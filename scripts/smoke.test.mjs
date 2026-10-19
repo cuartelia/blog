@@ -56,3 +56,19 @@ test('Laboratorio declara el helper de rutas que usa en la navegación',()=>{
   assert.match(lab,/import\s*\{\s*path\s*\}\s*from\s*['"]\.\.\/lib\/site['"]/);
   assert.match(lab,/href=\{path\('biblioteca\/'\)\}/);
 });
+
+test('ley bomberil permanece en borrador e incorpora marco organizativo y escalafón',()=>{
+  const md=read('src/content/articulos/ley-del-sistema-bomberil.md');
+  const frontmatter=md.split('---')[1];
+  assert.match(frontmatter,/^draft: true$/m);
+  assert.match(frontmatter,/^rankGuide: santa-fe-2025$/m);
+  for(const topic of ['asamblea','comisión directiva','cuerpo activo','servicio público','carga pública','jerárquico','atribuciones','obligaciones','25.054','12.969'])
+    assert.ok(md.toLocaleLowerCase('es-AR').includes(topic), `Falta abordar: ${topic}`);
+  const page=read('src/pages/articulos/[...slug].astro');
+  assert.match(page,/post\.data\.rankGuide === 'santa-fe-2025'/);
+  assert.match(read('src/content.config.ts'),/rankGuide: z\.enum/);
+  const guide=read('src/components/RankGuide.astro');
+  assert.match(guide,/Comandante General/);
+  assert.match(guide,/Oficial Ayudante/);
+  assert.match(guide,/Cabo Primero/);
+});
