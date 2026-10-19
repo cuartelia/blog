@@ -1,0 +1,148 @@
+---
+/**
+ * Esquemas geométricos originales basados en el cuadro didáctico de grados e
+ * insignias del Manual de Organización Bomberil, Nivel 1 (FSABV, 2025, p. 16).
+ * No son archivos oficiales aptos para bordado o reproducción de uniformes.
+ */
+type Rank = {
+  name: string;
+  minimum: string;
+  style: 'none' | 'chevron' | 'bars' | 'links' | 'diamonds' | 'command';
+  amount: number;
+  group: string;
+};
+const groups: { label: string; description: string; ranks: Rank[] }[] = [
+  {
+    label: 'Bombero',
+    description: 'Grado de ingreso al escalafón del cuerpo activo.',
+    ranks: [{name:'Bombero',minimum:'3 años como bombero antes de aspirar al próximo grado.',style:'none',amount:0,group:'Bombero'}]
+  },
+  {
+    label:'Suboficiales subalternos',
+    description:'Reconocibles por sus galones en forma de ángulo.',
+    ranks:[
+      {name:'Cabo',minimum:'3 años mínimo como bombero.',style:'chevron',amount:1,group:'Suboficiales subalternos'},
+      {name:'Cabo Primero',minimum:'1 año mínimo como cabo.',style:'chevron',amount:2,group:'Suboficiales subalternos'},
+      {name:'Sargento',minimum:'1 año mínimo como cabo primero.',style:'chevron',amount:3,group:'Suboficiales subalternos'}
+    ]
+  },
+  {
+    label:'Suboficiales superiores',
+    description:'Franjas horizontales y eslabones, según el grado.',
+    ranks:[
+      {name:'Sargento Primero',minimum:'2 años mínimo como sargento.',style:'bars',amount:2,group:'Suboficiales superiores'},
+      {name:'Suboficial Principal',minimum:'1 año mínimo como sargento primero.',style:'bars',amount:1,group:'Suboficiales superiores'},
+      {name:'Suboficial Mayor',minimum:'1 año mínimo como suboficial principal.',style:'links',amount:4,group:'Suboficiales superiores'}
+    ]
+  },
+  {
+    label:'Oficiales subalternos',
+    description:'Los rombos indican la progresión de los grados de oficiales subalternos.',
+    ranks:[
+      {name:'Oficial Ayudante',minimum:'2 años mínimo como suboficial mayor.',style:'diamonds',amount:1,group:'Oficiales subalternos'},
+      {name:'Oficial Inspector',minimum:'2 años mínimo como oficial ayudante.',style:'diamonds',amount:2,group:'Oficiales subalternos'},
+      {name:'Oficial Principal',minimum:'2 años mínimo como oficial inspector.',style:'diamonds',amount:3,group:'Oficiales subalternos'}
+    ]
+  },
+  {
+    label:'Oficiales jefes',
+    description:'Emblemas circulares y guarda dorada; el diseño se complejiza con el grado.',
+    ranks:[
+      {name:'Subcomandante',minimum:'2 años mínimo como oficial principal.',style:'command',amount:1,group:'Oficiales jefes'},
+      {name:'Comandante',minimum:'2 años mínimo como subcomandante.',style:'command',amount:2,group:'Oficiales jefes'},
+      {name:'Comandante Mayor',minimum:'2 años mínimo como comandante.',style:'command',amount:3,group:'Oficiales jefes'}
+    ]
+  },
+  {
+    label:'Oficial superior',
+    description:'Último grado del escalafón representado en el manual.',
+    ranks:[{name:'Comandante General',minimum:'5 años mínimo como comandante mayor.',style:'command',amount:4,group:'Oficial superior'}]
+  }
+];
+---
+<section class="rank-reference" aria-label="Guía visual de jerarquías de bomberos voluntarios de Santa Fe">
+  <header class="rank-header">
+    <p class="rank-eyebrow">GUÍA VISUAL / NIVEL 1 · SANTA FE</p>
+    <h2>Reconocé los <em>grados.</em></h2>
+    <p>Seleccioná cualquier grado para consultar su grupo y la antigüedad mínima indicada en el manual de formación 2025.</p>
+  </header>
+  {groups.map((group,i) => (
+    <section class="rank-group" aria-label={group.label}>
+      <div class="rank-group-head">
+        <div><span class="rank-index">{String(i+1).padStart(2,'0')}</span><h3>{group.label}</h3></div>
+        <p>{group.description}</p>
+      </div>
+      <div class="rank-cards">
+        {group.ranks.map(rank => (
+          <details class="rank-card">
+            <summary>
+              <span class="rank-insignia" role="img" aria-label={rank.style === 'none' ? 'Sin insignia de grado en el cuadro' : 'Esquema didáctico de distintivo de ' + rank.name}>
+                <svg viewBox="0 0 94 52" width="94" height="52" aria-hidden="true" focusable="false">
+                  {rank.style === 'none'
+                    ? <><rect x="5" y="8" width="84" height="36" rx="2" fill="#fffaf1" stroke="#c7ccc4" stroke-dasharray="3 3"/><path d="M30 26h34" stroke="#7b8882" stroke-width="2"/></>
+                    : <rect x="5" y="8" width="84" height="36" rx="2" fill="#d82319"/>}
+                  {rank.style === 'chevron' && Array.from({length:rank.amount},(_,idx)=>(
+                    <path d={`M16 ${11 + idx*6} L47 ${22 + idx*6} L78 ${11 + idx*6} L78 ${17 + idx*6} L47 ${28 + idx*6} L16 ${17 + idx*6} Z`} fill="#ffbd21" stroke="#513b25" stroke-width="1.6"/>
+                  ))}
+                  {rank.style === 'bars' && (rank.amount===1
+                    ? <rect x="13" y="19" width="68" height="14" fill="#ffb91e"/>
+                    : <><rect x="13" y="19" width="68" height="5" fill="#ffb91e" stroke="#513b25" stroke-width=".7"/><rect x="13" y="30" width="68" height="5" fill="#ffb91e" stroke="#513b25" stroke-width=".7"/></>
+                  )}
+                  {rank.style === 'links' && Array.from({length:4},(_,idx)=><ellipse cx={23+idx*16} cy="26" rx="10" ry="5.8" stroke="#ffb91e" stroke-width="4.2" fill="none"/>)}
+                  {rank.style === 'diamonds' && Array.from({length:rank.amount},(_,idx)=>{
+                    const x=47+(idx-(rank.amount-1)/2)*26;
+                    return <path d={`M${x} 14 l11 12 -11 12 -11 -12 Z`} fill="#ffb91e" stroke="#d88b0e" stroke-width="1.2"/>;
+                  })}
+                  {rank.style === 'command' && <>
+                    <rect x="81" y="8" width="8" height="36" fill="#ffbd21"/>
+                    {Array.from({length:rank.amount},(_,idx)=>{
+                      const x=rank.amount===4?14+idx*18:rank.amount===3?27+idx*19:rank.amount===2?36+idx*21:47;
+                      return <g><circle cx={x} cy="26" r="9" fill="#f5a900"/><circle cx={x} cy="26" r="5.5" fill="#d82319"/><circle cx={x} cy="26" r="2.9" fill="#f5a900"/></g>;
+                    })}
+                    {rank.amount>=3 && <path d="M77 12q-7 4 0 8q-7 4 0 8q-7 4 0 8q-7 4 0 8" fill="none" stroke="#ffbd21" stroke-width="2"/>}
+                  </>}
+                </svg>
+              </span>
+              <span class="rank-name">{rank.name}</span>
+              <span class="rank-expand" aria-hidden="true">+</span>
+            </summary>
+            <div class="rank-detail"><p><strong>Grupo:</strong> {rank.group}</p><p><strong>Antigüedad indicada para el siguiente escalón:</strong> {rank.minimum}</p></div>
+          </details>
+        ))}
+      </div>
+    </section>
+  ))}
+  <footer class="rank-footnote">
+    <p><strong>Fuente y alcance:</strong> representación gráfica simplificada, elaborada a partir del cuadro de la <em>página 16 del Manual de Organización Bomberil, Nivel 1 (FSABV, edición 2025)</em>. No reemplaza las insignias oficiales ni es un modelo para fabricar uniformes.</p>
+    <p><strong>Antigüedad no significa ascenso automático.</strong> Además intervienen formación, evaluaciones y condiciones reglamentarias. <a href="https://www.bomberosra.org.ar/snbv-legislacion/escalafon-jerarquico-snbv" target="_blank" rel="noopener noreferrer">Consultá también el escalafón del Sistema Nacional ↗</a></p>
+  </footer>
+</section>
+<style>
+.rank-reference{background:#192f33;color:#f7f5ef;padding:clamp(1.1rem,3.5vw,2.1rem);margin:1.8rem 0 3rem;border:1px solid #415d5f}
+.rank-eyebrow,.rank-index{font:600 .66rem var(--mono,monospace);letter-spacing:.13em;color:#fb9476}
+.rank-header h2{font:500 clamp(2rem,4vw,3rem)/1.1 var(--serif,Georgia,serif);letter-spacing:-.04em;margin:.45rem 0 1rem}
+.rank-header h2 em{color:#f99070}
+.rank-header>p:last-child{color:#d3ded8;line-height:1.6}
+.rank-group{margin-top:2rem}
+.rank-group-head{margin-bottom:.75rem;border-bottom:1px solid #526769;padding-bottom:.7rem}
+.rank-group-head>div{display:flex;gap:.8rem;align-items:baseline}
+.rank-group h3{margin:0;font:500 1.25rem var(--serif,Georgia,serif);color:white}
+.rank-group-head>p{color:#b8cbc6;font-size:.82rem;margin:.25rem 0 0}
+.rank-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,255px),1fr));gap:.6rem}
+.rank-card{background:#263f43;border:1px solid #466267}
+.rank-card[open]{border-color:#ed987b}
+.rank-card summary{list-style:none;display:flex;align-items:center;gap:.6rem;cursor:pointer;padding:.55rem .75rem;min-height:4rem}
+.rank-card summary::-webkit-details-marker{display:none}
+.rank-card summary:focus-visible{outline:2px solid #ffb08e;outline-offset:2px}
+.rank-insignia{display:inline-grid;place-items:center;background:#fdfcf8;border-radius:3px;flex:0 0 104px;height:54px}
+.rank-insignia svg{max-width:100%}
+.rank-name{flex:1;font-weight:700;font-size:.84rem;line-height:1.25;color:#f9fbf7}
+.rank-expand{font-size:1.1rem;color:#f7a183;line-height:1}
+.rank-card[open] .rank-expand{transform:rotate(45deg)}
+.rank-detail{border-top:1px solid #526769;padding:.8rem;color:#cad8d1;font-size:.8rem;line-height:1.55}
+.rank-detail p{margin:.3rem 0}.rank-detail strong{color:white}
+.rank-footnote{margin-top:1.6rem;padding-top:1rem;border-top:1px solid #526769}
+.rank-footnote p{font-size:.75rem;line-height:1.6;color:#b9cac4;margin:.4rem 0}
+.rank-footnote a{color:#ffbcaa;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:650px){.rank-reference{margin-left:-.5rem;margin-right:-.5rem}.rank-cards{grid-template-columns:1fr}.rank-group-head>div{gap:.55rem}}
+</style>
