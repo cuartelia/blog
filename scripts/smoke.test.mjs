@@ -61,14 +61,18 @@ test('ley bomberil permanece en borrador e incorpora marco organizativo y escala
   const md=read('src/content/articulos/ley-del-sistema-bomberil.md');
   const frontmatter=md.split('---')[1];
   assert.match(frontmatter,/^draft: true$/m);
-  assert.match(frontmatter,/^rankGuide: santa-fe-2025$/m);
+  assert.match(frontmatter,/^rankGuide: snbv-oficial$/m);
   for(const topic of ['asamblea','comisión directiva','cuerpo activo','servicio público','carga pública','jerárquico','atribuciones','obligaciones','25.054','12.969'])
     assert.ok(md.toLocaleLowerCase('es-AR').includes(topic), `Falta abordar: ${topic}`);
   const page=read('src/pages/articulos/[...slug].astro');
-  assert.match(page,/post\.data\.rankGuide === 'santa-fe-2025'/);
+  assert.match(page,/post\.data\.rankGuide === 'snbv-oficial'/);
   assert.match(read('src/content.config.ts'),/rankGuide: z\.enum/);
   const guide=read('src/components/RankGuide.astro');
   assert.match(guide,/Comandante General/);
   assert.match(guide,/Oficial Ayudante/);
-  assert.match(guide,/Cabo Primero/);
+  assert.match(guide,/cabo-primero/);
+  assert.doesNotMatch(guide,/<svg/);
+  assert.doesNotMatch(guide,/Manual de Organización Bomberil/);
+  assert.doesNotMatch(md,/Manual de Organización Bomberil|FSABV/);
+  assert.doesNotMatch(md,/\\| Ámbito \\| Norma \\|/);
 });
