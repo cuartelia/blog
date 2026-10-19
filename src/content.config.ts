@@ -17,6 +17,7 @@ const articulos = defineCollection({
     // Identificadores de src/components/simulators/<id>.astro
     simulators: z.array(z.string().regex(/^[a-z][a-z0-9-]*$/)).default([]),
     timeline: z.enum(['historia-bomberil']).optional(),
+    rankGuide: z.enum(['santa-fe-2025']).optional(),
     sources: z.array(z.object({ label: z.string(), url: z.string().url() })).default([]),
   }),
 });
