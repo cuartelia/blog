@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PressureSimulator from '../components/PressureSimulator.astro';
+import HeatSimulator from '../components/HeatSimulator.astro';
+import { path } from '../lib/site';
+---
+<BaseLayout title="Laboratorio interactivo" description="Simuladores didácticos de presión y calor: cambiá variables y visualizá relaciones físicas con modelos simplificados.">
+  <section class="subpage-hero shell"><div class="eyebrow eyebrow--dark"><span class="eyebrow-dot"></span> EXPLORACIÓN / LABORATORIO</div><div class="subpage-heading"><div><h1>Probá, cambiá.<br/><em>Comprendé.</em></h1><p>Pequeños experimentos digitales para visualizar ideas de física. La curiosidad como punto de partida.</p></div><div class="subpage-symbol" aria-hidden="true">⊕</div></div></section>
+  <div class="shell lab-page-content"><div class="lab-intro-box"><span class="intro-icon">ⓘ</span><p><strong>Antes de empezar.</strong> Estas herramientas explican modelos idealizados de física. No simulan incendios reales, condiciones seguras de operación ni el comportamiento de equipos presurizados. No son instrumentos de cálculo profesional.</p></div><div id="gases" class="lab-section"><div class="lab-section-head"><span>01 / GASES</span><a href={path('articulos/presion/')}>Leé el artículo relacionado ↗</a></div><PressureSimulator /></div><div id="termica" class="lab-section"><div class="lab-section-head"><span>02 / ENERGÍA TÉRMICA</span><a href={path('articulos/fuego/')}>Leé el artículo relacionado ↗</a></div><HeatSimulator /></div><div class="lab-outro"><span class="eyebrow eyebrow--dark">UNA INVITACIÓN</span><h2>Las buenas preguntas <em>no se terminan acá.</em></h2><p>Usá estos ejemplos como apoyo a la comprensión. Contrastá los resultados con bibliografía y, cuando corresponda, con los criterios de instructores y especialistas.</p><a href={path('biblioteca/')} class="inline-link">Explorá las lecturas ↗</a></div></div>
+</BaseLayout>

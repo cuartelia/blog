@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { formattedDate, path } from '../lib/site';
+interface Props { post: CollectionEntry<'articulos'>; index?: number; variant?: 'default' | 'feature' }
+const { post, index=0, variant='default' } = Astro.props;
+const { title, description, category, readingMinutes, date, audience } = post.data;
+const href = path(`articulos/${post.id}/`);
+const tones: Record<string,string> = { Historia:'history', Fundamentos:'fire', 'Ciencia aplicada':'science', Seguridad:'safety', Comunicaciones:'science', Formación:'history' };
+const tone = tones[category] || 'history';
+---
+<article class:list={['article-card',`article-card--${tone}`, {'article-card--feature':variant==='feature'}]}>
+  <div class="card-visual" aria-hidden="true">
+    <span class="card-num">{String(index+1).padStart(2,'0')}</span>
+    {category === 'Historia' ? <svg viewBox="0 0 230 140" fill="none"><path d="M19 109h198M40 109V57l74-38 75 38v52M65 109V63h98v46M90 109V82h48v27M30 59l84-43 84 43" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="115" cy="49" r="9" stroke="currentColor" stroke-width="3"/></svg> : category === 'Fundamentos' ? <svg viewBox="0 0 230 140" fill="none"><path d="M118 12c-16 20-12 30-5 41-23-6-34 15-34 33 0 21 17 39 40 39 22 0 41-16 41-41 0-28-18-45-33-56 4 18-2 27-8 31-11-18 7-30-1-47Z" stroke="currentColor" stroke-width="3"/><path d="M120 71c-17 13-22 24-17 36 4 9 13 15 24 15 13 0 21-11 21-25-8 3-13 2-16-6-3-6-1-14-12-20Z" fill="currentColor" opacity=".19"/></svg> : <svg viewBox="0 0 230 140" fill="none"><circle cx="116" cy="69" r="54" stroke="currentColor" stroke-width="3"/><path d="M116 16v11m37 3-8 8m25 31h-11m-6 37-8-8m-29 25v-11m-38-6 8-8m-25-29h11m6-39 8 8" stroke="currentColor" stroke-width="3"/><path d="m115 70 30-23" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><circle cx="115" cy="70" r="7" fill="currentColor"/><path d="M80 91h70" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>}
+    <span class="card-visual-caption">CUARTELIA · ARCHIVO ABIERTO</span>
+  </div>
+  <div class="card-copy">
+    <div class="card-metadata"><span class="pill pill-dark">{category}</span><span>{readingMinutes} min de lectura</span></div>
+    <h3><a href={href}>{title}</a></h3>
+    <p>{description}</p>
+    <div class="card-bottom"><time datetime={date.toISOString()}>{formattedDate(date)}</time><a aria-label={`Leer: ${title}`} href={href} class="card-arrow">↗</a></div>
+  </div>
+</article>

@@ -1,0 +1,66 @@
+---
+import { GAS_REFERENCE, PRESSURE_SCALE_MAX_KPA } from '../lib/simulations.mjs';
+const uid = crypto.randomUUID();
+---
+<section class="simulator pressure-simulator" data-pressure-simulator aria-label="Simulador didáctico de gas ideal">
+  <div class="sim-top"><div><div class="eyebrow eyebrow--orange">LAB / 01 · GASES IDEALES</div><h3>Una misma cantidad de gas.<br/><em>Distintas condiciones.</em></h3><p>Mové los controles y observá cómo cambia la presión absoluta.</p></div><span class="sim-live-indicator"><span></span> Modelo interactivo</span></div>
+  <div class="sim-grid">
+    <div class="sim-controls">
+      <div class="sim-range-block"><div class="range-head"><label for={`lab-volume-${uid}`}>Volumen del recipiente</label><output for={`lab-volume-${uid}`} data-value-volume>10 L</output></div><input id={`lab-volume-${uid}`} data-volume type="range" min="5" max="20" step="1" value="10"/><div class="range-extremes"><span>5 L</span><span>20 L</span></div></div>
+      <div class="sim-range-block"><div class="range-head"><label for={`lab-temp-${uid}`}>Temperatura del gas</label><output for={`lab-temp-${uid}`} data-value-temp>20 °C</output></div><input id={`lab-temp-${uid}`} data-temp type="range" min="0" max="180" step="5" value="20"/><div class="range-extremes"><span>0 °C</span><span>180 °C</span></div></div>
+      <div class="sim-formula"><span>MODELO USADO</span><strong>P₂ = P₁ × (V₁ / V₂) × (T₂ / T₁)</strong><p>Presión inicial: 101,325 kPa abs. · Volumen inicial: 10 L · Temperatura inicial: 293,15 K.</p></div>
+      <button class="reset-button" type="button" data-reset>↺ &nbsp; Reiniciar parámetros</button>
+    </div>
+    <div class="sim-results">
+      <div class="gauge" aria-hidden="true">
+        <svg viewBox="0 0 240 148" class="gauge-svg" focusable="false" aria-hidden="true">
+          <path class="gauge-track" d="M 23 118 A 97 97 0 0 1 217 118"/>
+          <g class="gauge-needle" data-needle><line x1="120" y1="118" x2="120" y2="40"/></g>
+          <circle class="gauge-hub" cx="120" cy="118" r="8"/>
+          <text x="16" y="140" class="gauge-tick">0</text><text x="208" y="140" class="gauge-tick">{PRESSURE_SCALE_MAX_KPA}</text>
+        </svg>
+      </div>
+      <p class="result-caption">PRESIÓN ABSOLUTA ESTIMADA</p><div class="result-number"><output data-pressure aria-live="polite" aria-atomic="true">101,3</output><span>kPa</span></div>
+      <div class="delta-row"><span>Respecto del estado inicial</span><strong data-delta>Sin cambio</strong></div>
+      <div class="sim-progress" aria-hidden="true"><div data-bar></div></div>
+    </div>
+  </div>
+  <p class="sim-disclaimer"><span aria-hidden="true">ⓘ</span> Modelo idealizado, a cantidad de gas constante. No modela recipientes reales, equipos presurizados ni fenómenos de incendio. No usar para decisiones operativas.</p>
+</section>
+<script>
+  import { GAS_REFERENCE, PRESSURE_SCALE_MAX_KPA, idealGasPressure } from '../lib/simulations.mjs';
+  document.querySelectorAll<HTMLElement>('[data-pressure-simulator]').forEach(root => {
+    if (root.dataset.initialized) return;
+    root.dataset.initialized = 'true';
+    const volume = root.querySelector<HTMLInputElement>('[data-volume]')!;
+    const temp = root.querySelector<HTMLInputElement>('[data-temp]')!;
+    const volumeText = root.querySelector<HTMLOutputElement>('[data-value-volume]')!;
+    const tempText = root.querySelector<HTMLOutputElement>('[data-value-temp]')!;
+    const pressureText = root.querySelector<HTMLOutputElement>('[data-pressure]')!;
+    const delta = root.querySelector<HTMLElement>('[data-delta]')!;
+    const needle = root.querySelector<SVGGElement>('[data-needle]')!;
+    const bar = root.querySelector<HTMLElement>('[data-bar]')!;
+    const format = new Intl.NumberFormat('es-AR', { maximumFractionDigits: 1, minimumFractionDigits: 1 });
+    function update() {
+      const v = Number(volume.value), t = Number(temp.value);
+      const p = idealGasPressure(v, t);
+      const variation = (p / GAS_REFERENCE.pressureKPa - 1) * 100;
+      const fraction = Math.max(0, Math.min(1, p / PRESSURE_SCALE_MAX_KPA));
+      volumeText.textContent = `${v} L`;
+      tempText.textContent = `${t} °C`;
+      pressureText.textContent = format.format(p);
+      delta.textContent = Math.abs(variation) < 0.05 ? 'Sin cambio' : `${variation >= 0 ? '+' : ''}${format.format(variation)} %`;
+      // La aguja gira alrededor del centro real del indicador (120, 118).
+      needle.style.transform = `rotate(${-90 + fraction * 180}deg)`;
+      bar.style.width = `${fraction * 100}%`;
+    }
+    volume.addEventListener('input', update);
+    temp.addEventListener('input', update);
+    root.querySelector('[data-reset]')?.addEventListener('click', () => {
+      volume.value = String(GAS_REFERENCE.volumeL);
+      temp.value = String(GAS_REFERENCE.temperatureC);
+      update();
+    });
+    update();
+  });
+</script>

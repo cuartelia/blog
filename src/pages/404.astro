@@ -1,0 +1,5 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { path } from '../lib/site';
+---
+<BaseLayout title="Página no encontrada"><section class="shell error-page"><span class="eyebrow eyebrow--dark">ERROR / 404</span><h1>Perdimos <em>el rumbo.</em></h1><p>Esta página no existe o cambió de dirección. Siempre podemos volver al punto de partida.</p><a class="button button-dark" href={path()}>Volver al inicio ↗</a></section></BaseLayout>

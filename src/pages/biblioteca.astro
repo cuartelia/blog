@@ -1,0 +1,85 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+const posts = (await getCollection('articulos', ({data})=>!data.draft)).sort((a,b)=>(a.data.order??99)-(b.data.order??99));
+const topics = [...new Set(posts.map(p=>p.data.category))];
+const audiences = ['Aspirantes','Cadetes','Bomberos','Público general'];
+---
+<BaseLayout title="Biblioteca" description="Explorá artículos de historia bomberil, fundamentos del fuego y ciencia aplicada. Buscá por tema, público y contenido.">
+  <section class="subpage-hero shell"><div class="eyebrow eyebrow--dark"><span class="eyebrow-dot"></span> BIBLIOTECA / CUARTELIA</div><div class="subpage-heading"><div><h1>El conocimiento<br/><em>se comparte.</em></h1><p>Una biblioteca abierta de conceptos, relatos y preguntas para seguir explorando el mundo bomberil.</p></div><div class="subpage-symbol" aria-hidden="true">◆</div></div></section>
+  <section class="shell library-browser" aria-label="Buscador de publicaciones">
+    <div class="browser-top"><div><div class="eyebrow eyebrow--dark">EXPLORADOR DE ARTÍCULOS</div><h2>Encontrá tu próxima lectura.</h2></div><div class="total-count"><strong id="results-count">{posts.length}</strong><span id="results-word">publicaciones</span></div></div>
+    <div class="browser-controls">
+      <label class="search-field"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="m16.5 16.5 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="sr-only">Buscar en los artículos</span><input id="article-search" type="search" placeholder="Buscar por título, concepto o palabra..." autocomplete="off"/><kbd>/</kbd></label>
+      <div class="select-fields"><label>Temática<select id="topic-filter"><option value="">Todas las temáticas</option>{topics.map(topic=><option value={topic}>{topic}</option>)}</select></label><label>Para quién<select id="audience-filter"><option value="">Todos los públicos</option>{audiences.map(audience=><option value={audience}>{audience}</option>)}</select></label></div>
+    </div>
+    <div class="browser-toolbar"><div class="filter-shortcuts" role="group" aria-label="Filtrar por tema"><button type="button" class="filter-pill active" data-topic="" aria-pressed="true">Todo</button>{topics.map(topic=><button type="button" class="filter-pill" data-topic={topic} aria-pressed="false">{topic}</button>)}</div><button id="reset-filters" class="clear-filters" type="button">Limpiar filtros ↺</button></div>
+    <div id="library-results" class="article-grid article-grid--library" aria-live="polite">{posts.map((post,i)=><div class="filterable-card" data-search={`${post.data.title} ${post.data.description} ${post.data.category} ${post.data.audience.join(' ')}`.toLocaleLowerCase('es-AR')} data-category={post.data.category} data-audience={post.data.audience.join('|')} data-href={`${import.meta.env.BASE_URL}articulos/${post.id}/`}><ArticleCard post={post} index={i} /></div>)}</div>
+    <div id="library-empty" class="empty-state" hidden><span class="empty-sigil">⌕</span><h3>No encontramos coincidencias.</h3><p>Probá con otro término o modificá los filtros. Hay mucho por descubrir.</p><button id="empty-reset" class="button button-dark" type="button">Mostrar todas las publicaciones ↗</button></div>
+    <div class="library-bottom"><span>UNA PUBLICACIÓN A LA VEZ, UNA PREGUNTA MÁS.</span><span>CUARTELIA · ARCHIVO ABIERTO</span></div>
+  </section>
+</BaseLayout>
+<script>
+  const searchInput = document.querySelector<HTMLInputElement>('#article-search');
+  const topicSelect = document.querySelector<HTMLSelectElement>('#topic-filter');
+  const audienceSelect = document.querySelector<HTMLSelectElement>('#audience-filter');
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('.filterable-card'));
+  const empty = document.querySelector<HTMLElement>('#library-empty');
+  const count = document.querySelector<HTMLElement>('#results-count');
+  const countLabel = document.querySelector<HTMLElement>('#results-word');
+  const pills = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-topic]'));
+  const reset = document.querySelector<HTMLButtonElement>('#reset-filters');
+  const emptyReset = document.querySelector<HTMLButtonElement>('#empty-reset');
+  let pagefind: any = null;
+  let requestNumber = 0;
+  let debounce: ReturnType<typeof setTimeout>;
+  const initialParams = new URLSearchParams(window.location.search);
+  if (audienceSelect) audienceSelect.value = initialParams.get('publico') || '';
+  if (topicSelect) topicSelect.value = initialParams.get('tema') || '';
+  const normalize = (url:string) => { const pathname = new URL(url,window.location.href).pathname; return decodeURI(pathname).replace(/\/?$/, '/'); };
+  async function loadPagefind(){
+    if(pagefind) return pagefind;
+    try { const base = import.meta.env.BASE_URL; pagefind = await import(/* @vite-ignore */ `${base}pagefind/pagefind.js`); await pagefind.options({ baseUrl: base }); return pagefind; }
+    catch { return null; } // En astro dev el índice no existe: funciona la búsqueda de metadatos.
+  }
+  async function applyFilters(){
+    const current = ++requestNumber;
+    const query = (searchInput?.value||'').trim().toLocaleLowerCase('es-AR');
+    const category = topicSelect?.value || '';
+    const audience = audienceSelect?.value || '';
+    let hits: Set<string> | null = null;
+    if(query.length > 1){
+      const engine=await loadPagefind();
+      if(engine){
+        try {const result=await engine.search(query);const found=await Promise.all(result.results.map((r:any)=>r.data()));hits=new Set(found.map((r:any)=>normalize(r.url)));}catch{ /* fallback local */ }
+      }
+    }
+    if(current!==requestNumber)return;
+    let visible=0;
+    cards.forEach(card=>{
+      const localMatch=card.dataset.search?.includes(query) ?? false;
+      const textMatch=!query || localMatch || (hits?.has(normalize(card.dataset.href || '')) ?? false);
+      const matches = textMatch && (!category||card.dataset.category===category) && (!audience||card.dataset.audience?.split('|').includes(audience));
+      card.hidden=!matches;
+      if(matches)visible++;
+    });
+    if(empty)empty.hidden=visible!==0;
+    if(count)count.textContent=String(visible);
+    if(countLabel)countLabel.textContent=visible===1?'publicación':'publicaciones';
+    pills.forEach(p=>{const active=(p.dataset.topic||'')===category;p.classList.toggle('active',active);p.setAttribute('aria-pressed',String(active));});
+    const params=new URLSearchParams();
+    if(category) params.set('tema',category);
+    if(audience) params.set('publico',audience);
+    if(query) params.set('q',query);
+    history.replaceState(null,'',`${location.pathname}${params.size ? '?'+params.toString() : ''}`);
+  }
+  if(searchInput){searchInput.value=initialParams.get('q')||'';searchInput.addEventListener('input',()=>{clearTimeout(debounce);debounce=setTimeout(applyFilters,180);});}
+  topicSelect?.addEventListener('change',applyFilters);
+  audienceSelect?.addEventListener('change',applyFilters);
+  pills.forEach(p=>p.addEventListener('click',()=>{if(topicSelect)topicSelect.value=p.dataset.topic||'';applyFilters();}));
+  function clearAll(){if(searchInput) searchInput.value='';if(topicSelect)topicSelect.value='';if(audienceSelect) audienceSelect.value='';applyFilters();searchInput?.focus();}
+  reset?.addEventListener('click',clearAll);emptyReset?.addEventListener('click',clearAll);
+  document.addEventListener('keydown',event=>{if(event.key==='/' && document.activeElement?.tagName!=='INPUT' && document.activeElement?.tagName!=='TEXTAREA' && document.activeElement?.tagName!=='SELECT'){event.preventDefault();searchInput?.focus();}});
+  applyFilters();
+</script>

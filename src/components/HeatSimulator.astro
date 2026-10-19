@@ -1,0 +1,41 @@
+---
+const uid = crypto.randomUUID();
+---
+<section class="simulator heat-simulator" data-heat-simulator aria-label="Simulador didáctico de energía y temperatura">
+  <div class="sim-top"><div><div class="eyebrow eyebrow--orange">LAB / 02 · ENERGÍA TÉRMICA</div><h3>El calor se transfiere.<br/><em>La temperatura cambia.</em></h3><p>¿Qué pasaría si suministramos energía a una masa fija de agua?</p></div><span class="sim-live-indicator"><span></span> Modelo interactivo</span></div>
+  <div class="sim-grid">
+    <div class="sim-controls">
+      <div class="sim-range-block"><div class="range-head"><label for={`lab-energy-${uid}`}>Energía incorporada</label><output for={`lab-energy-${uid}`} data-energy-text>84 kJ</output></div><input data-energy id={`lab-energy-${uid}`} type="range" min="0" max="300" step="2" value="84"/><div class="range-extremes"><span>0 kJ</span><span>300 kJ</span></div></div>
+      <div class="sim-formula"><span>MODELO USADO</span><strong>Q = m × c × ΔT</strong><p>1 kg de agua líquida · temperatura inicial: 20 °C · calor específico aproximado: 4,184 kJ/(kg·°C).</p></div>
+      <button class="reset-button" type="button" data-heat-reset>↺ &nbsp; Reiniciar parámetros</button>
+    </div>
+    <div class="sim-results heat-result"><div class="thermo" aria-hidden="true"><div class="thermo-tube"><div class="thermo-fill" data-heat-fill></div></div><div class="thermo-bulb"></div><span class="thermo-mark thermo-mark-top">100°</span><span class="thermo-mark thermo-mark-bottom">20°</span></div><p class="result-caption">TEMPERATURA ESTIMADA</p><div class="result-number"><output data-heat-result aria-live="polite" aria-atomic="true">40,1</output><span>°C</span></div><div class="delta-row"><span>Cambio de temperatura</span><strong data-heat-delta>+20,1 °C</strong></div></div>
+  </div>
+  <p class="sim-disclaimer"><span aria-hidden="true">ⓘ</span> Modelo didáctico sin pérdidas ni cambio de fase; considera agua líquida entre 20 °C y menos de 100 °C. No representa la transferencia de calor de un incendio.</p>
+</section>
+<script>
+  import { WATER_REFERENCE, waterTemperature } from '../lib/simulations.mjs';
+  document.querySelectorAll<HTMLElement>('[data-heat-simulator]').forEach(root => {
+    if (root.dataset.initialized) return;
+    root.dataset.initialized = 'true';
+    const slider = root.querySelector<HTMLInputElement>('[data-energy]')!;
+    const energy = root.querySelector<HTMLOutputElement>('[data-energy-text]')!;
+    const output = root.querySelector<HTMLOutputElement>('[data-heat-result]')!;
+    const delta = root.querySelector<HTMLElement>('[data-heat-delta]')!;
+    const fill = root.querySelector<HTMLElement>('[data-heat-fill]')!;
+    const format = new Intl.NumberFormat('es-AR', { maximumFractionDigits: 1, minimumFractionDigits: 1 });
+    function update() {
+      const q = Number(slider.value);
+      const t = waterTemperature(q);
+      const dt = t - WATER_REFERENCE.initialC;
+      const fraction = Math.max(0, Math.min(1, dt / (100 - WATER_REFERENCE.initialC)));
+      energy.textContent = `${q} kJ`;
+      output.textContent = format.format(t);
+      delta.textContent = `+${format.format(dt)} °C`;
+      fill.style.transform = `scaleY(${fraction})`;
+    }
+    slider.addEventListener('input', update);
+    root.querySelector('[data-heat-reset]')?.addEventListener('click', () => { slider.value = '84'; update(); });
+    update();
+  });
+</script>

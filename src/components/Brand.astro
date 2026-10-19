@@ -1,0 +1,14 @@
+---
+import { path } from '../lib/site';
+interface Props { light?: boolean; compact?: boolean }
+const { light = false, compact = false } = Astro.props;
+---
+<a class:list={['brand', {'brand-light':light, 'brand-compact':compact}]} href={path()} aria-label="Cuartelia, ir al inicio">
+  <span class="brand-mark" aria-hidden="true">
+    <svg viewBox="0 0 44 44" fill="none"><path d="m22 3 17 10v18L22 41 5 31V13L22 3Z" stroke="currentColor" stroke-width="2.1"/><path d="M21.9 9.7c1.3 5.2 8.7 10.7 8.7 18a8.6 8.6 0 0 1-17.2 0c0-5.8 4.3-10.4 7.2-13.1-.5 4.3 1.2 7.1 3.1 7.5 2.4-3.6 1.2-8.2-1.8-12.4Z" fill="currentColor"/></svg>
+  </span>
+  <span class="brand-word">cuartelia<span class="brand-dot">.</span></span>
+</a>
+<style>
+.brand{display:inline-flex;align-items:center;gap:.58rem;line-height:1;text-decoration:none!important;color:var(--ink);font-family:var(--sans);font-weight:800;font-size:1.56rem;letter-spacing:-.065em}.brand-mark{width:2rem;height:2rem;display:grid;place-items:center;color:var(--rust)}.brand-mark svg{width:100%;height:100%}.brand-dot{color:var(--rust)}.brand-light{color:var(--cream)}.brand-compact{font-size:1.36rem}.brand-compact .brand-mark{width:1.75rem;height:1.75rem}
+</style>

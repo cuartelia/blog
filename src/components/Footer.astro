@@ -1,0 +1,16 @@
+---
+import Brand from './Brand.astro';
+import { path } from '../lib/site';
+---
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div class="footer-intro">
+      <Brand light />
+      <p>Un espacio independiente para pensar, aprender y compartir el universo bomberil.</p>
+      <p class="footer-asterisk">Información educativa · No sustituye instrucción oficial ni protocolos operativos.</p>
+    </div>
+    <div class="footer-links"><h3>Explorar</h3><a href={path('biblioteca/')}>Biblioteca</a><a href={path('laboratorio/')}>Laboratorio</a><a href={path('acerca/')}>Acerca del proyecto</a></div>
+    <div class="footer-links"><h3>Una idea para llevar</h3><p class="footer-quote">El conocimiento no apaga el fuego.<br/><em>Nos prepara para comprenderlo.</em></p></div>
+  </div>
+  <div class="shell footer-bottom"><span>© {new Date().getFullYear()} Cuartelia · Hecho para aprender.</span><a href="#arriba">Volver arriba ↑</a></div>
+</footer>

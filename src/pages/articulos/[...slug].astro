@@ -1,0 +1,33 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { path, formattedDate } from '../../lib/site';
+export async function getStaticPaths(){
+  const posts=await getCollection('articulos', ({data})=>!data.draft);
+  return posts.map(post=>({ params:{slug:post.id},props:{post} }));
+}
+interface Props {post: CollectionEntry<'articulos'>}
+const {post}=Astro.props;
+const {Content,headings}=await render(post);
+const {title,description,date,category,audience,readingMinutes,sources}=post.data;
+// Vite identifica los simuladores por su nombre de archivo; las notas eligen mediante frontmatter.
+// El import dinámico carga únicamente los componentes solicitados por el artículo.
+const simulatorLoaders = import.meta.glob<{ default: any }>('../../components/simulators/*.astro');
+const simulators = await Promise.all(post.data.simulators.map(async (id) => {
+  const modulePath = `../../components/simulators/${id}.astro`;
+  const load = simulatorLoaders[modulePath];
+  if (!load) throw new Error(`Simulador "${id}" no existe. Creá src/components/simulators/${id}.astro o corregí el frontmatter de ${post.id}.`);
+  return { id, Component: (await load()).default };
+}));
+const others=(await getCollection('articulos',({data})=>!data.draft)).filter(p=>p.id!==post.id).slice(0,2);
+---
+<BaseLayout title={title} description={description} type="article">
+  <div class="article-page">
+    <div class="shell article-head"><nav class="breadcrumbs" aria-label="Ruta de navegación"><a href={path()}>Inicio</a><span>/</span><a href={path('biblioteca/')}>Biblioteca</a><span>/</span><span>{category}</span></nav><div class="eyebrow eyebrow--dark">CUARTELIA / ARCHIVO DE CONOCIMIENTO</div><h1>{title}</h1><p class="article-deck">{description}</p><div class="article-meta-row"><span class="pill pill-dark" data-pagefind-filter={`tema:${category}`}>{category}</span><time datetime={date.toISOString()}>{formattedDate(date)}</time><span class="meta-dot">·</span><span>{readingMinutes} min de lectura</span></div>{audience.map(a=><span class="sr-only" data-pagefind-filter={`publico:${a}`}>{a}</span>)}</div>
+    <div class="shell article-body-layout"><aside class="article-sidebar"><div class="toc-stick"><div class="eyebrow eyebrow--dark">EN ESTE ARTÍCULO</div><nav aria-label="Índice del artículo"><a href="#comienzo">Introducción</a>{headings.filter(h=>h.depth===2).map(h=><a href={`#${h.slug}`}>{h.text}</a>)}</nav><div class="toc-divider"></div><a href={path('biblioteca/')} class="back-inline">← Volver a la biblioteca</a></div></aside><div class="article-primary"><article class="prose" id="comienzo" data-pagefind-body><Content /></article>
+    {simulators.map(({ id, Component }) => <div class="article-lab" data-simulator={id}><Component /></div>)}
+    <section class="sources"><div class="eyebrow eyebrow--dark">FUENTES PARA SEGUIR INVESTIGANDO</div><h2>Lecturas y referencias.</h2><ol>{sources.map(source=><li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label}<span aria-hidden="true">↗</span></a></li>)}</ol><p>Contenido introductorio de divulgación. No sustituye procedimientos ni formación operativa oficial.</p></section></div></div>
+    <section class="shell related"><div class="section-topline"><span class="eyebrow eyebrow--dark">SEGUÍ EXPLORANDO</span><span class="hairline"></span></div><h2>Una pregunta lleva <em>a otra.</em></h2><div class="article-grid article-grid--related">{others.map((p,i)=><ArticleCard post={p} index={i} />)}</div></section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,33 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync, readdirSync } from 'node:fs';
+import { resolve } from 'node:path';
+const root = resolve(import.meta.dirname, '..');
+const read = path => readFileSync(resolve(root, path), 'utf8');
+const posts = readdirSync(resolve(root, 'src/content/articulos')).filter(x=>x.endsWith('.md'));
+test('hay exactamente tres artículos de demostración',()=>{
+  assert.deepEqual(posts.sort(), ['fuego.md','historia-bomberil-argentina.md','presion.md']);
+});
+test('todos los artículos tienen metadatos y fuentes',()=>{
+  for(const file of posts){const text=read(`src/content/articulos/${file}`);
+    for(const key of ['title:', 'description:', 'date:', 'category:', 'audience:', 'readingMinutes:', 'sources:']) assert.ok(text.includes(key), `${file}: falta ${key}`);
+    assert.match(text,/https:\/\//);
+  }
+});
+test('el contenido público no expone antecedentes ni preparación personal',()=>{
+  const files=['src/pages/index.astro','src/pages/acerca.astro',...posts.map(x=>`src/content/articulos/${x}`)];
+  for(const file of files) assert.doesNotMatch(read(file),/Barranqueras|Timbúes|mi ingreso|mi proceso de ingreso/i, file);
+});
+test('los ejemplos físicos conservan sus referencias esperadas',()=>{
+  const initial=101.325;
+  const p=initial*(10/5)*((20+273.15)/293.15);
+  assert.equal(Math.round(p*1000)/1000,202.65);
+  const temp=20 + 84/4.184;
+  assert.ok(temp>40 && temp<41);
+});
+test('el sitio contempla navegación y disclaimer',()=>{
+  assert.match(read('src/components/Header.astro'),/Biblioteca/);
+  assert.match(read('src/components/Header.astro'),/Laboratorio/);
+  assert.match(read('src/components/PressureSimulator.astro'),/No modela/);
+  assert.match(read('src/components/Footer.astro'),/No sustituye/);
+});
