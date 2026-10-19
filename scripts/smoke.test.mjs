@@ -31,3 +31,22 @@ test('el sitio contempla navegación y disclaimer',()=>{
   assert.match(read('src/components/PressureSimulator.astro'),/No modela/);
   assert.match(read('src/components/Footer.astro'),/No sustituye/);
 });
+
+// La publicación se controla desde frontmatter, sin eliminar artículos en elaboración.
+test('solo Historia bomberil se publica; Fuego y Presión quedan en borrador',()=>{
+  for(const slug of ['fuego','presion']){
+    const md=read(`src/content/articulos/${slug}.md`);
+    const frontmatter=md.split('---')[1];
+    assert.match(frontmatter,/^draft: true$/m,`${slug} debe permanecer oculto`);
+    assert.match(frontmatter,/^feature: false$/m,`${slug} no debe destacarse`);
+  }
+  const history=read('src/content/articulos/historia-bomberil-argentina.md');
+  assert.doesNotMatch(history.split('---')[1],/^draft: true$/m);
+  for(const file of ['src/pages/index.astro','src/pages/biblioteca.astro','src/pages/articulos/[...slug].astro']){
+    assert.match(read(file),/!data\.draft/,`${file} debe filtrar los borradores`);
+  }
+  const lab=read('src/pages/laboratorio.astro');
+  assert.doesNotMatch(lab,/articulos\/(fuego|presion)\//);
+  const home=read('src/pages/index.astro');
+  assert.doesNotMatch(home,/tres lecturas de muestra|03 ARTÍCULOS/);
+});
