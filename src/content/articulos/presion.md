@@ -6,7 +6,8 @@ category: Ciencia aplicada
 audience: [Aspirantes, Cadetes, Bomberos, Público general]
 readingMinutes: 9
 simulators: [pressure]
-feature: true
+feature: false
+draft: true
 order: 3
 sources:
   - label: 'NIST — SI Units: Pressure'

@@ -6,7 +6,8 @@ category: Fundamentos
 audience: [Aspirantes, Cadetes, Bomberos, Público general]
 readingMinutes: 8
 simulators: [heat]
-feature: true
+feature: false
+draft: true
 order: 2
 sources:
   - label: 'NIST — Fire Tetrahedron (NFPA 921)'

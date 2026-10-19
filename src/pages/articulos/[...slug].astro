@@ -30,6 +30,6 @@ const others=(await getCollection('articulos',({data})=>!data.draft)).filter(p=>
     {post.data.timeline === 'historia-bomberil' && <HistoryTimeline />}
     {simulators.map(({ id, Component }) => <div class="article-lab" data-simulator={id}><Component /></div>)}
     <section class="sources"><div class="eyebrow eyebrow--dark">FUENTES PARA SEGUIR INVESTIGANDO</div><h2>Lecturas y referencias.</h2><ol>{sources.map(source=><li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label}<span aria-hidden="true">↗</span></a></li>)}</ol><p>Contenido introductorio de divulgación. No sustituye procedimientos ni formación operativa oficial.</p></section></div></div>
-    <section class="shell related"><div class="section-topline"><span class="eyebrow eyebrow--dark">SEGUÍ EXPLORANDO</span><span class="hairline"></span></div><h2>Una pregunta lleva <em>a otra.</em></h2><div class="article-grid article-grid--related">{others.map((p,i)=><ArticleCard post={p} index={i} />)}</div></section>
+    {others.length > 0 && <section class="shell related"><div class="section-topline"><span class="eyebrow eyebrow--dark">SEGUÍ EXPLORANDO</span><span class="hairline"></span></div><h2>Una pregunta lleva <em>a otra.</em></h2><div class="article-grid article-grid--related">{others.map((p,i)=><ArticleCard post={p} index={i} />)}</div></section>}
   </div>
 </BaseLayout>
