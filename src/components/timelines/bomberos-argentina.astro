@@ -1,0 +1,78 @@
+---
+import { timelineGroups } from '../../lib/timelineData';
+const labels: Record<string,string>={antecedente:'Antecedente',fundacion:'Fundación',operativo:'Servicio',conflicto:'Conflicto',institucional:'Institucional',federacion:'Federación',normativa:'Normativa',internacional:'Internacional'};
+---
+<section class="history-timeline" data-history-timeline aria-labelledby="history-title">
+  <header class="history-head">
+    <div><p class="history-kicker">CUARTELIA / HISTORIA INTERACTIVA</p><h2 id="history-title">Una historia. <em>Muchos hitos.</em></h2><p>Recorré los acontecimientos y desplegá cada tarjeta para leer su contexto y consultar sus fuentes.</p></div>
+    <span class="history-diamond" aria-hidden="true">◆</span>
+  </header>
+  <div role="tablist" aria-label="Cronología por región" class="history-tabs">
+    {timelineGroups.map((g,i)=><button type="button" class="history-tab" data-history-tab role="tab" id={`history-tab-${g.id}`} aria-controls={`history-panel-${g.id}`} aria-selected={i===0?'true':'false'} tabindex={i===0?0:-1}>{g.label}<span aria-hidden="true">↗</span></button>)}
+  </div>
+  {timelineGroups.map((g,i)=><section data-history-panel role="tabpanel" id={`history-panel-${g.id}`} aria-labelledby={`history-tab-${g.id}`} tabindex="0" hidden={i!==0}>
+    <p class="history-lead">{g.introduction}</p><p class="history-count">{g.events.length} hitos con referencias</p>
+    <ol class="history-list">{g.events.map(e=><li class="history-item"><article class="history-card" data-category={e.category}>
+      <div class="history-meta"><time datetime={e.date}>{e.dateLabel}</time><span class="history-category">{labels[e.category]}</span></div>
+      <h3>{e.title}</h3><p>{e.description}</p>
+      <details><summary>Contexto y fuentes <span aria-hidden="true">⌄</span></summary><div class="history-context"><p>{e.context}</p><strong>Fuentes y documentos</strong><ul>{e.sources.map(s=><li><a href={s.url} target="_blank" rel="noopener noreferrer">{s.label} ↗</a></li>)}</ul></div></details>
+    </article></li>)}</ol>
+  </section>)}
+  <p class="history-note">Selección editorial de fuentes institucionales y públicas. No es una cronología exhaustiva: los datos sin suficiente confirmación documental permanecen fuera de esta versión.</p>
+</section>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-history-timeline]').forEach(root=>{
+    const tabs=Array.from(root.querySelectorAll<HTMLButtonElement>('[data-history-tab]'));
+    const panels=Array.from(root.querySelectorAll<HTMLElement>('[data-history-panel]'));
+    const select=(next:number,focus=false)=>{
+      tabs.forEach((tab,i)=>{const active=i===next;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;panels[i].hidden=!active;});
+      if(focus)tabs[next]?.focus();
+    };
+    tabs.forEach((tab,i)=>{
+      tab.addEventListener('click',()=>select(i));
+      tab.addEventListener('keydown',e=>{
+        let next:number;
+        if(e.key==='ArrowRight')next=(i+1)%tabs.length;
+        else if(e.key==='ArrowLeft')next=(i-1+tabs.length)%tabs.length;
+        else if(e.key==='Home')next=0;
+        else if(e.key==='End')next=tabs.length-1;
+        else return;
+        e.preventDefault();select(next,true);
+      });
+    });
+  });
+</script>
+<style>
+.history-timeline{margin:3.8rem 0 2.8rem;background:#172e32;color:#f7f5ef;padding:clamp(1.1rem,3.5vw,2.5rem);border:1px solid #405b5e}
+.history-head{display:flex;justify-content:space-between;gap:1rem;margin-bottom:1.8rem}
+.history-kicker,.history-count{font:500 .68rem var(--mono,monospace);letter-spacing:.1em;color:#f6ac94;text-transform:uppercase}
+.history-head h2{font-family:var(--serif,Georgia,serif);font-size:clamp(1.9rem,4vw,3.2rem);line-height:1.1;letter-spacing:-.04em;color:#fff;margin:.65rem 0}
+.history-head h2 em{color:#ef8b6b;font-weight:400}
+.history-head p:not(.history-kicker){color:#c9d8d0;line-height:1.65;margin:0}
+.history-diamond{color:#ef7857;font-size:clamp(2rem,6vw,4rem)}
+.history-tabs{display:flex;gap:.3rem;border-bottom:1px solid #57706f}
+.history-tab{appearance:none;background:transparent;border:0;border-bottom:3px solid transparent;margin-bottom:-1px;padding:.8rem 1rem;color:#c0d0ca;font-weight:750;font-size:.9rem;cursor:pointer;display:flex;gap:2rem}
+.history-tab[aria-selected=true]{border-color:#f28a69;color:white}.history-tab:hover{background:#ffffff0d}
+.history-timeline :is(button,a,summary):focus-visible{outline:2px solid #ffa783;outline-offset:3px}
+.history-lead{margin:1.5rem 0 .5rem;line-height:1.6;color:#d0dad4}.history-count{color:#a7c1b6;margin:0 0 1.5rem}
+.history-list{list-style:none;margin:0;padding:0 0 0 1.4rem;border-left:1px solid #627e7d}
+.history-item{position:relative;padding-left:1rem;margin-bottom:1rem}
+.history-item::before{content:"";position:absolute;left:-1.77rem;top:1.4rem;width:10px;height:10px;transform:rotate(45deg);background:#f28a69;box-shadow:0 0 0 2px #172e32}
+.history-card{--accent:#ef8b6b;border:1px solid #436165;border-left:3px solid var(--accent);background:#223d41;padding:1.2rem}
+.history-card[data-category=conflicto]{--accent:#f08080}.history-card[data-category=fundacion]{--accent:#f4b36f}.history-card[data-category=federacion]{--accent:#aebdf5}.history-card[data-category=operativo]{--accent:#95d0ad}.history-card[data-category=normativa]{--accent:#c1d9a6}
+.history-meta{display:flex;align-items:center;flex-wrap:wrap;gap:.75rem;justify-content:space-between;margin-bottom:.6rem}
+.history-meta time{font:600 .82rem var(--mono,monospace);color:#ffd1b8}.history-category{border:1px solid #607c7d;color:#e4ede8;padding:.15rem .4rem;font-size:.65rem}
+.history-card h3{color:white;font-family:var(--serif,Georgia,serif);font-size:1.35rem;font-weight:500;margin:0 0 .5rem;line-height:1.25}
+.history-card p{color:#d5e0dc;font-size:.93rem;line-height:1.65;margin:0}
+.history-card details{margin-top:1rem;padding-top:.65rem;border-top:1px solid #4d696b}
+.history-card summary{color:#ffc0a9;font-weight:700;font-size:.82rem;cursor:pointer;display:flex;justify-content:space-between;list-style:none}
+.history-card summary::-webkit-details-marker{display:none}.history-card summary span{font-size:1.3rem}
+.history-card details[open] summary span{transform:rotate(180deg)}
+.history-context{padding-top:1rem}.history-context p{margin-bottom:1rem}.history-context strong{font-size:.78rem;color:#ffd1b8}
+.history-context ul{margin:.5rem 0 0;padding-left:1.15rem}.history-context li{font-size:.82rem;line-height:1.8}
+.history-context a{color:#ffd7c9;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.history-note{margin:1.5rem 0 0;padding-top:1rem;border-top:1px solid #496367;font-size:.78rem;line-height:1.6;color:#b8cbc3}
+.history-timeline [hidden]{display:none!important}
+@media(max-width:600px){.history-timeline{margin:2.8rem -.65rem;padding:1rem}.history-diamond{font-size:2rem}.history-tab{flex:1;justify-content:center;gap:1rem}.history-list{padding-left:1rem}.history-item{padding-left:.5rem}.history-item::before{left:-1.36rem}.history-card{padding:1rem}}
+@media(prefers-reduced-motion:reduce){.history-card summary span{transition:none}}
+</style>

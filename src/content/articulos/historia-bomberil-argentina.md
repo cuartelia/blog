@@ -7,11 +7,16 @@ audience: [Aspirantes, Cadetes, Bomberos, Público general]
 readingMinutes: 7
 feature: true
 order: 1
+timeline: historia-bomberil
 sources:
   - label: 'Argentina.gob.ar — El primer cuartel de bomberos voluntarios'
     url: 'https://www.argentina.gob.ar/noticias/recorrimos-el-primer-cuartel-de-bomberos-voluntarios-de-la-argentina'
   - label: 'Legislatura de CABA — Fundación del cuerpo de La Boca'
     url: 'https://cultura.legislatura.gob.ar/cultura_posts/2-de-junio-de-1884-se-funda-el-cuerpo-de-bomberos-voluntarios-de-la-boca-el-mas-antiguo-del-pais852.html'
+  - label: 'Bomberos Voluntarios de La Boca — Historia institucional'
+    url: 'https://www.bomberosdelaboca.org.ar/nuestra-historia'
+  - label: 'Bomberos Voluntarios de Argentina — Historia del sistema nacional'
+    url: 'https://www.bomberosra.org.ar/snbv-historia'
   - label: 'Normativa argentina — Ley 25.054 (texto actualizado)'
     url: 'https://www.argentina.gob.ar/normativa/nacional/ley-25054-54903/actualizacion'
 ---
@@ -48,6 +53,10 @@ La **Ley Nacional 25.054**, sancionada en 1998 y modificada posteriormente, regu
 No es, sin embargo, el único texto que conviene consultar. También existen leyes y reglamentaciones provinciales, normas institucionales y disposiciones técnicas que pueden variar según el territorio.
 
 Por eso, cuando alguien consulta «¿cómo ingreso?» o «¿qué requisitos debo cumplir?», la respuesta más rigurosa es acudir a la **asociación y a la autoridad competente de su jurisdicción**. Un blog puede ayudar a entender el contexto, pero no sustituye la información oficial.
+
+## Una cronología para explorar
+
+La historia del movimiento bomberil reúne acontecimientos nacionales, historias locales y procesos de organización provincial. La línea de tiempo interactiva que sigue permite recorrer los principales hitos de **Argentina** y de **Santa Fe**, y consultar las fuentes documentales de cada episodio.
 
 ## Lo que permanece
 
