@@ -21,8 +21,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-          # Sin cache: el repositorio aún no incluye package-lock.json.
-          # Reactivar cache: npm cuando se incorpore el lockfile.
+          cache: npm
+          cache-dependency-path: package-lock.json
       - name: Configurar rutas para GitHub Pages
         shell: bash
         env:
@@ -42,8 +42,7 @@ jobs:
             echo "BASE_PATH=/$REPO" >> "$GITHUB_ENV"
           fi
       - name: Instalar dependencias
-        run: |
-          if [ -f package-lock.json ]; then npm ci; else npm install --no-audit --no-fund; fi
+        run: npm ci --no-audit --no-fund
       - name: Compilar Astro y generar índice de búsqueda
         run: npm run build
       - uses: actions/upload-pages-artifact@v3
