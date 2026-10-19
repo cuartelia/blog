@@ -43,6 +43,8 @@ jobs:
           fi
       - name: Instalar dependencias
         run: npm ci --no-audit --no-fund
+      - name: Ejecutar pruebas de regresión
+        run: npm test
       - name: Compilar Astro y generar índice de búsqueda
         run: npm run build
       - uses: actions/upload-pages-artifact@v3

@@ -50,3 +50,9 @@ test('solo Historia bomberil se publica; Fuego y Presión quedan en borrador',()
   const home=read('src/pages/index.astro');
   assert.doesNotMatch(home,/tres lecturas de muestra|03 ARTÍCULOS/);
 });
+
+test('Laboratorio declara el helper de rutas que usa en la navegación',()=>{
+  const lab=read('src/pages/laboratorio.astro');
+  assert.match(lab,/import\s*\{\s*path\s*\}\s*from\s*['"]\.\.\/lib\/site['"]/);
+  assert.match(lab,/href=\{path\('biblioteca\/'\)\}/);
+});
