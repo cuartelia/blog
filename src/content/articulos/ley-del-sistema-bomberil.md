@@ -215,17 +215,61 @@ Son los incumplimientos de máxima gravedad, especialmente cuando se comprometen
 
 ### ¿Qué sanciones pueden corresponder?
 
-Los regímenes disciplinarios pueden contemplar **llamados de atención o apercibimientos, suspensiones y medidas de separación del cuerpo**, como baja o exoneración, según la falta y las disposiciones aplicables.
+Para estudiar el régimen disciplinario es útil distinguir **cinco sanciones**. Los siguientes conceptos y plazos corresponden al régimen desarrollado en la formación de bomberos voluntarios de Santa Fe, y ayudan a comprender la diferencia entre una corrección, una suspensión y la separación definitiva. **No deben confundirse con artículos que estén transcritos en la Ley 12.969**.
 
-Conviene distinguir **baja** y **exoneración**: no son necesariamente equivalentes; sus efectos sobre una eventual reincorporación dependen de la reglamentación que corresponda.
+#### Exhortación: observación verbal
 
-Las sanciones más severas requieren especial cuidado: debe establecerse qué ocurrió, permitir la intervención y defensa de la persona involucrada y respetar el procedimiento y la autoridad competente. **Una acusación no equivale a una falta acreditada.** También es importante distinguir la responsabilidad disciplinaria de eventuales responsabilidades civiles o penales.
+Es una **observación verbal** de un superior a quien cometió una falta, acompañada de la indicación de corregir su comportamiento.
 
-### ¿Dónde están reguladas?
+**Ejemplo:** un superior observa una conducta menor, explica qué debe cambiar y pide que no se repita. No todo consejo o conversación informal equivale necesariamente a una sanción: importa quién interviene y bajo qué reglas.
 
-La **Ley 12.969, artículo 22**, y el **Decreto provincial 464/2010**, especialmente su reglamentación del artículo 11, remiten a reglamentos específicos de integración, deberes, escalafón, ascensos y disciplina de los cuerpos activos. **La ley provincial no contiene una lista exhaustiva de faltas leves, graves y gravísimas.**
+#### Apercibimiento: llamado de atención escrito
 
-Hay [reproducciones públicas de reglamentos disciplinarios santafesinos](https://centro-de-operaciones-y-capacita.webnode.com.ar/reglamentos-cuerpos-activos/), pero se encuentran compilaciones con versiones y clasificaciones que **no coinciden completamente** —algunas también mencionan faltas «muy leves»—. Esa página es **una reproducción no oficial** y no acredita por sí sola cuál es la versión actualmente aprobada. Por eso, para conocer la calificación o sanción aplicable a un caso real, corresponde consultar el **reglamento disciplinario vigente y aprobado**, además de las normas de la asociación.
+Es un **llamado de atención por escrito**. A diferencia de la exhortación, **queda constancia en el legajo personal** del bombero.
+
+**Ejemplo:** un incumplimiento de puntualidad, comprobado y encuadrado como falta leve, puede motivar un apercibimiento si así se determina mediante el procedimiento correspondiente. La reiteración debe evaluarse conforme al reglamento.
+
+#### Suspensión: privación temporal de derechos
+
+La suspensión implica una **privación transitoria de los derechos como integrante del cuerpo activo** durante el plazo impuesto. El régimen de referencia establece además la **prohibición de ingresar al cuartel** mientras dura la sanción.
+
+La suspensión **no es una baja**: la persona no queda separada de manera definitiva por el solo hecho de estar suspendida. Su duración y sus efectos concretos se determinan por el reglamento aplicable.
+
+#### Baja disciplinaria: separación con posibilidad de reingreso
+
+La baja **separa al integrante de la asociación**. En el régimen disciplinario desarrollado en la formación santafesina, después de **cinco años contados desde la aplicación de la medida**, la persona puede **solicitar** su reincorporación a una asociación de bomberos voluntarios de la provincia.
+
+La solicitud **no implica un reingreso automático**: la **comisión directiva de la asociación** a la que se postule puede aceptarla o rechazarla, y deben reunirse los requisitos vigentes de incorporación.
+
+No debe confundirse esta **baja disciplinaria** con una renuncia, retiro o desvinculación por otros motivos.
+
+#### Exoneración: separación con prohibición permanente de reingreso
+
+La exoneración es la sanción más severa contemplada en el régimen estudiado. Consiste en la **separación de la asociación**, con **prohibición absoluta y permanente de reingresar a ella o a cualquier otra asociación de la provincia de Santa Fe**.
+
+Por eso, aunque las palabras se parezcan, **exhortación y exoneración significan cosas completamente diferentes**: la primera es una observación verbal y la segunda supone la expulsión con una inhabilitación provincial de reingreso en los términos del régimen citado.
+
+Ese alcance es **provincial**. No podemos extrapolarlo automáticamente al resto del país ni afirmar que otra federación deba admitir a esa persona: cada jurisdicción y asociación aplica sus normas.
+
+### ¿Cómo se vinculan las faltas con las sanciones?
+
+El régimen de tres categorías estudiado en la formación santafesina establece esta correspondencia:
+
+| Gravedad | Sanciones previstas en ese régimen |
+| --- | --- |
+| **Leve** | Exhortación, apercibimiento o suspensión de hasta **60 días**. |
+| **Grave** | Suspensión de hasta **360 días** o baja disciplinaria. |
+| **Gravísima** | Exoneración. |
+
+**No son castigos automáticos.** Ante una falta deben examinarse los hechos, la gravedad, las circunstancias y el procedimiento y autoridad competentes. La responsabilidad disciplinaria es diferente de la eventual responsabilidad civil o penal.
+
+### ¿Qué respaldo legal tiene el régimen disciplinario?
+
+La **Ley santafesina 12.969, artículo 22**, contempla la intervención de la entidad de segundo grado en las normas de integración, deberes y escalafón del cuerpo activo. Su **Decreto reglamentario 464/2010** encomienda preparar reglamentos específicos para el personal y, en la reglamentación del **artículo 11, inciso h**, menciona también los regímenes de ascensos y disciplina.
+
+Podés consultar directamente la [Ley 12.969](https://www.santafe.gob.ar/boletinoficial/ver.php?seccion=03-06-2009ley12969-2009.html) y el [Decreto 464/2010](https://www.santafe.gob.ar/boletinoficial/ver.php?seccion=09-04-2010decreto464-2010.htm).
+
+**Límite de verificación:** ninguno de esos dos textos oficiales reproduce íntegramente los artículos que fijan **exhortación, apercibimiento, suspensión, cinco años para solicitar reingreso o exoneración**. Las definiciones anteriores sirven para aprender las diferencias que se enseñan en la formación provincial, pero **no hemos verificado en una publicación oficial de acceso público qué edición del reglamento disciplinario está actualmente aprobada**. Hasta contar con ese documento, **no debe darse por acreditada su vigencia para resolver un caso real**. Ante una sanción o solicitud de reingreso, hay que consultar el reglamento aprobado que corresponda y la autoridad competente.
 
 ## ¿Qué significa carga pública?
 
@@ -277,6 +321,7 @@ Después de estudiar este material, deberías poder responder sin memorizar art�
 - ¿Cómo resumirías los deberes del cuerpo activo y qué significa carga pública?
 - ¿Por qué un cadete o aspirante no puede intervenir activamente en un siniestro?
 - ¿Cuál es la diferencia entre una falta leve, grave y gravísima, y por qué no se aplica una sanción sin evaluar el caso?
+- ¿En qué se diferencian **exhortación**, **apercibimiento**, **suspensión**, **baja disciplinaria** y **exoneración**?
 
 ## Guía visual del escalafón y sus distintivos
 

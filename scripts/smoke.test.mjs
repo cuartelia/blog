@@ -78,10 +78,17 @@ test('ley bomberil permanece en borrador e incorpora marco organizativo y escala
 });
 
 
-test('el artículo explica faltas disciplinarias sin atribuirlas erróneamente a la ley provincial',()=>{
+test('el artículo distingue sanciones y mantiene límites de verificación jurídica',()=>{
   const md=read('src/content/articulos/ley-del-sistema-bomberil.md');
-  for(const topic of ['## ¿Qué son las faltas disciplinarias','### Faltas leves','### Faltas graves','### Faltas gravísimas','### ¿Qué sanciones pueden corresponder?','Decreto provincial 464/2010','una reproducción no oficial'])
-    assert.ok(md.includes(topic),`Falta la sección: ${topic}`);
+  for(const topic of [
+    '### Faltas leves','### Faltas graves','### Faltas gravísimas',
+    '#### Exhortación:','#### Apercibimiento:','#### Suspensión:',
+    '#### Baja disciplinaria:','#### Exoneración:',
+    'cinco años','legajo personal','prohibición absoluta y permanente',
+    '60 días','360 días','Límite de verificación',
+    'Decreto 464/2010'
+  ]) assert.ok(md.includes(topic), `Falta la explicación: ${topic}`);
   assert.match(md,/^draft: true$/m);
-  assert.match(md,/no constituyen una tabla oficial de calificación/);
+  assert.doesNotMatch(md,/Slideshare|Scribd|webnode|Manual de Organización Bomberil/i);
+  assert.match(md,/no hemos verificado en una publicación oficial/);
 });
