@@ -187,9 +187,45 @@ Una obligación aparece expresamente en la **Ley 12.969, artículo 23**: el inte
 
 **Voluntario no significa sin obligaciones:** la decisión de incorporarse es voluntaria, pero el servicio asumido está sujeto a deberes y disciplina.
 
-### ¿Qué ocurre si se incumple un deber?
+## ¿Qué son las faltas disciplinarias y cómo se clasifican?
 
-La normativa disciplinaria puede diferenciar faltas según su gravedad y prever sanciones. Para este nivel introductorio alcanza con comprender que existe un régimen disciplinario y que **su aplicación debe respetar las normas y procedimientos vigentes**. El detalle de cada falta debe consultarse en la reglamentación correspondiente.
+Hasta acá vimos qué se espera del personal del cuerpo activo. Pero ¿qué sucede si alguien incumple esos deberes? En una organización que interviene ante emergencias, la disciplina no es solamente una cuestión de formalidad: también busca proteger a las personas, al equipo y a la comunidad.
+
+Una **falta disciplinaria** es una conducta u omisión contraria a los deberes y reglas aplicables al servicio. **No toda falta tiene la misma gravedad**: importa lo ocurrido, sus consecuencias, el riesgo generado y las circunstancias concretas. Las categorías que se utilizan para estudiarlas son **leves, graves y gravísimas**.
+
+### Faltas leves
+
+Son incumplimientos de menor entidad que requieren una corrección, pero que no necesariamente causan un perjuicio operativo importante.
+
+**Ejemplos orientativos:** descuidar la presentación del uniforme exigida para una actividad o llegar tarde injustificadamente a una instancia de formación. Una reiteración o un contexto diferente pueden cambiar la valoración de la conducta.
+
+### Faltas graves
+
+Comprenden infracciones que afectan de manera más significativa la disciplina, el funcionamiento del cuerpo, el respeto entre sus integrantes o el cumplimiento del servicio.
+
+**Ejemplos orientativos:** abandonar momentáneamente una tarea asignada ocasionando un perjuicio al servicio o utilizar indebidamente una credencial institucional. La gravedad concreta requiere evaluar el hecho y la reglamentación aplicable.
+
+### Faltas gravísimas
+
+Son los incumplimientos de máxima gravedad, especialmente cuando se comprometen seriamente la seguridad, el servicio, los bienes confiados o la confianza indispensable para ejercer la función.
+
+**Ejemplos orientativos:** abandonar injustificadamente una intervención generando un grave peligro para terceros o solicitar dinero para beneficio personal a cambio de un servicio prestado en nombre de la institución.
+
+> **Importante:** estos ejemplos ayudan a comprender las diferencias, pero **no constituyen una tabla oficial de calificación**. No alcanza con identificar una conducta para determinar automáticamente la falta o su sanción. La calificación precisa debe hacerse conforme al reglamento disciplinario aplicable y los hechos comprobados.
+
+### ¿Qué sanciones pueden corresponder?
+
+Los regímenes disciplinarios pueden contemplar **llamados de atención o apercibimientos, suspensiones y medidas de separación del cuerpo**, como baja o exoneración, según la falta y las disposiciones aplicables.
+
+Conviene distinguir **baja** y **exoneración**: no son necesariamente equivalentes; sus efectos sobre una eventual reincorporación dependen de la reglamentación que corresponda.
+
+Las sanciones más severas requieren especial cuidado: debe establecerse qué ocurrió, permitir la intervención y defensa de la persona involucrada y respetar el procedimiento y la autoridad competente. **Una acusación no equivale a una falta acreditada.** También es importante distinguir la responsabilidad disciplinaria de eventuales responsabilidades civiles o penales.
+
+### ¿Dónde están reguladas?
+
+La **Ley 12.969, artículo 22**, y el **Decreto provincial 464/2010**, especialmente su reglamentación del artículo 11, remiten a reglamentos específicos de integración, deberes, escalafón, ascensos y disciplina de los cuerpos activos. **La ley provincial no contiene una lista exhaustiva de faltas leves, graves y gravísimas.**
+
+Hay [reproducciones públicas de reglamentos disciplinarios santafesinos](https://centro-de-operaciones-y-capacita.webnode.com.ar/reglamentos-cuerpos-activos/), pero se encuentran compilaciones con versiones y clasificaciones que **no coinciden completamente** —algunas también mencionan faltas «muy leves»—. Esa página es **una reproducción no oficial** y no acredita por sí sola cuál es la versión actualmente aprobada. Por eso, para conocer la calificación o sanción aplicable a un caso real, corresponde consultar el **reglamento disciplinario vigente y aprobado**, además de las normas de la asociación.
 
 ## ¿Qué significa carga pública?
 
@@ -240,6 +276,7 @@ Después de estudiar este material, deberías poder responder sin memorizar art�
 - ¿Qué derechos se suelen explicar como atribuciones personales y qué diferencia hay entre una síntesis histórica y la normativa vigente?
 - ¿Cómo resumirías los deberes del cuerpo activo y qué significa carga pública?
 - ¿Por qué un cadete o aspirante no puede intervenir activamente en un siniestro?
+- ¿Cuál es la diferencia entre una falta leve, grave y gravísima, y por qué no se aplica una sanción sin evaluar el caso?
 
 ## Guía visual del escalafón y sus distintivos
 
