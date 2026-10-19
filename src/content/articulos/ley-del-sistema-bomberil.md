@@ -8,7 +8,7 @@ readingMinutes: 18
 feature: false
 draft: true
 order: 2
-rankGuide: santa-fe-2025
+rankGuide: snbv-oficial
 sources:
   - label: 'Ley nacional 25.054 — texto actualizado (InfoLEG)'
     url: 'https://www.argentina.gob.ar/normativa/nacional/ley-25054-54903/actualizacion'
@@ -24,29 +24,41 @@ sources:
     url: 'https://www.santafe.gob.ar/boletinoficial/ver.php?seccion=09-04-2010decreto464-2010.htm'
   - label: 'Santa Fe — Decreto 795/2025: reglamentación de la Ley 14.296'
     url: 'https://www.santafe.gob.ar/normativa/getFile.php?cod=2504526e2ed4c946907c3dc92d0b570f&id=1547427&item=297505'
-  - label: 'Bomberos Voluntarios de Argentina — Sistema Único de Escalafón'
-    url: 'https://www.bomberosra.org.ar/snbv-legislacion/escalafon-jerarquico-snbv'
+  - label: 'Consejo Nacional — Escalafón jerárquico oficial (PDF)'
+    url: 'https://www.bomberosra.org.ar/wp-content/uploads/2016/12/Escalafon-Jerarquico.pdf'
+  - label: 'Consejo Nacional — Reglamento del Escalafón Jerárquico (PDF)'
+    url: 'https://www.bomberosra.org.ar/wp-content/uploads/2018/01/Reglamento-Escalafon-Jerarquico-SNBV.pdf'
 ---
 
 ¿Qué autoridad tiene un bombero voluntario? ¿Quién administra el cuartel? ¿A quién corresponde obedecer durante una intervención? ¿Qué leyes reconocen los derechos del personal?
 
 Estas preguntas forman parte de la preparación de un aspirante, tanto como las materias operativas. Para responderlas hay que distinguir **la organización institucional**, **el cuerpo activo** y **las normas que regulan el servicio**.
 
-Esta guía sigue el enfoque del **Manual de Organización Bomberil, Nivel 1, edición 2025**, de la Federación Santafesina de Asociaciones de Bomberos Voluntarios (FSABV), especialmente sus lecciones sobre organización, deberes, atribuciones y conceptos jurídicos.
+El recorrido parte de **normas públicas y verificables**: legislación nacional y provincial, decretos reglamentarios y documentación institucional del Consejo Nacional. Cada tema prioriza qué necesita comprender una persona que empieza a formarse y ofrece enlaces para consultar las fuentes originales.
 
-> **Alcance:** material de divulgación y estudio introductorio, no dictamen jurídico ni reglamento operativo. Separa los conceptos enseñados en el manual de las obligaciones que surgen directamente de la legislación. Las normas pueden modificarse: consultá siempre los textos oficiales vinculados al final.
+> **Alcance y actualización:** introducción divulgativa, no dictamen jurídico ni reglamento operativo. Las referencias corresponden a disposiciones públicas consultadas en octubre de 2026. Para conocer los requisitos y beneficios aplicables a un caso concreto, contrastá la normativa vigente y sus reglamentaciones.
 
 ## ¿Qué leyes regulan la actividad bomberil?
 
 En Argentina hay normas nacionales y provinciales con ámbitos diferentes. **No se elige una u otra:** se estudian conjuntamente.
 
-| Ámbito | Norma | Qué necesitás comprender |
-| --- | --- | --- |
-| Nacional | **Ley 25.054** (1998) y **Ley 26.987** (2014) | Sistema Nacional de Bomberos Voluntarios, misión, organización, reconocimiento de entidades, formación y beneficios. |
-| Santa Fe | **Ley 12.969** (2009) | Asociación, servicio público provincial, cuerpo activo, funcionamiento, autoridad de aplicación y beneficios. |
-| Santa Fe | **Decreto 464/2010**, modificado por el **2178/2014** | Reglamentación provincial; desarrollo de organización y requisitos. |
-| Santa Fe | **Leyes 13.705, 13.755 y 13.860** | Modificaciones sobre exenciones, requisitos y beneficios, entre otras disposiciones. |
-| Santa Fe | **Ley 14.296** (2024) y **Decreto 795/2025** | Cambios en fondos provinciales y beneficios, con su reglamentación posterior. |
+### Normas principales
+
+**Ámbito nacional — Ley 25.054 (1998), modificada por la Ley 26.987 (2014).** Define la misión, la estructura representativa, la capacitación, los recursos nacionales y las protecciones de quienes prestan el servicio.
+
+**Santa Fe — Ley 12.969 (2009).** Establece la organización provincial de las asociaciones, las condiciones generales del cuerpo activo, las responsabilidades y los beneficios del servicio.
+
+### Cambios que también hay que conocer
+
+**Decretos 464/2010 y 2178/2014:** reglamentan y modifican aspectos de la aplicación provincial.
+
+**Leyes 13.705 y 13.755:** actualizan disposiciones sobre exenciones y otros tratamientos específicos.
+
+**Ley 13.860:** modifica, entre otras disposiciones, el artículo 16 sobre integración y edad del cuerpo activo y aspectos institucionales.
+
+**Ley 14.296 (2024) y Decreto 795/2025:** actualizan el régimen provincial de beneficios, recursos y su aplicación.
+
+Este resumen **no reemplaza los textos consolidados**. Por ejemplo, al estudiar límites de edad o el alcance de una exención, no corresponde citar aisladamente el artículo original de 2009: hay que verificar su redacción actual.
 
 La Ley **12.969 reemplazó a las antiguas leyes provinciales 9.800 y 9.833**, y derogó el Decreto **130/87**. Esa normativa histórica puede aparecer en materiales antiguos, pero no corresponde estudiarla como si siguiera íntegramente vigente. El registro provincial permite consultar los cambios.
 
@@ -55,6 +67,12 @@ La Ley **12.969 reemplazó a las antiguas leyes provinciales 9.800 y 9.833**, y 
 La **Ley 25.054** establece el marco nacional, reconoce asociaciones y federaciones y define cómo el sistema se vincula con el Estado nacional. La **Ley 12.969** desarrolla el régimen provincial de las asociaciones que prestan servicios en Santa Fe. Los **decretos reglamentarios** precisan cómo se aplican las normas dentro de los límites legales.
 
 También existen estatutos y reglamentos internos de cada asociación. Son importantes para la actividad cotidiana, pero **no pueden reemplazar lo que establece la ley**.
+
+### Del marco legal a la vida cotidiana del cuartel
+
+Las normas no se limitan a reconocer la existencia de los bomberos voluntarios. También explican **qué tipo de servicio prestan**, **cómo se sostiene una asociación**, **quiénes integran el cuerpo activo** y **qué derechos y responsabilidades nacen al formar parte de él**. Esa es la conexión entre el marco nacional, la regulación santafesina y la organización que una persona encuentra al ingresar a un cuartel.
+
+El primer concepto para entender esa relación es el carácter público del servicio: aunque la asociación no sea una dependencia estatal, su actividad responde a necesidades de toda la comunidad.
 
 ## ¿Qué significa que se preste un servicio público?
 
@@ -68,7 +86,7 @@ Sin embargo, que sea servicio público **no convierte automáticamente a la asoc
 
 ## ¿Cómo funciona una asociación de bomberos voluntarios?
 
-En la lección 2, el manual distingue **asamblea, comisión directiva y cuerpo activo**. Tienen responsabilidades diferentes y trabajan dentro de una misma institución.
+En una asociación de bomberos voluntarios conviven **órganos institucionales** —asamblea y comisión directiva— y una **estructura operativa**, el cuerpo activo. Sus funciones son distintas y complementarias, de acuerdo con la legislación y los estatutos aplicables.
 
 ### La asociación y sus socios
 
@@ -94,7 +112,7 @@ Gestiona recursos, patrimonio, decisiones administrativas y la relación institu
 
 El **cuerpo activo** reúne al personal que cumple las condiciones de ingreso, formación y habilitación previstas para prestar el servicio bomberil. Cuenta con una estructura jerárquica y una **jefatura**, responsable de la conducción de sus actividades conforme a las normas aplicables.
 
-El manual diferencia dos ámbitos para comprender su funcionamiento:
+Para comprender la actividad del cuerpo activo conviene distinguir dos ámbitos organizativos, desarrollados en los reglamentos correspondientes:
 
 - **Servicio u orden operativo:** respuesta a emergencias, instrucción vinculada a la intervención y conducción de tareas de servicio.
 - **Orden interno:** actividades propias de la vida y la organización del cuerpo, guardias, formación y cumplimiento de reglas institucionales.
@@ -128,7 +146,7 @@ Hay cuatro conceptos distintos:
 
 **No siempre son lo mismo.** Alguien puede tener un grado determinado y recibir una función concreta; conocer el grado no alcanza por sí solo para conocer todas sus atribuciones operativas.
 
-El **artículo 5 de la Ley 25.054**, en su texto reformado por la Ley 26.987, reconoce los símbolos, uniformes, el **sistema único de escalafón jerárquico** y las nomenclaturas dictadas en el ámbito del Consejo de Federaciones. El manual santafesino de 2025 presenta un cuadro con **14 grados y sus distintivos**, que podés consultar en la guía visual al final de este artículo.
+El **artículo 5 de la Ley 25.054**, en su texto reformado por la Ley 26.987, reconoce los símbolos, uniformes, el **Sistema Único de Escalafón Jerárquico** y las nomenclaturas del sistema. El Consejo Nacional publica un **cuadro oficial de distintivos**: comprende 13 insignias, desde Cabo hasta Comandante General. El grado **Bombero** forma parte del escalafón, aunque ese cuadro no presenta una insignia específica para él. Podés consultar ambas referencias públicas al final del artículo.
 
 Las **insignias o distintivos de grado** son los símbolos visibles de esa jerarquía. Su identificación es parte del lenguaje común del sistema bomberil: no son simples adornos del uniforme.
 
@@ -138,14 +156,14 @@ Hay que evitar una confusión frecuente: **las funciones de la asociación** no 
 
 Las leyes **25.054 (art. 2)** y **12.969 (arts. 20 y 21)** describen qué tareas realiza la institución: prevención y respuesta a siniestros, protección de vidas y bienes, capacitación, educación comunitaria y documentación de intervenciones.
 
-En cambio, la **lección 3 del Manual de Organización Bomberil 2025 (pág. 24)** presenta **cuatro atribuciones personales** como recurso de estudio:
+En la enseñanza tradicional de las atribuciones personales suele utilizarse una síntesis de cuatro categorías, reflejada históricamente en el **artículo 25 del derogado Decreto provincial 130/87**:
 
 1. **Usar el uniforme y el título del grado** que corresponda.
 2. **Llevar la credencial** que acredita la condición de bombero voluntario.
 3. **Acceder a beneficios asistenciales y previsionales** conforme a los requisitos establecidos.
 4. **Ejercer las franquicias y atribuciones previstas por las normas** durante las funciones específicas.
 
-**Precisión legal:** esta enumeración reproduce una clasificación tradicional presente en el **artículo 25 del antiguo Decreto 130/87**, derogado con la Ley 12.969. El manual 2025 continúa utilizándola como explicación formativa. **No son cuatro incisos textuales de la Ley 12.969 vigente.** Para determinar las atribuciones actuales hay que acudir a la legislación y a las reglamentaciones aplicables al cuerpo activo, especialmente la Ley 12.969, art. **22**, y el Decreto **464/2010**.
+**Precisión legal:** esta enumeración es un **antecedente histórico y un esquema didáctico**, no cuatro incisos textuales de la Ley 12.969 vigente. Las atribuciones actuales deben verificarse en la legislación y las reglamentaciones del cuerpo activo, especialmente la Ley 12.969, art. **22**, y el Decreto **464/2010**. La participación operativa requiere la habilitación correspondiente: una credencial o un uniforme por sí solos no autorizan intervenir.
 
 ### ¿La jerarquía otorga facultades policiales?
 
@@ -155,7 +173,7 @@ Los artículos **37 y 38** regulan situaciones de concurrencia con cuerpos ofici
 
 ## ¿Cuáles son las obligaciones del integrante del cuerpo activo?
 
-El manual desarrolla muchos deberes concretos (págs. **21 a 24**). Para comprenderlos, conviene agruparlos en **cinco principios**:
+Los deberes reglamentarios pueden entenderse mediante **cinco principios**, sin confundir esta síntesis editorial con una enumeración literal de la ley:
 
 1. **Servicio a la comunidad.** Prestar ayuda con responsabilidad, respeto y sin discriminación, protegiendo vidas y bienes según la misión y las capacidades del personal.
 2. **Disciplina y cadena de mando.** Conocer las reglas, respetar a superiores y compañeros y cumplir las órdenes legítimas en el marco del servicio.
@@ -163,7 +181,7 @@ El manual desarrolla muchos deberes concretos (págs. **21 a 24**). Para compren
 4. **Cuidado del equipamiento.** Usar correctamente, preservar y mantener en condiciones los bienes que la institución confía a su personal.
 5. **Conducta y responsabilidad.** Actuar con honestidad, informar novedades relevantes, preservar la confianza institucional y responder por la propia conducta.
 
-Estas categorías son una **síntesis pedagógica del reglamento explicado en el manual**, no una transcripción literal de artículos nacionales o provinciales. Los deberes concretos, faltas y sanciones se desarrollan en reglamentos y normas internas aplicables.
+Estas categorías son una **síntesis editorial**, no una transcripción literal de artículos de la Ley 25.054 o la Ley 12.969. Los deberes, faltas y sanciones concretos se desarrollan en los reglamentos del cuerpo activo y otras disposiciones aplicables.
 
 Una obligación aparece expresamente en la **Ley 12.969, artículo 23**: el integrante del **cuerpo activo** debe acudir inmediatamente ante la alarma, salvo enfermedad u otra causa plenamente justificada. La ley considera esta actividad **carga pública**.
 
@@ -171,7 +189,7 @@ Una obligación aparece expresamente en la **Ley 12.969, artículo 23**: el inte
 
 ### ¿Qué ocurre si se incumple un deber?
 
-El manual distingue faltas **leves, graves y gravísimas** y explica distintos tipos de sanciones (págs. **25 a 28**). En un primer artículo alcanza con saber que existe un régimen disciplinario y que las decisiones deben respetar el procedimiento y la normativa aplicables. Las faltas específicas se estudian en el reglamento correspondiente, no se improvisan en una intervención.
+La normativa disciplinaria puede diferenciar faltas según su gravedad y prever sanciones. Para este nivel introductorio alcanza con comprender que existe un régimen disciplinario y que **su aplicación debe respetar las normas y procedimientos vigentes**. El detalle de cada falta debe consultarse en la reglamentación correspondiente.
 
 ## ¿Qué significa carga pública?
 
@@ -219,14 +237,14 @@ Después de estudiar este material, deberías poder responder sin memorizar art�
 - ¿Qué decisiones corresponden a la asamblea, a la comisión directiva y a la jefatura del cuerpo activo?
 - ¿Cuál es la diferencia entre grado, cargo, antigüedad y mando?
 - ¿Qué representa una insignia y por qué importa reconocerla?
-- ¿Cuáles son las cuatro atribuciones enseñadas en el manual y qué alcance jurídico tiene esa lista?
+- ¿Qué derechos se suelen explicar como atribuciones personales y qué diferencia hay entre una síntesis histórica y la normativa vigente?
 - ¿Cómo resumirías los deberes del cuerpo activo y qué significa carga pública?
 - ¿Por qué un cadete o aspirante no puede intervenir activamente en un siniestro?
 
 ## Guía visual del escalafón y sus distintivos
 
-La siguiente guía está organizada **de menor a mayor grado**, siguiendo la tabla de la **página 16 del Manual de Organización Bomberil, Nivel 1 (2025)**. Incluye una representación gráfica esquemática del distintivo y la antigüedad mínima que figura en la tabla para optar al grado siguiente.
+Las insignias reproducidas en la guía son **recortes fieles del [Escalafón Jerárquico oficial del Sistema Nacional de Bomberos Voluntarios](https://www.bomberosra.org.ar/wp-content/uploads/2016/12/Escalafon-Jerarquico.pdf)**. No fueron redibujadas. Están agrupadas de menor a mayor grado y acompañadas por la identificación de cada jerarquía.
 
-**La antigüedad mínima no garantiza un ascenso:** intervienen los requisitos, las evaluaciones y los procedimientos reglamentarios. Y las figuras son **didácticas**, no diseños oficiales para confeccionar uniformes.
+**El documento no determina por sí solo la ubicación de cada distintivo en el uniforme**, por lo que no afirmamos dónde debe colocarse sin consultar una norma específica de uniformidad. Para ascensos, antigüedad y requisitos, corresponde acudir al reglamento público del escalafón, no deducir condiciones a partir de la imagen.
 
-Para profundizar, consultá las fuentes oficiales del artículo, las normas reglamentarias y el manual de la academia correspondiente a tu jurisdicción.
+**Revisión normativa:** octubre de 2026. Consultá las fuentes oficiales para verificar posibles reformas posteriores.
