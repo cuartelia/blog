@@ -1,0 +1,58 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { path } from '../lib/site';
+interface Props {
+  series: { title: string; description: string };
+  slug: string;
+  chapter: number;
+  chapters: CollectionEntry<'articulos'>[];
+  previous?: CollectionEntry<'articulos'>;
+  next?: CollectionEntry<'articulos'>;
+  position: 'top' | 'bottom';
+}
+const { series, slug, chapter, chapters, previous, next, position } = Astro.props;
+const linkFor = (post: CollectionEntry<'articulos'>) => path(`articulos/${post.id}/`);
+---
+<nav class:list={['series-navigation', `series-navigation--${position}`]} aria-label={`Navegación de la serie ${series.title}`}>
+  <div class="series-navigation__heading">
+    <span class="eyebrow eyebrow--dark">SERIE · CAPÍTULO {String(chapter).padStart(2, '0')}</span>
+    <h2>{series.title}</h2>
+    <p>{series.description}</p>
+  </div>
+  <details class="series-navigation__index" open={position === 'top'}>
+    <summary>Capítulos de esta serie ({chapters.length})</summary>
+    <ol>
+      {chapters.map(post => <li>
+        <a href={linkFor(post)} aria-current={post.data.series?.chapter === chapter ? 'page' : undefined}>
+          <span>{String(post.data.series!.chapter).padStart(2, '0')}</span>
+          <span>{post.data.title}</span>
+        </a>
+      </li>)}
+    </ol>
+  </details>
+  {position === 'bottom' && (previous || next) && <div class="series-navigation__adjacent">
+    {previous ? <a href={linkFor(previous)}><small>← Capítulo anterior</small><strong>{previous.data.title}</strong></a> : <span />}
+    {next ? <a href={linkFor(next)}><small>Capítulo siguiente →</small><strong>{next.data.title}</strong></a> : <span />}
+  </div>}
+</nav>
+<style>
+.series-navigation{margin:0 0 2rem;border:1px solid var(--sand-deep);background:var(--cream);padding:1.5rem}
+.series-navigation--bottom{margin:2.5rem 0}
+.series-navigation__heading h2{font:500 clamp(1.5rem,3vw,2rem)/1.2 var(--serif);margin:.65rem 0 .4rem}
+.series-navigation__heading p{font-size:.88rem;color:var(--ink-soft);margin:0 0 1.1rem}
+.series-navigation__index{border-top:1px solid var(--sand-deep);padding-top:.85rem}
+.series-navigation__index summary{cursor:pointer;font-size:.83rem;font-weight:800}
+.series-navigation__index ol{list-style:none;margin:.75rem 0 0;padding:0}
+.series-navigation__index li + li{border-top:1px solid var(--sand)}
+.series-navigation__index a{display:flex;gap:1rem;padding:.65rem .2rem;font-size:.87rem;line-height:1.45}
+.series-navigation__index a span:first-child{font-family:var(--mono);color:var(--muted)}
+.series-navigation__index a:hover,.series-navigation__index a[aria-current=page]{color:var(--rust-dark)}
+.series-navigation__index a[aria-current=page]{font-weight:800}
+.series-navigation__adjacent{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.3rem;border-top:1px solid var(--sand-deep);padding-top:1rem}
+.series-navigation__adjacent a{display:flex;flex-direction:column;gap:.25rem;min-width:0}
+.series-navigation__adjacent a:last-child{text-align:right}
+.series-navigation__adjacent small{color:var(--muted);font-size:.75rem}
+.series-navigation__adjacent strong{font-size:.9rem;line-height:1.35}
+.series-navigation__adjacent a:hover{color:var(--rust-dark)}
+@media(max-width:600px){.series-navigation{padding:1rem}.series-navigation__adjacent{grid-template-columns:1fr}.series-navigation__adjacent a:last-child{text-align:left}}
+</style>
