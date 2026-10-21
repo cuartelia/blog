@@ -8,6 +8,9 @@ readingMinutes: 11
 feature: false
 draft: true
 order: 1
+series:
+  slug: atencion-prehospitalaria
+  chapter: 1
 sources:
   - label: 'NAEMT — Prehospital Trauma Life Support (PHTLS)'
     url: 'https://www.naemt.org/education/trauma-education/phtls'
