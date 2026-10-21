@@ -14,6 +14,8 @@ const articulos = defineCollection({
     feature: z.boolean().default(false),
     draft: z.boolean().default(false),
     order: z.number().int().optional(),
+    // Relación opcional: los artículos independientes omiten por completo series.
+    series: z.object({ slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/), chapter: z.number().int().positive() }).optional(),
     // Identificadores de src/components/simulators/<id>.astro
     simulators: z.array(z.string().regex(/^[a-z][a-z0-9-]*$/)).default([]),
     timeline: z.enum(['historia-bomberil']).optional(),
