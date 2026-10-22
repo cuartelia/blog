@@ -14,8 +14,6 @@ series:
 sources:
   - label: 'NAEMT — Prehospital Trauma Life Support (PHTLS)'
     url: 'https://www.naemt.org/education/trauma-education/phtls'
-  - label: 'NFPA 1550 — Standard for Emergency Responder Health and Safety'
-    url: 'https://www.nfpa.org/codes-and-standards/1/5/5/nfpa-1550'
   - label: 'NHTSA / EMS.gov — EMR Instructional Guidelines'
     url: 'https://www.ems.gov/assets/EMR_Instructional_Guidelines.pdf'
   - label: 'NHTSA / EMS.gov — Paramedic Instructional Guidelines'
@@ -60,6 +58,8 @@ Cuando detectamos un peligro, debemos identificar qué lo produce y cómo puede 
 Hay situaciones que exigen personal o equipamiento especializado. Por ejemplo, una línea eléctrica caída requiere intervención de quienes pueden asegurar la instalación; una atmósfera potencialmente tóxica exige capacidades de identificación y protección específicas.
 
 **La seguridad no se revisa una sola vez.** El tránsito puede cambiar, una estructura puede volverse inestable y una persona agresiva puede regresar. Mientras dure la intervención, la escena sigue siendo evaluada.
+
+Este criterio también forma parte de la formación prehospitalaria reconocida internacionalmente. **PHTLS, 9.ª edición**, dedica su capítulo 5, *Scene Management* (gestión de la escena), al abordaje del lugar de la emergencia. El programa de NAEMT incluye la evaluación de la escena entre sus contenidos centrales. Por su parte, las guías educativas oficiales para personal de emergencias médicas de Estados Unidos (*EMS Instructional Guidelines*) desarrollan la identificación de peligros ambientales, sustancias peligrosas, violencia y riesgos asociados al rescate, junto con la decisión de solicitar recursos especializados cuando son necesarios. Son referencias que fundamentan la importancia de evaluar el entorno antes y durante la asistencia.
 
 ## 2. Escena: ¿qué encontramos al llegar?
 
@@ -145,7 +145,6 @@ Al llegar a una emergencia, intentá responder estas preguntas:
 
 ## Bibliografía y lecturas recomendadas
 
-- **NAEMT — PHTLS (Prehospital Trauma Life Support).** Formación en atención prehospitalaria del trauma, con contenidos de evaluación de la escena y del paciente.
-- **NFPA 1550:2024 — Standard for Emergency Responder Health and Safety.** Referencia para la organización y gestión de la seguridad del personal de emergencias.
+- **NAEMT — PHTLS (Prehospital Trauma Life Support), 9.ª edición, capítulo 5: *Scene Management*.** Gestión y evaluación inicial de la escena. [Programa oficial de NAEMT](https://www.naemt.org/education/trauma-education/phtls).
 - **NHTSA / EMS.gov — Emergency Medical Responder Instructional Guidelines.** Contenidos de formación inicial para primeros respondientes, incluida la evaluación de la escena.
-- **NHTSA / EMS.gov — Paramedic Instructional Guidelines.** Apartados de evaluación del paciente y reconocimiento inicial de la escena (*scene size-up*).
+- **NHTSA / EMS.gov — [Paramedic Instructional Guidelines](https://www.ems.gov/assets/Paramedic_Instructional_Guidelines.pdf).** Apartado *Patient Assessment — Scene Size-Up*, con riesgos y evaluación de seguridad.
