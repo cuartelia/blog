@@ -24,7 +24,6 @@ sources:
     url: 'https://www.ems.gov/assets/National-Model-EMS-Clinical-Guidelines-September-2017.pdf'
 ---
 
-*Serie: Atención prehospitalaria · Capítulo 01*
 
 Una unidad de bomberos llega a un siniestro vial. Hay un automóvil sobre la banquina y una persona tendida a pocos metros. La reacción inmediata podría ser correr hacia ella y comenzar la atención. Sin embargo, todavía desconocemos si hay tránsito aproximándose, combustible derramado, cables eléctricos caídos, un vehículo inestable o más personas involucradas.
 
