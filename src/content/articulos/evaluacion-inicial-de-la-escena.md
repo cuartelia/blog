@@ -18,133 +18,118 @@ sources:
     url: 'https://www.ems.gov/assets/EMR_Instructional_Guidelines.pdf'
   - label: 'NHTSA / EMS.gov — Paramedic Instructional Guidelines'
     url: 'https://www.ems.gov/assets/Paramedic_Instructional_Guidelines.pdf'
-  - label: 'NHTSA / EMS.gov — National Model EMS Clinical Guidelines (2017)'
-    url: 'https://www.ems.gov/assets/National-Model-EMS-Clinical-Guidelines-September-2017.pdf'
 ---
 
-Una persona está tendida junto a una motocicleta en una avenida. Un vecino se acerca para ayudarla, mientras los vehículos siguen circulando. A simple vista parece una emergencia que requiere atención inmediata. Pero antes de tocar al paciente hay algo que necesitamos hacer: **observar el lugar y comprender qué está pasando**.
+Una persona está tendida junto a una motocicleta en plena avenida. Algunos vecinos intentan ayudarla, mientras otros vehículos siguen circulando. Cuando llega el primer respondiente, la atención parece tener una prioridad evidente: acercarse a la persona y comprobar cómo se encuentra. Pero hay algo que debemos hacer incluso antes de ese primer contacto: **observar el lugar de la emergencia**.
 
-Toda respuesta a una emergencia comienza con una evaluación inicial de la escena. Ocurre en un siniestro vial, un domicilio, una fábrica, una cancha de fútbol o una calle donde alguien perdió el conocimiento. Es el punto de partida para bomberos, personal de ambulancias, policías y cualquier otro primer respondiente.
-
-En esta etapa buscamos tres cosas: **reconocer peligros, dimensionar la situación y comprender cómo se produjo el incidente**. Para estudiarlas, vamos a organizarlas en tres conceptos: **seguridad, escena y escenario**, las *tres S*.
+Esa primera mirada nos permite reconocer peligros, comprender qué ocurrió y decidir cómo intervenir. Es un paso común a situaciones muy diferentes: un siniestro vial, una caída en una vivienda, una persona descompensada durante un evento deportivo o un trabajador lesionado en una fábrica.
 
 ## ¿Qué es la evaluación inicial de la escena?
 
-Es la observación sistemática del lugar de una emergencia para decidir cómo intervenir. Empieza durante el acercamiento, continúa al arribar y se actualiza a medida que cambian las condiciones.
+La **evaluación inicial de la escena** es el reconocimiento del lugar donde ocurre una emergencia. Su finalidad es reunir la información necesaria para intervenir de manera segura y organizada, tanto para quien responde como para las personas que necesitan ayuda.
 
-Antes del contacto con el paciente podemos obtener información valiosa: si el tránsito representa un peligro, si hay fuego o electricidad, cuántas personas necesitan ayuda, qué recursos hacen falta y qué pudo haber ocasionado las lesiones.
+Comienza durante la aproximación, cuando todavía podemos observar el entorno desde cierta distancia. Continúa al llegar y se mantiene durante la intervención, porque las condiciones pueden cambiar.
 
-Esta evaluación forma parte de la preparación para la atención: permite **proteger a las personas, organizar la respuesta y anticipar necesidades**.
+A veces lo que vemos es suficiente para advertir un peligro inmediato, como vehículos circulando cerca de una víctima. Otras veces aparecen datos menos evidentes: una escalera desde la que alguien pudo haber caído, varias personas afectadas en un mismo ambiente o indicios de que necesitamos más recursos de los previstos.
 
-## 1. Seguridad: ¿es seguro acercarse?
+**Evaluar la escena es el primer paso para entender qué tenemos delante.** Para hacerlo de manera ordenada, podemos dividir esa observación en tres grandes preguntas.
 
-La primera S se refiere a la protección del respondiente, su equipo, el paciente y quienes están alrededor.
+## Las tres S: una forma de interpretar la emergencia
 
-Pensemos en el ejemplo de la motocicleta. Aunque la persona lesionada esté a pocos metros, el tránsito todavía puede causar un segundo atropellamiento. La prioridad inicial consiste en reconocer ese peligro y disponer las medidas de control correspondientes antes de ingresar al área de trabajo.
+Cuando llegamos a un incidente, no observamos solamente a la persona afectada. También necesitamos mirar el lugar, reconocer qué está sucediendo a su alrededor y considerar las circunstancias que pudieron causar la emergencia.
 
-Los riesgos dependen del tipo de emergencia:
+Una forma sencilla de organizar esas observaciones es trabajar con **tres S: seguridad, escena y escenario**.
 
-- **En una vía pública:** vehículos en movimiento, baja visibilidad, combustible derramado o restos sobre la calzada.
-- **En una vivienda:** electricidad, gas, humo, escaleras, espacios reducidos o elementos inestables.
-- **En una industria:** maquinaria en funcionamiento, sustancias peligrosas, presión almacenada y cargas suspendidas.
-- **En un incendio:** calor, humo, colapso estructural y cambios repentinos en las condiciones del ambiente.
-- **En un hecho violento:** agresiones, armas o personas que aún representan una amenaza.
-- **En cualquier atención:** exposición a fluidos corporales, objetos cortantes y condiciones ambientales adversas.
+La **seguridad** responde a la primera pregunta: *¿podemos acercarnos y trabajar sin exponernos a un peligro?* Nos lleva a identificar amenazas y a tomar medidas para proteger al equipo, a las víctimas y a terceros.
 
-### Reconocer, comunicar y controlar
+La **escena** nos ayuda a responder *¿qué encontramos en el lugar?* Observamos el tipo de incidente, las personas involucradas, el acceso, las dificultades para asistirlas y los recursos que podrían hacer falta.
 
-Cuando detectamos un peligro, debemos identificar qué lo produce y cómo puede afectarnos. Según las competencias del equipo y los recursos disponibles, se establecen zonas seguras, se utiliza el equipo de protección personal apropiado, se solicita apoyo y se controla el riesgo antes de avanzar.
+El **escenario** agrega una pregunta: *¿cómo pudo haber sucedido?* A partir de las circunstancias y de los indicios disponibles, comenzamos a comprender qué fuerzas actuaron sobre una persona o qué factores pudieron desencadenar una emergencia médica.
 
-Hay situaciones que exigen personal o equipamiento especializado. Por ejemplo, una línea eléctrica caída requiere intervención de quienes pueden asegurar la instalación; una atmósfera potencialmente tóxica exige capacidades de identificación y protección específicas.
+Las tres miradas se complementan. No son tres momentos aislados ni requieren terminar una para empezar la siguiente. A medida que reconocemos el lugar, vamos construyendo una idea más completa de la situación.
 
-**La seguridad no se revisa una sola vez.** El tránsito puede cambiar, una estructura puede volverse inestable y una persona agresiva puede regresar. Mientras dure la intervención, la escena sigue siendo evaluada.
+## Seguridad: reconocer los riesgos
 
-Este criterio también forma parte de la formación prehospitalaria reconocida internacionalmente. **PHTLS, 9.ª edición**, dedica su capítulo 5, *Scene Management* (gestión de la escena), al abordaje del lugar de la emergencia. El programa de NAEMT incluye la evaluación de la escena entre sus contenidos centrales. Por su parte, las guías educativas oficiales para personal de emergencias médicas de Estados Unidos (*EMS Instructional Guidelines*) desarrollan la identificación de peligros ambientales, sustancias peligrosas, violencia y riesgos asociados al rescate, junto con la decisión de solicitar recursos especializados cuando son necesarios. Son referencias que fundamentan la importancia de evaluar el entorno antes y durante la asistencia.
+Antes de ingresar a una escena debemos identificar los factores que podrían poner en peligro a quienes intervienen y a las personas que ya están allí.
 
-## 2. Escena: ¿qué encontramos al llegar?
+Volvamos al siniestro de la motocicleta. La persona lesionada está sobre la calzada y el tránsito continúa. Acercarnos sin advertir ese riesgo podría ocasionar otro atropellamiento. El control de la circulación y la organización de un área de trabajo segura forman parte de la respuesta desde el primer momento.
 
-La segunda S consiste en **reconocer las características y la magnitud del incidente**. No alcanza con mirar al primer paciente: necesitamos observar el conjunto de la emergencia.
+En una vivienda, en cambio, tal vez debamos prestar atención a una instalación eléctrica dañada, una posible fuga de gas o una escalera inestable. En una industria pueden existir máquinas en movimiento, sustancias peligrosas o cargas suspendidas. Durante un incendio, el humo, el calor y la estabilidad de las estructuras presentan riesgos diferentes.
 
-La evaluación inicial considera, entre otras cosas:
+También debemos considerar la presencia de personas violentas, animales, elementos cortantes, fluidos corporales y condiciones ambientales que puedan complicar la atención.
 
-1. **Tipo de incidente.** ¿Se trata de un accidente de tránsito, una caída, un incendio, una emergencia médica o un hecho de violencia?
-2. **Cantidad de personas involucradas.** ¿Hay un solo paciente? ¿Podría haber otros dentro de un vehículo, en una habitación o fuera de nuestra vista?
-3. **Acceso y salida.** ¿Por dónde podemos ingresar, trabajar y evacuar si hace falta?
-4. **Recursos disponibles y necesarios.** ¿Alcanza el personal presente? ¿Se requieren ambulancias adicionales, apoyo policial, rescate o personal especializado?
-5. **Organización y comunicaciones.** ¿Quién coordina? ¿Qué información debemos transmitir a los demás equipos?
+### Del reconocimiento al control
 
-### Ejemplo: un siniestro con varios ocupantes
+Identificar un riesgo permite decidir qué medidas hacen falta. En algunos casos será necesario delimitar el área, utilizar el equipo de protección apropiado o solicitar que se controle el tránsito. En otros, como la presencia de cables energizados o materiales peligrosos, se requerirá personal especializado antes de avanzar.
 
-Llegamos a una colisión entre dos automóviles. Observamos a una persona de pie junto a un vehículo y a otra sentada en el asiento del conductor. La escena exige comprobar si hay más ocupantes, si alguien quedó atrapado y si la cantidad de recursos responde a las necesidades del lugar.
+La tarea de cada respondiente dependerá de su formación, de los recursos disponibles y de la organización de la emergencia. Lo importante es reconocer los peligros y trabajar sobre condiciones seguras.
 
-Esta información resulta fundamental para organizar la asistencia desde los primeros minutos.
+Además, **la seguridad de la escena se evalúa continuamente**. Un vehículo puede desplazarse, el viento puede cambiar la dirección del humo y una estructura dañada puede deteriorarse mientras estamos asistiendo a alguien.
 
-Una comunicación inicial podría informar: «Colisión entre dos vehículos. Dos personas visibles, una permanece dentro de un automóvil. Tránsito activo. Estamos evaluando necesidad de recursos adicionales».
+Este principio también está presente en la formación prehospitalaria internacional. **PHTLS, en su 9.ª edición, incluye un capítulo dedicado a la gestión de la escena (*Scene Management*)**. Las guías educativas para primeros respondientes de los servicios de emergencias médicas también desarrollan la identificación de peligros y la necesidad de recursos adicionales. La evaluación del entorno es, por lo tanto, parte del trabajo que antecede y acompaña a la atención del paciente.
 
-## 3. Escenario: ¿qué pudo haber sucedido?
+## Escena: reconocer la magnitud del incidente
 
-La tercera S nos invita a interpretar **las circunstancias en las que ocurrió la emergencia**. El lugar, los objetos, las posiciones de las personas y los relatos de testigos pueden ofrecernos pistas.
+Una vez que empezamos a comprender las condiciones de seguridad, ampliamos la mirada hacia el conjunto del lugar. La escena nos muestra **qué tipo de emergencia tenemos delante y cómo está organizada la situación**.
 
-En pacientes traumatizados, esa información ayuda a reconocer el **mecanismo de lesión**. En emergencias médicas, orienta hacia la **naturaleza de la enfermedad**.
+Imaginemos una colisión entre dos automóviles. Al llegar vemos a una persona de pie junto a uno de ellos y a otra en el asiento del conductor. Esa primera observación despierta nuevas preguntas: ¿hay más ocupantes?, ¿alguien quedó atrapado?, ¿existen otros vehículos involucrados?, ¿por dónde podremos acceder y evacuar?
 
-### Mecanismo de lesión
+También necesitamos considerar cuántas personas pueden asistir, qué equipos llegaron y si harán falta ambulancias adicionales, apoyo policial o personal de rescate.
 
-Es la forma en que una fuerza o energía actúa sobre el cuerpo y puede producir daño. Algunos ejemplos son el impacto de un vehículo, una caída desde altura, una desaceleración brusca o la compresión de una parte del cuerpo.
+La escena no siempre es tan evidente. Ante una persona inconsciente en una vivienda, por ejemplo, es importante observar si se encuentra sola, cómo es el acceso al lugar y si existe algún factor ambiental que también pueda afectar a quienes ingresen.
 
-Observar cómo ocurrió el evento ayuda a **sospechar qué regiones del cuerpo podrían estar lesionadas y qué evaluaciones tendrán especial importancia**.
+### Reconocer para organizar
 
-Veamos dos situaciones.
+Esta información permite anticipar tareas y comunicar las necesidades del incidente. Una primera transmisión podría ser:
 
-**Durante un partido de fútbol**, un jugador gira sobre una pierna, cae y comienza a sentir dolor en la rodilla. La forma en que se produjo el movimiento hace pensar en una posible lesión articular, ligamentaria u ósea. Esa información orienta la evaluación de la extremidad y la búsqueda de signos como deformidad, dolor, edema o alteraciones de circulación y sensibilidad.
+> «Colisión entre dos vehículos. Dos personas visibles; una permanece dentro de un automóvil. Tránsito activo. Solicitamos apoyo para el control de la circulación y continuamos verificando ocupantes».
 
-**En un siniestro vial**, un ocupante es eyectado del automóvil durante una colisión. La energía involucrada y la forma en que el cuerpo pudo impactar hacen sospechar traumatismos importantes, incluso lesiones que no se aprecian a simple vista. En ese contexto cobra especial relevancia identificar hemorragias graves y evaluar el estado neurológico, la respiración y otras amenazas inmediatas para la vida.
+Se trata de una descripción inicial: informa lo que el equipo encontró y permite organizar la llegada de otros recursos.
 
-Los dos casos requieren atención, pero el contexto cambia las prioridades, las sospechas y los recursos que pueden ser necesarios.
+## Escenario: comprender cómo ocurrió
 
-### Naturaleza de la enfermedad
+Reconocer el lugar también significa prestar atención a las circunstancias que rodean a la emergencia. Los objetos, las posiciones de las personas, los daños visibles y los relatos de testigos pueden ayudarnos a reconstruir lo ocurrido.
 
-No todas las emergencias se producen por un traumatismo.
+Esa interpretación resulta especialmente útil para anticipar las lesiones que podríamos encontrar.
 
-Imaginemos una persona que presenta dificultad respiratoria mientras trabaja en una habitación donde se utilizó un producto químico de limpieza. El ambiente y la actividad previa forman parte de la información que necesitamos reunir.
+### El mecanismo de lesión
 
-En otro caso, una persona puede perder el conocimiento durante una jornada de mucho calor. La temperatura, el esfuerzo, los síntomas previos y los testimonios ayudan a orientar la valoración inicial.
+Llamamos **mecanismo de lesión** a la forma en que una fuerza o energía actúa sobre el cuerpo y puede producir un traumatismo. Algunos ejemplos son un golpe, una caída, una compresión o una desaceleración brusca.
 
-En la atención prehospitalaria se utiliza el concepto de **naturaleza de la enfermedad** para describir el problema médico que parece estar ocurriendo, a partir de lo que observamos y de la información disponible.
+Estudiar cómo ocurrió el evento nos ayuda a sospechar qué regiones del cuerpo pueden estar comprometidas y qué aspectos cobrarán importancia en la evaluación posterior.
 
-## Las tres S trabajando juntas
+Pensemos en un jugador de fútbol que gira sobre una pierna, cae y comienza a sentir dolor en una rodilla. Por el movimiento y la zona afectada, podemos considerar lesiones articulares, ligamentarias u óseas.
 
-Volvamos al primer ejemplo: una persona tendida junto a su motocicleta.
+Ahora imaginemos a una persona que salió eyectada de un automóvil durante una colisión. La energía del impacto hace pensar en un traumatismo de mayor complejidad, con posibles lesiones en cabeza, columna, tórax, abdomen u otras regiones, y la necesidad de buscar amenazas inmediatas para la vida.
 
-| Pregunta | Qué observamos | Qué aporta |
-| --- | --- | --- |
-| **Seguridad** | Vehículos circulando cerca del paciente. | Necesidad de controlar el tránsito y establecer un lugar seguro de trabajo. |
-| **Escena** | Una motocicleta caída y una persona visible en la calzada. | Necesidad de dimensionar el incidente, verificar involucrados y solicitar recursos. |
-| **Escenario** | Posible caída o colisión, marcas de frenado y daños visibles. | Información para considerar mecanismos de lesión y orientar la evaluación posterior. |
+En ambos casos estamos frente a una persona lesionada, pero **la forma en que ocurrió el accidente nos aporta información diferente**. Esa información orienta las primeras sospechas y las prioridades de atención.
 
-La evaluación inicial no funciona como tres trámites independientes. Mientras el equipo observa el lugar, puede detectar peligros, reconocer pacientes y reunir indicios sobre lo ocurrido al mismo tiempo.
+### Cuando la emergencia no es traumática
 
-Tampoco finaliza con el primer reconocimiento: **cada dato nuevo puede cambiar la forma de intervenir**.
+El escenario también nos aporta datos ante enfermedades repentinas.
 
-## ¿Qué sucede después?
+Si una persona presenta dificultad respiratoria dentro de un ambiente donde se utilizaron productos químicos, las condiciones del lugar forman parte de la evaluación. Si alguien pierde el conocimiento durante una jornada de calor intenso, nos interesará conocer qué estaba haciendo, cuánto tiempo estuvo expuesto y qué síntomas presentó.
 
-Cuando contamos con condiciones adecuadas para acercarnos y una comprensión inicial del incidente, comienza la **evaluación del paciente**.
+En estas situaciones hablamos de la **naturaleza de la enfermedad**: el problema médico que parece motivar la emergencia, interpretado a partir de los signos observados y de la información que podemos reunir.
 
-Allí las prioridades pasan a reconocer y atender amenazas inmediatas para la vida, valorar su estado y decidir los pasos siguientes de acuerdo con la formación del respondiente y los protocolos de su servicio.
+## Cómo se relacionan las tres S
 
-De eso trataremos en el próximo capítulo de la serie *Atención prehospitalaria*.
+Retomemos el ejemplo con el que comenzamos: una persona tendida junto a una motocicleta.
 
-## Para repasar
+La **seguridad** nos hace prestar atención al tránsito que sigue circulando y a la necesidad de establecer condiciones de trabajo seguras.
 
-Al llegar a una emergencia, intentá responder estas preguntas:
+La **escena** nos muestra una motocicleta caída, una persona visible y una avenida que posiblemente requiera apoyo para organizar el acceso, la asistencia y la circulación.
 
-1. ¿Cuáles son los peligros presentes y qué necesitamos hacer para trabajar con seguridad?
-2. ¿Qué tipo de incidente tenemos delante, cuántas personas están involucradas y qué apoyo puede hacer falta?
-3. ¿Qué información aporta el lugar sobre lo que ocurrió y sobre las lesiones o problemas médicos que podríamos encontrar?
+El **escenario** nos lleva a observar daños en el vehículo, marcas en la calzada y la posición del paciente para comenzar a comprender cómo pudo producirse el siniestro y qué lesiones debemos considerar.
 
-**Antes de asistir, observamos. Antes de actuar, comprendemos la escena.**
+Todo eso sucede como parte de una misma evaluación. Mientras intervenimos pueden aparecer nuevos datos y tendremos que ajustar nuestras decisiones.
 
-## Bibliografía y lecturas recomendadas
+## De la escena a la atención del paciente
 
-- **NAEMT — PHTLS (Prehospital Trauma Life Support), 9.ª edición, capítulo 5: *Scene Management*.** Gestión y evaluación inicial de la escena. [Programa oficial de NAEMT](https://www.naemt.org/education/trauma-education/phtls).
-- **NHTSA / EMS.gov — Emergency Medical Responder Instructional Guidelines.** Contenidos de formación inicial para primeros respondientes, incluida la evaluación de la escena.
-- **NHTSA / EMS.gov — [Paramedic Instructional Guidelines](https://www.ems.gov/assets/Paramedic_Instructional_Guidelines.pdf).** Apartado *Patient Assessment — Scene Size-Up*, con riesgos y evaluación de seguridad.
+Una vez identificados los peligros, organizados los primeros recursos y reconocido el contexto de la emergencia, estamos en condiciones de avanzar hacia la evaluación del paciente.
+
+En esa siguiente etapa será necesario reconocer amenazas inmediatas para la vida, valorar su estado y comenzar las intervenciones que correspondan al nivel de formación y a los procedimientos del servicio.
+
+La evaluación inicial de la escena nos deja una idea fundamental: **antes de decidir cómo asistir a alguien, necesitamos comprender dónde estamos, qué está ocurriendo y qué pudo haber sucedido**.
+
+Ese será nuestro punto de partida para el próximo capítulo de *Atención prehospitalaria*, dedicado a la evaluación inicial del paciente.
