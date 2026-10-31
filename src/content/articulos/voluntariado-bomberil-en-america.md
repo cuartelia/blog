@@ -37,6 +37,12 @@ sources:
     url: 'https://www.bomberoscbvp.org.py/nosotros/historia/'
   - label: 'Biblioteca del Congreso del Paraguay — Ley 6.762'
     url: 'https://www.bacn.gov.py/leyes-paraguayas/9625/ley-n-6762-regula-la-organizacion-de-las-instituciones-de-bomberos-voluntarios-del-paraguay'
+  - label: 'Argentina.gob.ar — Policía Federal: Superintendencia de Bomberos y Protección de Riesgos (Decreto 383/2025)'
+    url: 'https://www.argentina.gob.ar/normativa/nacional/decreto-383-2025-414065/texto'
+  - label: 'Prefectura Naval Argentina — Salvamento, Incendio y Protección Ambiental'
+    url: 'https://www.argentina.gob.ar/prefecturanaval/servicios/salvamento-incendio-proteccion-ambiental'
+  - label: 'ANAC — Servicio de Salvamento y Extinción de Incendios: objetivos y funciones'
+    url: 'https://www.argentina.gob.ar/anac/infraestructura-y-servicios-aeroportuarios/servicio-de-salvamento-y-extincion-de-indendios-ssei/objetivos-y-funciones-sei'
   - label: 'Ciudad de México — Heroico Cuerpo de Bomberos'
     url: 'https://bomberos.cdmx.gob.mx/dependencia/acerca-de'
   - label: 'México, Protección Civil — Registro de grupos voluntarios'
@@ -53,6 +59,14 @@ Y la historia se remonta mucho más atrás de lo que imaginamos. Antes de la fun
 
 En este recorrido vamos a conocer cómo nació el voluntariado bomberil en distintos países, de qué manera se organizan sus instituciones y cuál es su presencia actual.
 
+### Una aclaración sobre los términos
+
+Antes de comenzar, conviene aclarar cómo usaremos algunas palabras. **Ser bombero profesional no es sinónimo de percibir un sueldo**: la preparación, la competencia y la responsabilidad no dependen de si una persona presta servicio de manera voluntaria o remunerada.
+
+Para facilitar la comparación, en este artículo hablaremos de **bomberos estatales** cuando nos refiramos a integrantes de cuerpos organizados directamente por organismos públicos, y de **bomberos remunerados** cuando sea necesario distinguir a quienes reciben una retribución por su trabajo. No son categorías idénticas: un servicio puede ser público, voluntario, remunerado o mixto según el país y la institución. Para las estadísticas extranjeras conservaremos, cuando corresponda, categorías originales como *career* (personal de carrera remunerado) o *paid-per-call* (remuneración por intervención).
+
+En Argentina, dentro de los servicios estatales incluimos, según sus competencias y jurisdicciones, a los cuerpos de bomberos de policías provinciales, los servicios especializados de la **Policía Federal Argentina**, el **Servicio de Salvamento, Incendio y Protección Ambiental de la Prefectura Naval Argentina** y el **Servicio de Salvamento y Extinción de Incendios (SSEI) de la ANAC**, de alcance aeroportuario. **No todos cumplen las mismas funciones ni atienden el mismo territorio**.
+
 Porque **la vocación de servicio no conoce fronteras**.
 
 ## Mucho antes de La Boca: Filadelfia, 1736
@@ -65,11 +79,11 @@ La idea era sencilla: en lugar de esperar a que cada vecino enfrentara un incend
 
 Con el tiempo aparecieron nuevas compañías. Filadelfia mantuvo durante más de un siglo un sistema de organizaciones voluntarias independientes, hasta que en **1871** comenzó a funcionar su departamento municipal remunerado.
 
-Esta historia nos deja una primera enseñanza: en Estados Unidos, **el voluntariado no apareció después de los bomberos profesionales; en muchas ciudades ocurrió al revés**.
+Esta historia nos deja una primera enseñanza: en Estados Unidos, **el voluntariado organizado precedió a los departamentos municipales remunerados; en muchas ciudades ocurrió al revés de lo que podríamos imaginar**.
 
 ## Chile: un sistema construido por voluntarios
 
-Imaginá un cuartel con autobombas modernas, equipos de respiración autónoma, radios, herramientas de rescate y personal que entrena regularmente. ¿Pensarías que se trata de un cuerpo de bomberos profesional remunerado?
+Imaginá un cuartel con autobombas modernas, equipos de respiración autónoma, radios, herramientas de rescate y personal que entrena regularmente. ¿Darías por sentado que sus integrantes reciben un sueldo?
 
 En Chile, es perfectamente posible que todo ese servicio operativo sea prestado por voluntarios.
 
@@ -103,11 +117,11 @@ Para nosotros, el hito más conocido es el **2 de junio de 1884**, cuando Tomás
 
 Ya dedicamos otro artículo de Cuartelia a [la historia bomberil argentina](/articulos/historia-bomberil-argentina/). Acá nos interesa usarla como punto de comparación.
 
-En nuestro país conviven **asociaciones de bomberos voluntarios** y **cuerpos oficiales** pertenecientes a distintas jurisdicciones, como los bomberos de fuerzas provinciales y Bomberos de la Ciudad de Buenos Aires. El Sistema Nacional de Bomberos Voluntarios articula a numerosas asociaciones, federaciones e instituciones de formación, mientras que los cuerpos oficiales responden a sus propias estructuras.
+En nuestro país conviven **asociaciones de bomberos voluntarios** y **cuerpos estatales** de distintas jurisdicciones. Entre estos últimos se encuentran los cuerpos de bomberos de policías provinciales y **Bomberos de la Ciudad de Buenos Aires**. También existen servicios especializados de la Policía Federal, Prefectura Naval y ANAC, con funciones y ámbitos de actuación específicos, como explicamos al comienzo. El Sistema Nacional de Bomberos Voluntarios articula a numerosas asociaciones, federaciones e instituciones de formación, mientras que cada servicio estatal responde a su propia estructura.
 
 Es decir, Argentina no adoptó un esquema idéntico al de Chile: **ambos países tienen una tradición voluntaria muy fuerte, pero organizan de manera diferente su convivencia con los servicios estatales**.
 
-## Estados Unidos: voluntarios, profesionales y dotaciones mixtas
+## Estados Unidos: voluntarios, remunerados y dotaciones mixtas
 
 Las grandes ciudades estadounidenses suelen mostrarnos departamentos remunerados, con personal de guardia permanente. Son servicios muy visibles en películas, documentales y series.
 
@@ -132,7 +146,7 @@ El registro federal tiene además una limitación importante: la inscripción er
 
 ## Canadá: tres de cada cuatro bomberos son voluntarios
 
-Canadá ofrece otra sorpresa. Podemos asociar sus grandes ciudades con departamentos profesionales remunerados, pero fuera de esos centros urbanos existen numerosas comunidades atendidas por bomberos voluntarios.
+Canadá ofrece otra sorpresa. Podemos asociar sus grandes ciudades con departamentos de personal remunerado, pero fuera de esos centros urbanos existen numerosas comunidades atendidas por bomberos voluntarios.
 
 La **Canadian Association of Fire Chiefs** publicó en su *Great Canadian Fire Census 2025* una estimación de **125.261 bomberos** en el país.
 
@@ -140,7 +154,7 @@ De ese total, unos **91.685 eran voluntarios**, equivalentes al **73 %**, mientr
 
 Es decir, aproximadamente **tres de cada cuatro bomberos canadienses** pertenecen al voluntariado, según esa estimación. Esto no quiere decir que atiendan tres de cada cuatro emergencias: los departamentos de carrera de las grandes ciudades pueden concentrar una gran cantidad de servicios.
 
-El dato sirve para comprender algo: **la existencia de departamentos profesionales no implica la desaparición de las compañías voluntarias**. Ambos modelos conviven y cumplen funciones en comunidades muy diferentes.
+El dato sirve para comprender algo: **la existencia de departamentos remunerados no implica la desaparición de las compañías voluntarias**. Ambos modelos conviven y cumplen funciones en comunidades muy diferentes.
 
 ## Brasil: bomberos militares y una tradición voluntaria propia
 
