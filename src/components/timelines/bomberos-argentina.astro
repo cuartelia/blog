@@ -29,9 +29,6 @@ const labels: Record<string,string>={antecedente:'Antecedente',fundacion:'Fundac
 .history-head h2 em{color:#ef8b6b;font-weight:400}
 .history-head p:not(.history-kicker){color:#c9d8d0;line-height:1.65;margin:0}
 .history-diamond{color:#ef7857;font-size:clamp(2rem,6vw,4rem)}
-.history-tabs{display:flex;gap:.3rem;border-bottom:1px solid #57706f}
-.history-tab{appearance:none;background:transparent;border:0;border-bottom:3px solid transparent;margin-bottom:-1px;padding:.8rem 1rem;color:#c0d0ca;font-weight:750;font-size:.9rem;cursor:pointer;display:flex;gap:2rem}
-.history-tab[aria-selected=true]{border-color:#f28a69;color:white}.history-tab:hover{background:#ffffff0d}
 .history-timeline :is(button,a,summary):focus-visible{outline:2px solid #ffa783;outline-offset:3px}
 .history-lead{margin:1.5rem 0 .5rem;line-height:1.6;color:#d0dad4}.history-count{color:#a7c1b6;margin:0 0 1.5rem}
 .history-list{list-style:none;margin:0;padding:0 0 0 1.4rem;border-left:1px solid #627e7d}
@@ -52,6 +49,5 @@ const labels: Record<string,string>={antecedente:'Antecedente',fundacion:'Fundac
 .history-context a{color:#ffd7c9;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
 .history-note{margin:1.5rem 0 0;padding-top:1rem;border-top:1px solid #496367;font-size:.78rem;line-height:1.6;color:#b8cbc3}
 .history-timeline [hidden]{display:none!important}
-@media(max-width:600px){.history-timeline{margin:2.8rem -.65rem;padding:1rem}.history-diamond{font-size:2rem}.history-tab{flex:1;justify-content:center;gap:1rem}.history-list{padding-left:1rem}.history-item{padding-left:.5rem}.history-item::before{left:-1.36rem}.history-card{padding:1rem}}
 @media(prefers-reduced-motion:reduce){.history-card summary span{transition:none}}
 </style>
