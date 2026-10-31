@@ -18,6 +18,16 @@ test('critical corrected dates are preserved',()=>{
  assert.equal(santafe.find(e=>e.id==='sf-1970').date,'1970-08-09');
  assert.ok(!santafe.some(e=>e.date==='1950-05'));
 });
-test('interactive timeline is keyboard navigable',()=>{
- for(const word of ['role="tablist"','role="tabpanel"','aria-selected','ArrowRight','ArrowLeft','<details','prefers-reduced-motion'])assert.ok(component.includes(word));
+test('national timeline shows only Argentine milestones without provincial tabs',()=>{
+ assert.ok(component.includes("import { nationalTimeline }"));
+ assert.ok(component.includes("event.category !== 'internacional'"));
+ assert.ok(component.includes('events.map(e=>'));
+ for(const word of ['timelineGroups','santaFeTimeline','role="tablist"','role="tabpanel"','aria-selected','data-history-tab']){
+  assert.ok(!component.includes(word), `Unexpected regional tab reference: ${word}`);
+ }
+});
+test('national timeline cards keep accessible expandable sources',()=>{
+ for(const word of ['<details','<summary','<time','aria-labelledby','prefers-reduced-motion']){
+  assert.ok(component.includes(word), `Missing expected timeline feature: ${word}`);
+ }
 });
