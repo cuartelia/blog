@@ -1,5 +1,9 @@
 ---
-import { timelineGroups } from '../../lib/timelineData';
+import { nationalTimeline } from '../../lib/timelineData';
+// Este artículo se limita a los hitos de la historia bomberil argentina.
+// Los acontecimientos provinciales e internacionales se conservan en los datos
+// para futuros artículos dedicados a esos temas.
+const events = nationalTimeline.filter(event => event.category !== 'internacional');
 const labels: Record<string,string>={antecedente:'Antecedente',fundacion:'Fundación',operativo:'Servicio',conflicto:'Conflicto',institucional:'Institucional',federacion:'Federación',normativa:'Normativa',internacional:'Internacional'};
 ---
 <section class="history-timeline" data-history-timeline aria-labelledby="history-title">
@@ -7,41 +11,16 @@ const labels: Record<string,string>={antecedente:'Antecedente',fundacion:'Fundac
     <div><p class="history-kicker">CUARTELIA / HISTORIA INTERACTIVA</p><h2 id="history-title">Una historia. <em>Muchos hitos.</em></h2><p>Recorré los acontecimientos y desplegá cada tarjeta para leer su contexto y consultar sus fuentes.</p></div>
     <span class="history-diamond" aria-hidden="true">◆</span>
   </header>
-  <div role="tablist" aria-label="Cronología por región" class="history-tabs">
-    {timelineGroups.map((g,i)=><button type="button" class="history-tab" data-history-tab role="tab" id={`history-tab-${g.id}`} aria-controls={`history-panel-${g.id}`} aria-selected={i===0?'true':'false'} tabindex={i===0?0:-1}>{g.label}<span aria-hidden="true">↗</span></button>)}
-  </div>
-  {timelineGroups.map((g,i)=><section data-history-panel role="tabpanel" id={`history-panel-${g.id}`} aria-labelledby={`history-tab-${g.id}`} tabindex="0" hidden={i!==0}>
-    <p class="history-lead">{g.introduction}</p><p class="history-count">{g.events.length} hitos con referencias</p>
-    <ol class="history-list">{g.events.map(e=><li class="history-item"><article class="history-card" data-category={e.category}>
-      <div class="history-meta"><time datetime={e.date}>{e.dateLabel}</time><span class="history-category">{labels[e.category]}</span></div>
-      <h3>{e.title}</h3><p>{e.description}</p>
-      <details><summary>Contexto y fuentes <span aria-hidden="true">⌄</span></summary><div class="history-context"><p>{e.context}</p><strong>Fuentes y documentos</strong><ul>{e.sources.map(s=><li><a href={s.url} target="_blank" rel="noopener noreferrer">{s.label} ↗</a></li>)}</ul></div></details>
-    </article></li>)}</ol>
-  </section>)}
+  <p class="history-lead">De los primeros antecedentes del servicio organizado al surgimiento del voluntariado y la consolidación del sistema nacional.</p>
+  <p class="history-count">{events.length} hitos con referencias</p>
+  <ol class="history-list">{events.map(e=><li class="history-item"><article class="history-card" data-category={e.category}>
+    <div class="history-meta"><time datetime={e.date}>{e.dateLabel}</time><span class="history-category">{labels[e.category]}</span></div>
+    <h3>{e.title}</h3><p>{e.description}</p>
+    <details><summary>Contexto y fuentes <span aria-hidden="true">⌄</span></summary><div class="history-context"><p>{e.context}</p><strong>Fuentes y documentos</strong><ul>{e.sources.map(source=><li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label} ↗</a></li>)}</ul></div></details>
+  </article></li>)}</ol>
   <p class="history-note">Selección editorial de fuentes institucionales y públicas. No es una cronología exhaustiva: los datos sin suficiente confirmación documental permanecen fuera de esta versión.</p>
 </section>
-<script>
-  document.querySelectorAll<HTMLElement>('[data-history-timeline]').forEach(root=>{
-    const tabs=Array.from(root.querySelectorAll<HTMLButtonElement>('[data-history-tab]'));
-    const panels=Array.from(root.querySelectorAll<HTMLElement>('[data-history-panel]'));
-    const select=(next:number,focus=false)=>{
-      tabs.forEach((tab,i)=>{const active=i===next;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;panels[i].hidden=!active;});
-      if(focus)tabs[next]?.focus();
-    };
-    tabs.forEach((tab,i)=>{
-      tab.addEventListener('click',()=>select(i));
-      tab.addEventListener('keydown',e=>{
-        let next:number;
-        if(e.key==='ArrowRight')next=(i+1)%tabs.length;
-        else if(e.key==='ArrowLeft')next=(i-1+tabs.length)%tabs.length;
-        else if(e.key==='Home')next=0;
-        else if(e.key==='End')next=tabs.length-1;
-        else return;
-        e.preventDefault();select(next,true);
-      });
-    });
-  });
-</script>
+
 <style>
 .history-timeline{margin:3.8rem 0 2.8rem;background:#172e32;color:#f7f5ef;padding:clamp(1.1rem,3.5vw,2.5rem);border:1px solid #405b5e}
 .history-head{display:flex;justify-content:space-between;gap:1rem;margin-bottom:1.8rem}
