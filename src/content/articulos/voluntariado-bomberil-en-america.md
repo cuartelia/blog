@@ -69,6 +69,18 @@ En Argentina, dentro de los servicios estatales incluimos, según sus competenci
 
 Porque **la vocación de servicio no conoce fronteras**.
 
+<figure class="editorial-map" aria-label="Ilustración editorial del continente americano con puntos que representan países explorados en el artículo">
+  <svg viewBox="0 0 720 285" role="img" aria-labelledby="maptitle mapdesc" xmlns="http://www.w3.org/2000/svg">
+    <title id="maptitle">Voluntariado bomberil en América</title><desc id="mapdesc">Composición cartográfica simbólica de América con puntos de referencia; no representa distancias ni límites políticos a escala.</desc>
+    <rect x="0" y="0" width="720" height="285" rx="9" fill="#183135"/>
+    <g stroke="#476568" stroke-width="1" opacity=".4"><path d="M0 55H720M0 105H720M0 155H720M0 205H720M0 255H720M80 0V285M160 0V285M240 0V285M320 0V285M400 0V285M480 0V285M560 0V285M640 0V285"/></g>
+    <g fill="#97aa9f" stroke="#e1e4d6" stroke-width="1.5"><path d="M121 23 205 25 244 45 228 72 198 92 187 112 167 113 156 96 130 90 108 61Z"/><path d="m182 109 34 3 30 20-7 20-18 6-14-19-22-12Z"/><path d="m235 151 41 1 26 21 30 15-4 27-25 20-15 40-24-9-3-35-19-22-18-30Z"/><path d="m224 130 20 10 8 14-16 3-11-11Z"/><path d="m98 29 15-12 11 11-8 20-17-2Z"/></g>
+    <g fill="#f18a66" stroke="#183135" stroke-width="4"><circle cx="183" cy="67" r="8"/><circle cx="226" cy="131" r="8"/><circle cx="281" cy="193" r="8"/><circle cx="287" cy="245" r="8"/><circle cx="236" cy="160" r="8"/></g>
+    <g fill="#f7f5ef" font-family="sans-serif"><text x="383" y="85" font-size="13" letter-spacing="2">CUARTELIA / HISTORIA</text><text x="382" y="130" font-size="32" font-weight="700">Una vocación.</text><text x="382" y="169" font-size="32" font-weight="700">Muchas fronteras.</text><text x="383" y="204" font-size="13" fill="#b8c9c0">Ocho países · distintos modelos</text><path d="M382 225H661" stroke="#f18a66" stroke-width="2"/></g>
+  </svg>
+  <figcaption>Ilustración cartográfica conceptual creada para este artículo. Los marcadores no indican ubicaciones precisas.</figcaption>
+</figure>
+
 ## Mucho antes de La Boca: Filadelfia, 1736
 
 Benjamin Franklin suele aparecer en los libros de historia como científico, inventor, escritor y una de las figuras de la independencia estadounidense. Pero también participó en la organización de un servicio comunitario para combatir incendios.
@@ -80,6 +92,18 @@ La idea era sencilla: en lugar de esperar a que cada vecino enfrentara un incend
 Con el tiempo aparecieron nuevas compañías. Filadelfia mantuvo durante más de un siglo un sistema de organizaciones voluntarias independientes, hasta que en **1871** comenzó a funcionar su departamento municipal remunerado.
 
 Esta historia nos deja una primera enseñanza: en Estados Unidos, **el voluntariado organizado precedió a los departamentos municipales remunerados; en muchas ciudades ocurrió al revés de lo que podríamos imaginar**.
+
+<figure class="editorial-timeline" aria-label="Cronología de fundaciones de compañías de bomberos voluntarios en América">
+  <div class="editorial-kicker">ARCHIVO / CINCO HITOS</div>
+  <ol>
+    <li><time datetime="1736">1736</time><span><strong>Filadelfia</strong><small>Union Fire Company · Estados Unidos</small></span></li>
+    <li><time datetime="1851">1851</time><span><strong>Valparaíso</strong><small>Primer Cuerpo de Bomberos de Chile</small></span></li>
+    <li><time datetime="1884">1884</time><span><strong>La Boca</strong><small>Primera sociedad voluntaria argentina</small></span></li>
+    <li><time datetime="1892">1892</time><span><strong>Joinville</strong><small>Organización voluntaria en Brasil</small></span></li>
+    <li><time datetime="1978">1978</time><span><strong>Asunción</strong><small>Cuerpo de Bomberos Voluntarios del Paraguay</small></span></li>
+  </ol>
+  <figcaption>Selección de acontecimientos mencionados en este artículo. No es una cronología exhaustiva del continente.</figcaption>
+</figure>
 
 ## Chile: un sistema construido por voluntarios
 
@@ -144,6 +168,14 @@ No son dos formas de expresar lo mismo. Un gran departamento urbano puede emplea
 
 El registro federal tiene además una limitación importante: la inscripción era voluntaria y abarcaba aproximadamente el 91 % de los departamentos estimados del país. Aun así, muestra la enorme presencia del voluntariado en el servicio estadounidense.
 
+<figure class="editorial-stats" aria-label="Distribución de efectivos registrados por la U.S. Fire Administration: 52 por ciento voluntarios, 35 por ciento de carrera y 13 por ciento remunerados por intervención">
+  <div class="editorial-kicker">ESTADOS UNIDOS / USFA · JUNIO 2026</div>
+  <h3>¿Cómo se distribuyen los efectivos registrados?</h3>
+  <div class="editorial-stats-track" role="img" aria-label="Voluntarios 52 %, de carrera 35 %, remunerados por intervención 13 %"><span class="volunteer" style="width:52%"></span><span class="career" style="width:35%"></span><span class="percall" style="width:13%"></span></div>
+  <div class="editorial-stats-legend"><span><i class="volunteer"></i><strong>52 %</strong> Voluntarios</span><span><i class="career"></i><strong>35 %</strong> De carrera remunerados</span><span><i class="percall"></i><strong>13 %</strong> Por intervención</span></div>
+  <figcaption>U.S. Fire Administration, National Fire Department Registry (junio de 2026). Efectivos registrados, no porcentaje de departamentos ni de emergencias atendidas.</figcaption>
+</figure>
+
 ## Canadá: tres de cada cuatro bomberos son voluntarios
 
 Canadá ofrece otra sorpresa. Podemos asociar sus grandes ciudades con departamentos de personal remunerado, pero fuera de esos centros urbanos existen numerosas comunidades atendidas por bomberos voluntarios.
@@ -155,6 +187,14 @@ De ese total, unos **91.685 eran voluntarios**, equivalentes al **73 %**, mientr
 Es decir, aproximadamente **tres de cada cuatro bomberos canadienses** pertenecen al voluntariado, según esa estimación. Esto no quiere decir que atiendan tres de cada cuatro emergencias: los departamentos de carrera de las grandes ciudades pueden concentrar una gran cantidad de servicios.
 
 El dato sirve para comprender algo: **la existencia de departamentos remunerados no implica la desaparición de las compañías voluntarias**. Ambos modelos conviven y cumplen funciones en comunidades muy diferentes.
+
+<figure class="editorial-stats" aria-label="Canadá, estimación 2025: 73 por ciento de bomberos voluntarios y 27 por ciento de carrera remunerados">
+  <div class="editorial-kicker">CANADÁ / GREAT CANADIAN FIRE CENSUS 2025</div>
+  <h3>Tres de cada cuatro bomberos son voluntarios</h3>
+  <div class="editorial-stats-track" role="img" aria-label="Voluntarios 73 %, de carrera remunerados 27 %"><span class="volunteer" style="width:73%"></span><span class="career" style="width:27%"></span></div>
+  <div class="editorial-stats-legend"><span><i class="volunteer"></i><strong>73 %</strong> Voluntarios · 91.685</span><span><i class="career"></i><strong>27 %</strong> De carrera · 33.576</span></div>
+  <figcaption>Canadian Association of Fire Chiefs, Great Canadian Fire Census 2025. Estimación nacional; no es directamente comparable en metodología con el registro estadounidense.</figcaption>
+</figure>
 
 ## Brasil: bomberos militares y una tradición voluntaria propia
 
