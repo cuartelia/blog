@@ -93,18 +93,6 @@ Con el tiempo aparecieron nuevas compañías. Filadelfia mantuvo durante más de
 
 Esta historia nos deja una primera enseñanza: en Estados Unidos, **el voluntariado organizado precedió a los departamentos municipales remunerados; en muchas ciudades ocurrió al revés de lo que podríamos imaginar**.
 
-<figure class="editorial-timeline" aria-label="Cronología de fundaciones de compañías de bomberos voluntarios en América">
-  <div class="editorial-kicker">ARCHIVO / CINCO HITOS</div>
-  <ol>
-    <li><time datetime="1736">1736</time><span><strong>Filadelfia</strong><small>Union Fire Company · Estados Unidos</small></span></li>
-    <li><time datetime="1851">1851</time><span><strong>Valparaíso</strong><small>Primer Cuerpo de Bomberos de Chile</small></span></li>
-    <li><time datetime="1884">1884</time><span><strong>La Boca</strong><small>Primera sociedad voluntaria argentina</small></span></li>
-    <li><time datetime="1892">1892</time><span><strong>Joinville</strong><small>Organización voluntaria en Brasil</small></span></li>
-    <li><time datetime="1978">1978</time><span><strong>Asunción</strong><small>Cuerpo de Bomberos Voluntarios del Paraguay</small></span></li>
-  </ol>
-  <figcaption>Selección de acontecimientos mencionados en este artículo. No es una cronología exhaustiva del continente.</figcaption>
-</figure>
-
 ## Chile: un sistema construido por voluntarios
 
 Imaginá un cuartel con autobombas modernas, equipos de respiración autónoma, radios, herramientas de rescate y personal que entrena regularmente. ¿Darías por sentado que sus integrantes reciben un sueldo?
@@ -262,6 +250,22 @@ Después de conocer estas historias, podemos resumir sus diferencias sin intenta
 | **México** | Cuerpos locales públicos, voluntarios y mixtos | Sí |
 
 *Nota sobre las cifras:* los porcentajes de Estados Unidos y Canadá corresponden a conjuntos estadísticos y metodologías diferentes. No existe un censo continental único que permita ordenar a todos los países con una misma medida. En Chile, la descripción se refiere al sistema territorial y no incluye otros servicios especializados, como los forestales o aeroportuarios.
+
+## El recorrido en cinco fechas
+
+Después de conocer los distintos modelos, esta cronología reúne algunos de los hitos históricos que acabamos de recorrer.
+
+<figure class="editorial-timeline" aria-label="Cronología de fundaciones de compañías de bomberos voluntarios en América">
+  <div class="editorial-kicker">ARCHIVO / CINCO HITOS</div>
+  <ol>
+    <li><time datetime="1736">1736</time><span><strong>Filadelfia</strong><small>Union Fire Company · Estados Unidos</small></span></li>
+    <li><time datetime="1851">1851</time><span><strong>Valparaíso</strong><small>Primer Cuerpo de Bomberos de Chile</small></span></li>
+    <li><time datetime="1884">1884</time><span><strong>La Boca</strong><small>Primera sociedad voluntaria argentina</small></span></li>
+    <li><time datetime="1892">1892</time><span><strong>Joinville</strong><small>Organización voluntaria en Brasil</small></span></li>
+    <li><time datetime="1978">1978</time><span><strong>Asunción</strong><small>Cuerpo de Bomberos Voluntarios del Paraguay</small></span></li>
+  </ol>
+  <figcaption>Selección de acontecimientos mencionados en este artículo. No es una cronología exhaustiva del continente.</figcaption>
+</figure>
 
 ## Diferentes uniformes, una misma vocación
 
