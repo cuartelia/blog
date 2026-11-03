@@ -56,3 +56,13 @@ test('Laboratorio declara el helper de rutas que usa en la navegación',()=>{
   assert.match(lab,/import\s*\{\s*path\s*\}\s*from\s*['"]\.\.\/lib\/site['"]/);
   assert.match(lab,/href=\{path\('biblioteca\/'\)\}/);
 });
+
+// Umami se configura una sola vez en el layout y solo se habilita con un ID real.
+test('Umami se integra de forma opcional en el layout compartido',()=>{
+  const layout=read('src/layouts/BaseLayout.astro');
+  const workflow=read('.github/workflows/deploy.yml');
+  assert.match(layout,/PUBLIC_UMAMI_WEBSITE_ID/);
+  assert.match(layout,/cloud\.umami\.is\/script\.js/);
+  assert.match(layout,/umamiEnabled/);
+  assert.match(workflow,/vars\.UMAMI_WEBSITE_ID/);
+});
