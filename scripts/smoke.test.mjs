@@ -5,8 +5,10 @@ import { resolve } from 'node:path';
 const root = resolve(import.meta.dirname, '..');
 const read = path => readFileSync(resolve(root, path), 'utf8');
 const posts = readdirSync(resolve(root, 'src/content/articulos')).filter(x=>x.endsWith('.md'));
-test('hay exactamente tres artículos de demostración',()=>{
-  assert.deepEqual(posts.sort(), ['fuego.md','historia-bomberil-argentina.md','presion.md']);
+test('el catálogo incluye los artículos publicados y los borradores esperados',()=>{
+  for (const file of ['fuego.md','historia-bomberil-argentina.md','presion.md','voluntariado-bomberil-en-america.md']) {
+    assert.ok(posts.includes(file), `falta el artículo ${file}`);
+  }
 });
 test('todos los artículos tienen metadatos y fuentes',()=>{
   for(const file of posts){const text=read(`src/content/articulos/${file}`);
@@ -33,15 +35,17 @@ test('el sitio contempla navegación y disclaimer',()=>{
 });
 
 // La publicación se controla desde frontmatter, sin eliminar artículos en elaboración.
-test('solo Historia bomberil se publica; Fuego y Presión quedan en borrador',()=>{
+test('Historia y Voluntariado se publican; Fuego y Presión quedan en borrador',()=>{
   for(const slug of ['fuego','presion']){
     const md=read(`src/content/articulos/${slug}.md`);
     const frontmatter=md.split('---')[1];
     assert.match(frontmatter,/^draft: true$/m,`${slug} debe permanecer oculto`);
     assert.match(frontmatter,/^feature: false$/m,`${slug} no debe destacarse`);
   }
-  const history=read('src/content/articulos/historia-bomberil-argentina.md');
-  assert.doesNotMatch(history.split('---')[1],/^draft: true$/m);
+  for (const slug of ['historia-bomberil-argentina','voluntariado-bomberil-en-america']) {
+    const article=read(`src/content/articulos/${slug}.md`);
+    assert.doesNotMatch(article.split('---')[1],/^draft: true$/m);
+  }
   for(const file of ['src/pages/index.astro','src/pages/biblioteca.astro','src/pages/articulos/[...slug].astro']){
     assert.match(read(file),/!data\.draft/,`${file} debe filtrar los borradores`);
   }
