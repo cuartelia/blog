@@ -1,0 +1,55 @@
+---
+interface Props { title: string; url: string }
+const { title, url } = Astro.props;
+const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(`${title} — ${url}`)}`;
+const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+---
+<section class="article-share" aria-label="Compartir artículo" data-share-url={url} data-share-title={title}>
+  <span class="article-share-label">COMPARTÍ ESTE ARTÍCULO</span>
+  <div class="article-share-actions">
+    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" aria-label="Compartir por WhatsApp">WhatsApp ↗</a>
+    <a href={facebookUrl} target="_blank" rel="noopener noreferrer" aria-label="Compartir en Facebook">Facebook ↗</a>
+    <button type="button" data-share-copy>Copiar enlace</button>
+    <button type="button" data-share-native hidden>Compartir…</button>
+  </div>
+  <span class="article-share-feedback" data-share-feedback role="status" aria-live="polite"></span>
+</section>
+<script>
+  document.querySelectorAll<HTMLElement>('.article-share').forEach(section => {
+    const url = section.dataset.shareUrl || location.href;
+    const title = section.dataset.shareTitle || document.title;
+    const feedback = section.querySelector<HTMLElement>('[data-share-feedback]');
+    const copy = section.querySelector<HTMLButtonElement>('[data-share-copy]');
+    const native = section.querySelector<HTMLButtonElement>('[data-share-native]');
+    if (native && typeof navigator.share === 'function') {
+      native.hidden = false;
+      native.addEventListener('click', async () => {
+        try { await navigator.share({ title, url }); }
+        catch (error) { if ((error as Error).name !== 'AbortError' && feedback) feedback.textContent = 'No se pudo abrir el menú para compartir.'; }
+      });
+    }
+    copy?.addEventListener('click', async () => {
+      try {
+        if (navigator.clipboard?.writeText) await navigator.clipboard.writeText(url);
+        else {
+          const field = document.createElement('textarea');
+          field.value = url; field.style.position = 'fixed'; field.style.opacity = '0';
+          document.body.appendChild(field); field.select();
+          const copied = document.execCommand('copy'); field.remove();
+          if (!copied) throw new Error('No se pudo copiar');
+        }
+        if (feedback) feedback.textContent = 'Enlace copiado.';
+      } catch { if (feedback) feedback.textContent = 'No se pudo copiar el enlace. Podés copiarlo desde la barra de direcciones.'; }
+    });
+  });
+</script>
+<style>
+  .article-share{margin:42px 0 30px;padding:24px 0;border-top:1px solid var(--sand-deep);border-bottom:1px solid var(--sand-deep)}
+  .article-share-label{display:block;font:500 .65rem var(--mono);letter-spacing:.1em;color:var(--rust-dark);margin-bottom:14px}
+  .article-share-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .article-share-actions a,.article-share-actions button{font:700 .8rem var(--sans);color:var(--ink);background:transparent;border:1px solid var(--sand-deep);padding:10px 14px;cursor:pointer;text-decoration:none}
+  .article-share-actions a:hover,.article-share-actions button:hover{border-color:var(--rust);color:var(--rust-dark)}
+  .article-share-actions button[hidden]{display:none}
+  .article-share-actions :focus-visible{outline:2px solid var(--rust);outline-offset:3px}
+  .article-share-feedback{display:block;min-height:1.3em;margin-top:10px;font-size:.78rem;color:var(--rust-dark)}
+</style>
