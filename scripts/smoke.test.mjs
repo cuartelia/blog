@@ -88,5 +88,11 @@ test('los simuladores solo se publican cuando se habilitan expresamente',()=>{
   const article=read('src/pages/articulos/[...slug].astro');
   assert.match(article,/enabledSimulatorIds\.has/);
   const home=read('src/pages/index.astro');
-  assert.match(home,/hasSimulators/);
+  assert.match(home,/Explorá conceptos físicos/);
+  assert.match(home,/en movimiento\./);
+  assert.match(home,/Entrar al laboratorio/);
+  assert.match(home,/MODELOS EDUCATIVOS · NO APTOS PARA DECISIONES OPERATIVAS/);
+  assert.match(lab,/Probá, cambiá\./);
+  assert.match(lab,/Comprendé\./);
+  assert.match(lab,/Simuladores didácticos para visualizar relaciones/);
 });
