@@ -1,7 +1,7 @@
 ---
 title: 'Más allá de nuestras fronteras: el voluntariado bomberil en América'
 description: 'De Benjamin Franklin a Valparaíso: descubrí cómo nacieron y cómo se organizan los bomberos voluntarios en distintos países de América.'
-date: 2026-10-31
+date: 2026-11-03
 category: Historia
 audience: [Aspirantes, Cadetes, Bomberos, Público general]
 readingMinutes: 13
