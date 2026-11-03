@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import AnalyticsNotice from '../components/AnalyticsNotice.astro';
 import { brand, path } from '../lib/site';
 import '../styles/global.css';
 interface Props {
@@ -38,12 +39,13 @@ const umamiEnabled = Boolean(umamiWebsiteId && umamiWebsiteId !== 'xxx');
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT,WONK@9..144,400,0,1;9..144,500,0,1;9..144,600,0,1&display=swap" rel="stylesheet" />
     <title>{pageTitle}</title>
-    {umamiEnabled && <script is:inline defer src="https://cloud.umami.is/script.js" data-website-id={umamiWebsiteId}></script>}
+    {/* La carga de Umami y el aviso de error se controlan juntos. */}
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <Header />
     <main id="contenido"><slot /></main>
     <Footer />
+    {umamiEnabled && <AnalyticsNotice websiteId={umamiWebsiteId} />}
   </body>
 </html>
