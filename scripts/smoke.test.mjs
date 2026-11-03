@@ -79,13 +79,14 @@ test('Umami se integra de forma opcional en el layout compartido',()=>{
 
 test('los simuladores solo se publican cuando se habilitan expresamente',()=>{
   const availability=read('src/lib/simulator-availability.ts');
-  assert.match(availability,/new Set<string>\\(\\[\\s*\\/\\/ 'pressure',\\s*\\/\\/ 'heat',\\s*\\]\\)/);
+  assert.match(availability,/enabledSimulatorIds = new Set<string>/);
+  assert.doesNotMatch(availability,/^\s*['"](?:pressure|heat)['"],?\s*$/m);
   const lab=read('src/pages/laboratorio.astro');
-  assert.match(lab,/simulators\\.length > 0/);
+  assert.match(lab,/simulators\.length > 0/);
   assert.match(lab,/Estamos preparando nuevos simuladores/);
-  assert.match(lab,/enabledSimulatorIds\\.has/);
+  assert.match(lab,/enabledSimulatorIds\.has/);
   const article=read('src/pages/articulos/[...slug].astro');
-  assert.match(article,/enabledSimulatorIds\\.has/);
+  assert.match(article,/enabledSimulatorIds\.has/);
   const home=read('src/pages/index.astro');
   assert.match(home,/hasSimulators/);
 });
