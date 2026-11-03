@@ -3,7 +3,6 @@
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 import re
-import textwrap
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / 'public' / 'og'
