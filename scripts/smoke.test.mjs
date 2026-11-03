@@ -56,3 +56,39 @@ test('Laboratorio declara el helper de rutas que usa en la navegación',()=>{
   assert.match(lab,/import\s*\{\s*path\s*\}\s*from\s*['"]\.\.\/lib\/site['"]/);
   assert.match(lab,/href=\{path\('biblioteca\/'\)\}/);
 });
+
+test('ley bomberil permanece en borrador e incorpora marco organizativo y escalafón',()=>{
+  const md=read('src/content/articulos/ley-del-sistema-bomberil.md');
+  const frontmatter=md.split('---')[1];
+  assert.match(frontmatter,/^draft: true$/m);
+  assert.match(frontmatter,/^rankGuide: snbv-oficial$/m);
+  for(const topic of ['asamblea','comisión directiva','cuerpo activo','servicio público','carga pública','jerárquico','atribuciones','obligaciones','25.054','12.969'])
+    assert.ok(md.toLocaleLowerCase('es-AR').includes(topic), `Falta abordar: ${topic}`);
+  const page=read('src/pages/articulos/[...slug].astro');
+  assert.match(page,/post\.data\.rankGuide === 'snbv-oficial'/);
+  assert.match(read('src/content.config.ts'),/rankGuide: z\.enum/);
+  const guide=read('src/components/RankGuide.astro');
+  assert.match(guide,/Comandante General/);
+  assert.match(guide,/Oficial Ayudante/);
+  assert.match(guide,/cabo-primero/);
+  assert.doesNotMatch(guide,/<svg/);
+  assert.doesNotMatch(guide,/Manual de Organización Bomberil/);
+  assert.doesNotMatch(md,/Manual de Organización Bomberil|FSABV/);
+  assert.doesNotMatch(md,/\\| Ámbito \\| Norma \\|/);
+});
+
+
+test('el artículo distingue sanciones y mantiene límites de verificación jurídica',()=>{
+  const md=read('src/content/articulos/ley-del-sistema-bomberil.md');
+  for(const topic of [
+    '### Faltas leves','### Faltas graves','### Faltas gravísimas',
+    '#### Exhortación:','#### Apercibimiento:','#### Suspensión:',
+    '#### Baja disciplinaria:','#### Exoneración:',
+    'cinco años','legajo personal','prohibición absoluta y permanente',
+    '60 días','360 días','Límite de verificación',
+    'Decreto 464/2010'
+  ]) assert.ok(md.includes(topic), `Falta la explicación: ${topic}`);
+  assert.match(md,/^draft: true$/m);
+  assert.doesNotMatch(md,/Slideshare|Scribd|webnode|Manual de Organización Bomberil/i);
+  assert.match(md,/no hemos verificado en una publicación oficial/);
+});
