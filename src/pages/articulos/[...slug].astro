@@ -34,6 +34,7 @@ const jsonLd = {
   inLanguage: 'es-AR',
   mainEntityOfPage: articleUrl,
   image: new URL(path(`og/${post.id}.png`), Astro.site || Astro.url).toString(),
+  author: { '@type': 'Organization', name: 'Cuartelia' },
   publisher: { '@type': 'Organization', name: 'Cuartelia', url: new URL(path(), Astro.site || Astro.url).toString() },
 };
 ---
