@@ -62,7 +62,13 @@ test('Umami se integra de forma opcional en el layout compartido',()=>{
   const layout=read('src/layouts/BaseLayout.astro');
   const workflow=read('.github/workflows/deploy.yml');
   assert.match(layout,/PUBLIC_UMAMI_WEBSITE_ID/);
-  assert.match(layout,/cloud\.umami\.is\/script\.js/);
+  assert.match(layout,/AnalyticsNotice/);
+  assert.match(read('src/components/AnalyticsNotice.astro'),/cloud\.umami\.is\/script\.js/);
   assert.match(layout,/umamiEnabled/);
   assert.match(workflow,/vars\.UMAMI_WEBSITE_ID/);
+  const notice=read('src/components/AnalyticsNotice.astro');
+  assert.match(notice,/script\.onerror/);
+  assert.match(notice,/notice\.hidden = false/);
+  assert.match(notice,/localStorage\.setItem/);
+  assert.match(read('src/components/Footer.astro'),/privacidad\//);
 });
