@@ -76,3 +76,16 @@ test('Umami se integra de forma opcional en el layout compartido',()=>{
   assert.match(notice,/localStorage\.setItem/);
   assert.match(read('src/components/Footer.astro'),/privacidad\//);
 });
+
+test('los simuladores solo se publican cuando se habilitan expresamente',()=>{
+  const availability=read('src/lib/simulator-availability.ts');
+  assert.match(availability,/new Set<string>\\(\\[\\s*\\/\\/ 'pressure',\\s*\\/\\/ 'heat',\\s*\\]\\)/);
+  const lab=read('src/pages/laboratorio.astro');
+  assert.match(lab,/simulators\\.length > 0/);
+  assert.match(lab,/Estamos preparando nuevos simuladores/);
+  assert.match(lab,/enabledSimulatorIds\\.has/);
+  const article=read('src/pages/articulos/[...slug].astro');
+  assert.match(article,/enabledSimulatorIds\\.has/);
+  const home=read('src/pages/index.astro');
+  assert.match(home,/hasSimulators/);
+});
