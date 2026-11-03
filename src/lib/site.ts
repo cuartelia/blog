@@ -1,7 +1,7 @@
 export const brand = {
   name: 'Cuartelia',
   tagline: 'Conocimiento que nos acerca.',
-  description: 'Divulgación, historia y herramientas interactivas para explorar el universo bomberil. Un espacio independiente para aprender y compartir.',
+  description: 'Artículos y recursos educativos sobre historia, ciencia, organización y formación bomberil.',
 };
 
 // Astro normaliza BASE_URL con una barra final gracias a trailingSlash: 'always'.
