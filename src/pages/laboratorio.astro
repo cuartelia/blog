@@ -3,8 +3,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PressureSimulator from '../components/PressureSimulator.astro';
 import HeatSimulator from '../components/HeatSimulator.astro';
 import { path } from '../lib/site';
+import { enabledSimulatorIds } from '../lib/simulator-availability';
+
+const simulators = [
+  { id: 'gases', key: 'pressure', label: '01 / GASES', Component: PressureSimulator },
+  { id: 'termica', key: 'heat', label: '02 / ENERGÍA TÉRMICA', Component: HeatSimulator },
+].filter(({ key }) => enabledSimulatorIds.has(key));
+const hasSimulators = simulators.length > 0;
 ---
-<BaseLayout title="Laboratorio interactivo" description="Simuladores didácticos de presión y calor: cambiá variables y visualizá relaciones físicas con modelos simplificados.">
-  <section class="subpage-hero shell"><div class="eyebrow eyebrow--dark"><span class="eyebrow-dot"></span> EXPLORACIÓN / LABORATORIO</div><div class="subpage-heading"><div><h1>Probá, cambiá.<br/><em>Comprendé.</em></h1><p>Simuladores didácticos para visualizar relaciones entre magnitudes físicas y observar cómo cambian al modificar sus variables.</p></div><div class="subpage-symbol" aria-hidden="true">⊕</div></div></section>
-  <div class="shell lab-page-content"><div class="lab-intro-box"><span class="intro-icon">ⓘ</span><p><strong>Antes de empezar.</strong> Estas herramientas explican modelos idealizados de física. No simulan incendios reales, condiciones seguras de operación ni el comportamiento de equipos presurizados. No son instrumentos de cálculo profesional.</p></div><div id="gases" class="lab-section"><div class="lab-section-head"><span>01 / GASES</span></div><PressureSimulator /></div><div id="termica" class="lab-section"><div class="lab-section-head"><span>02 / ENERGÍA TÉRMICA</span></div><HeatSimulator /></div><div class="lab-outro"><span class="eyebrow eyebrow--dark">PARA SEGUIR PROFUNDIZANDO</span><h2>Del simulador <em>a la teoría.</em></h2><p>Los modelos permiten explorar relaciones físicas simplificadas. Para profundizar, consultá bibliografía técnica y contrastá sus supuestos con las condiciones reales.</p><a href={path('biblioteca/')} class="inline-link">Explorá las lecturas ↗</a></div></div>
+<BaseLayout title="Laboratorio interactivo" description={hasSimulators ? 'Simuladores didácticos para explorar relaciones físicas con modelos simplificados.' : 'Estamos preparando simuladores educativos que acompañarán los artículos de Cuartelia.'}>
+  <section class="subpage-hero shell">
+    <div class="eyebrow eyebrow--dark"><span class="eyebrow-dot"></span> EXPLORACIÓN / LABORATORIO</div>
+    <div class="subpage-heading">
+      <div>
+        <h1>{hasSimulators ? 'Probá, cambiá.' : 'Un espacio para'}<br/><em>{hasSimulators ? 'Comprendé.' : 'seguir aprendiendo.'}</em></h1>
+        <p>{hasSimulators ? 'Simuladores didácticos para visualizar relaciones entre magnitudes físicas y observar cómo cambian al modificar sus variables.' : 'Estamos desarrollando experiencias interactivas para complementar los artículos y dar contexto a cada concepto.'}</p>
+      </div>
+      <div class="subpage-symbol" aria-hidden="true">⊕</div>
+    </div>
+  </section>
+  <div class="shell lab-page-content">
+    {hasSimulators ? (
+      <>
+        <div class="lab-intro-box"><span class="intro-icon" aria-hidden="true">ⓘ</span><p><strong>Antes de empezar.</strong> Estas herramientas explican modelos idealizados de física. No simulan incendios reales, condiciones seguras de operación ni el comportamiento de equipos presurizados. No son instrumentos de cálculo profesional.</p></div>
+        {simulators.map(({ id, label, Component }) => <div id={id} class="lab-section"><div class="lab-section-head"><span>{label}</span></div><Component /></div>)}
+        <div class="lab-outro"><span class="eyebrow eyebrow--dark">PARA SEGUIR PROFUNDIZANDO</span><h2>Del simulador <em>a la teoría.</em></h2><p>Los modelos permiten explorar relaciones físicas simplificadas. Para profundizar, consultá bibliografía técnica y contrastá sus supuestos con las condiciones reales.</p><a href={path('biblioteca/')} class="inline-link">Explorá las lecturas ↗</a></div>
+      </>
+    ) : (
+      <>
+        <div class="lab-intro-box"><span class="intro-icon" aria-hidden="true">✦</span><p><strong>Estamos preparando nuevos simuladores.</strong> Queremos que cada experiencia interactiva acompañe los artículos y ayude a comprender mejor los conceptos. Próximamente vas a encontrar nuevas herramientas educativas en este espacio.</p></div>
+        <div class="lab-outro"><a href={path('biblioteca/')} class="inline-link">Volver a la biblioteca ↗</a></div>
+      </>
+    )}
+  </div>
 </BaseLayout>
