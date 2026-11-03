@@ -77,6 +77,26 @@ test('Umami se integra de forma opcional en el layout compartido',()=>{
   assert.match(read('src/components/Footer.astro'),/privacidad\//);
 });
 
+test('los simuladores solo se publican cuando se habilitan expresamente',()=>{
+  const availability=read('src/lib/simulator-availability.ts');
+  assert.match(availability,/enabledSimulatorIds = new Set<string>/);
+  assert.doesNotMatch(availability,/^\s*['"](?:pressure|heat)['"],?\s*$/m);
+  const lab=read('src/pages/laboratorio.astro');
+  assert.match(lab,/simulators\.length > 0/);
+  assert.match(lab,/Estamos preparando nuevos simuladores/);
+  assert.match(lab,/enabledSimulatorIds\.has/);
+  const article=read('src/pages/articulos/[...slug].astro');
+  assert.match(article,/enabledSimulatorIds\.has/);
+  const home=read('src/pages/index.astro');
+  assert.match(home,/Explorá conceptos físicos/);
+  assert.match(home,/en movimiento\./);
+  assert.match(home,/Entrar al laboratorio/);
+  assert.match(home,/MODELOS EDUCATIVOS · NO APTOS PARA DECISIONES OPERATIVAS/);
+  assert.match(lab,/Probá, cambiá\./);
+  assert.match(lab,/Comprendé\./);
+  assert.match(lab,/Simuladores didácticos para visualizar relaciones/);
+});
+
 test('SEO: sitemap, preview social y botones de compartir',()=>{
   const layout=read('src/layouts/BaseLayout.astro');
   const article=read('src/pages/articulos/[...slug].astro');
