@@ -32,6 +32,10 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Ejecutar pruebas de regresión
         run: npm test
+      - name: Generar imágenes sociales para artículos publicados
+        run: |
+          python3 -m pip install --disable-pip-version-check Pillow==11.3.0
+          python3 scripts/social_images.py
       - name: Compilar Astro y generar índice de búsqueda
         env:
           PUBLIC_UMAMI_WEBSITE_ID: ${{ vars.UMAMI_WEBSITE_ID }}
