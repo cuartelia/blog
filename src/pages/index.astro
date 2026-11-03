@@ -3,7 +3,9 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import { path } from '../lib/site';
+import { enabledSimulatorIds } from '../lib/simulator-availability';
 const posts = (await getCollection('articulos', ({data})=>!data.draft)).sort((a,b)=>(a.data.order??99)-(b.data.order??99));
+const hasSimulators = enabledSimulatorIds.size > 0;
 ---
 <BaseLayout>
   <section class="hero">
@@ -52,6 +54,6 @@ const posts = (await getCollection('articulos', ({data})=>!data.draft)).sort((a,
     <div class="section-end"><a class="inline-link" href={path('biblioteca/')}>Ver biblioteca completa <span aria-hidden="true">↗</span></a><span>{posts.length} {posts.length === 1 ? 'ARTÍCULO PUBLICADO' : 'ARTÍCULOS PUBLICADOS'}</span></div>
   </div></section>
 
-  <section class="lab-promo"><div class="shell lab-promo-grid"><div class="lab-promo-copy"><span class="eyebrow eyebrow--orange">03 / LABORATORIO INTERACTIVO</span><h2>Explorá conceptos físicos<br/><em>en movimiento.</em></h2><p>Modificá variables y observá cómo se relacionan la presión, la temperatura y otras magnitudes en modelos didácticos simplificados.</p><a class="button button-light" href={path('laboratorio/')}>Entrar al laboratorio <span aria-hidden="true">↗</span></a><span class="lab-small">MODELOS EDUCATIVOS · NO APTOS PARA DECISIONES OPERATIVAS</span></div><div class="lab-promo-art" aria-hidden="true"><div class="radial-lines"></div><div class="promo-gauge"><div class="promo-gauge-ruler">0 <span>PRESSURE / kPa</span> 500</div><div class="promo-dial"><div class="promo-needle"></div><div class="promo-dot"></div></div><div class="promo-gauge-bottom">PV = nRT</div></div><span class="promo-art-label">LABORATORIO<br/>CUARTELIA—001</span></div></div></section>
+  <section class="lab-promo"><div class="shell lab-promo-grid"><div class="lab-promo-copy"><span class="eyebrow eyebrow--orange">03 / LABORATORIO INTERACTIVO</span><h2>{hasSimulators ? 'Explorá conceptos físicos' : 'Un laboratorio para'}<br/><em>{hasSimulators ? 'en movimiento.' : 'seguir descubriendo.'}</em></h2><p>{hasSimulators ? 'Modificá variables y observá cómo se relacionan la presión, la temperatura y otras magnitudes en modelos didácticos simplificados.' : 'Estamos preparando simuladores educativos para acompañar las lecturas y explorar sus conceptos de forma interactiva.'}</p><a class="button button-light" href={path('laboratorio/')}>{hasSimulators ? 'Entrar al laboratorio' : 'Conocé el laboratorio'} <span aria-hidden="true">↗</span></a><span class="lab-small">{hasSimulators ? 'MODELOS EDUCATIVOS · NO APTOS PARA DECISIONES OPERATIVAS' : 'NUEVOS SIMULADORES EN PREPARACIÓN'}</span></div><div class="lab-promo-art" aria-hidden="true"><div class="radial-lines"></div><div class="promo-gauge"><div class="promo-gauge-ruler">0 <span>PRESSURE / kPa</span> 500</div><div class="promo-dial"><div class="promo-needle"></div><div class="promo-dot"></div></div><div class="promo-gauge-bottom">PV = nRT</div></div><span class="promo-art-label">LABORATORIO<br/>CUARTELIA—001</span></div></div></section>
 
 </BaseLayout>
