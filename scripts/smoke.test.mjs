@@ -29,7 +29,7 @@ test('el sitio contempla navegación y disclaimer',()=>{
   assert.match(read('src/components/Header.astro'),/Biblioteca/);
   assert.match(read('src/components/Header.astro'),/Laboratorio/);
   assert.match(read('src/components/PressureSimulator.astro'),/No modela/);
-  assert.match(read('src/components/Footer.astro'),/No sustituye/);
+  assert.match(read('src/components/Footer.astro'),/No (?:sustituye|reemplaza)/);
 });
 
 // La publicación se controla desde frontmatter, sin eliminar artículos en elaboración.
