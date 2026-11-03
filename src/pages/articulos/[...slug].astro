@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import HistoryTimeline from '../../components/timelines/bomberos-argentina.astro';
 import { path, formattedDate } from '../../lib/site';
+import { enabledSimulatorIds } from '../../lib/simulator-availability';
 export async function getStaticPaths(){
   const posts=await getCollection('articulos', ({data})=>!data.draft);
   return posts.map(post=>({ params:{slug:post.id},props:{post} }));
@@ -15,7 +16,7 @@ const {title,description,date,category,audience,readingMinutes,sources}=post.dat
 // Vite identifica los simuladores por su nombre de archivo; las notas eligen mediante frontmatter.
 // El import dinámico carga únicamente los componentes solicitados por el artículo.
 const simulatorLoaders = import.meta.glob<{ default: any }>('../../components/simulators/*.astro');
-const simulators = await Promise.all(post.data.simulators.map(async (id) => {
+const simulators = await Promise.all(post.data.simulators.filter((id) => enabledSimulatorIds.has(id)).map(async (id) => {
   const modulePath = `../../components/simulators/${id}.astro`;
   const load = simulatorLoaders[modulePath];
   if (!load) throw new Error(`Simulador "${id}" no existe. Creá src/components/simulators/${id}.astro o corregí el frontmatter de ${post.id}.`);
