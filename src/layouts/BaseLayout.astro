@@ -13,6 +13,9 @@ const { title, description=brand.description, image=path('og-cover.svg'), type='
 const pageTitle = title ? `${title} · Cuartelia` : 'Cuartelia — Conocimiento que nos acerca';
 const canonical = new URL(Astro.url.pathname, Astro.site || Astro.url).toString();
 const ogImage = new URL(image, Astro.site || Astro.url).toString();
+// El tracking se activa solo cuando existe un ID válido configurado en el build.
+const umamiWebsiteId = import.meta.env.PUBLIC_UMAMI_WEBSITE_ID?.trim();
+const umamiEnabled = Boolean(umamiWebsiteId && umamiWebsiteId !== 'xxx');
 ---
 <!doctype html>
 <html lang="es-AR">
@@ -35,6 +38,7 @@ const ogImage = new URL(image, Astro.site || Astro.url).toString();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght,SOFT,WONK@9..144,400,0,1;9..144,500,0,1;9..144,600,0,1&display=swap" rel="stylesheet" />
     <title>{pageTitle}</title>
+    {umamiEnabled && <script is:inline defer src="https://cloud.umami.is/script.js" data-website-id={umamiWebsiteId}></script>}
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
