@@ -112,4 +112,9 @@ test('SEO: sitemap, preview social y botones de compartir',()=>{
   assert.match(share,/wa\.me/);
   assert.match(share,/facebook\.com\/sharer/);
   assert.match(workflow,/scripts\/social_images\.py/);
+  assert.match(workflow,/CairoSVG/);
+  const previews=read('scripts/social_images.py');
+  assert.match(previews,/Brand\.astro/);
+  assert.match(previews,/cairosvg\.svg2png/);
+  assert.doesNotMatch(previews,/draw\.polygon/);
 });
