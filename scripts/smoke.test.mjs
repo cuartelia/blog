@@ -119,3 +119,11 @@ test('SEO: sitemap, preview social y botones de compartir',()=>{
   assert.match(previews,/cairosvg\.svg2png/);
   assert.doesNotMatch(previews,/draw\.polygon/);
 });
+
+test('la portada invita a colaborar sin alterar los mensajes existentes',()=>{
+  const home=read('src/pages/index.astro');
+  assert.match(home,/¿Tenés algo para/);
+  assert.match(home,/compartir información, proponer un tema/);
+  assert.match(home,/href="mailto:contacto@cuartelia\.ar"/);
+  assert.match(home,/Explorá conceptos físicos/);
+});
