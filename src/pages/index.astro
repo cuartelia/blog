@@ -54,4 +54,29 @@ const posts = (await getCollection('articulos', ({data})=>!data.draft)).sort((a,
 
   <section class="lab-promo"><div class="shell lab-promo-grid"><div class="lab-promo-copy"><span class="eyebrow eyebrow--orange">03 / LABORATORIO INTERACTIVO</span><h2>Explorá conceptos físicos<br/><em>en movimiento.</em></h2><p>Modificá variables y observá cómo se relacionan la presión, la temperatura y otras magnitudes en modelos didácticos simplificados.</p><a class="button button-light" href={path('laboratorio/')}>Entrar al laboratorio <span aria-hidden="true">↗</span></a><span class="lab-small">MODELOS EDUCATIVOS · NO APTOS PARA DECISIONES OPERATIVAS</span></div><div class="lab-promo-art" aria-hidden="true"><div class="radial-lines"></div><div class="promo-gauge"><div class="promo-gauge-ruler">0 <span>PRESSURE / kPa</span> 500</div><div class="promo-dial"><div class="promo-needle"></div><div class="promo-dot"></div></div><div class="promo-gauge-bottom">PV = nRT</div></div><span class="promo-art-label">LABORATORIO<br/>CUARTELIA—001</span></div></div></section>
 
+
+  <section class="contact-invite" aria-labelledby="contact-invite-title">
+    <div class="shell contact-invite-inner">
+      <div class="contact-invite-copy">
+        <span class="eyebrow eyebrow--dark">UN ESPACIO PARA COMPARTIR</span>
+        <h2 id="contact-invite-title">¿Tenés algo para <em>contarnos?</em></h2>
+        <p>Si querés compartir información, proponer un tema o ayudarnos a corregir algún detalle, nos encantará leerte.</p>
+      </div>
+      <a class="contact-invite-link" href="mailto:contacto@cuartelia.ar">Escribinos a contacto@cuartelia.ar <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
 </BaseLayout>
+
+<style>
+  .contact-invite{padding:75px 0 85px;border-top:1px solid var(--sand-deep);background:var(--paper)}
+  .contact-invite-inner{display:flex;justify-content:space-between;align-items:center;gap:42px}
+  .contact-invite-copy{max-width:670px}
+  .contact-invite h2{font-size:clamp(2rem,3.7vw,3.4rem);margin:14px 0}
+  .contact-invite p{margin:0;color:var(--ink-soft);line-height:1.75;max-width:610px}
+  .contact-invite-link{display:inline-flex;align-items:center;gap:16px;border-bottom:1px solid var(--ink);padding-bottom:7px;font-size:.88rem;font-weight:800;white-space:nowrap}
+  .contact-invite-link:hover{color:var(--rust-dark);border-color:var(--rust-dark)}
+  @media(max-width:850px){.contact-invite-inner{flex-direction:column;align-items:flex-start;gap:25px}}
+  @media(max-width:570px){.contact-invite{padding:55px 0 65px}.contact-invite-link{white-space:normal;overflow-wrap:anywhere}}
+</style>
+
