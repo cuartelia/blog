@@ -2,11 +2,14 @@
 """Generate 1200x630 PNG previews for Cuartelia during GitHub Pages deployment."""
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
+from io import BytesIO
+import cairosvg
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / 'public' / 'og'
 POSTS = ROOT / 'src' / 'content' / 'articulos'
+BRAND = ROOT / 'src' / 'components' / 'Brand.astro'
 OUTPUT.mkdir(parents=True, exist_ok=True)
 
 FONT_REGULAR = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
@@ -36,13 +39,27 @@ def wrap(draw, title, max_width, title_font):
     return lines
 
 
+def brand_mark():
+    """Render the actual SVG used in Cuartelia's header; never redraw the logo."""
+    markup = BRAND.read_text(encoding='utf-8')
+    match = re.search(r'<svg\b[^>]*>.*?</svg>', markup, flags=re.DOTALL)
+    if not match:
+        raise ValueError('Brand.astro no contiene el SVG del isotipo')
+    svg = match.group(0).replace('currentColor', RUST)
+    svg = svg.replace('<svg ', '<svg xmlns="http://www.w3.org/2000/svg" ', 1)
+    png = cairosvg.svg2png(bytestring=svg.encode('utf-8'), output_width=62, output_height=62)
+    return Image.open(BytesIO(png)).convert('RGBA')
+
+
+MARK = brand_mark()
+
+
 def make_card(title, label, filename):
     image = Image.new('RGB', (1200, 630), INK)
     draw = ImageDraw.Draw(image)
     for radius in (210, 285, 360):
         draw.ellipse((995-radius, 95-radius, 995+radius, 95+radius), outline='#3e5555', width=2)
-    draw.rounded_rectangle((74, 70, 131, 127), radius=10, fill=RUST)
-    draw.polygon([(99,81),(109,104),(103,118),(89,117),(84,104)], fill=INK)
+    image.paste(MARK, (74, 70), MARK)
     draw.text((155, 75), 'CUARTELIA', font=font(38, True), fill=CREAM)
     draw.text((76, 185), label.upper(), font=font(22, True), fill=RUST)
     title_font = font(59, True)

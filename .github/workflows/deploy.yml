@@ -34,7 +34,7 @@ jobs:
         run: npm test
       - name: Generar imágenes sociales para artículos publicados
         run: |
-          python3 -m pip install --disable-pip-version-check Pillow==11.3.0
+          python3 -m pip install --disable-pip-version-check Pillow==11.3.0 CairoSVG==2.7.1
           python3 scripts/social_images.py
       - name: Compilar Astro y generar índice de búsqueda
         env:

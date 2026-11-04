@@ -32,6 +32,7 @@ test('el sitio contempla navegación y disclaimer',()=>{
   assert.match(read('src/components/Header.astro'),/Laboratorio/);
   assert.match(read('src/components/PressureSimulator.astro'),/No modela/);
   assert.match(read('src/components/Footer.astro'),/No (?:sustituye|reemplaza)/);
+  assert.match(read('src/components/Footer.astro'),/href="mailto:contacto@cuartelia\.ar"/);
 });
 
 // La publicación se controla desde frontmatter, sin eliminar artículos en elaboración.
@@ -112,4 +113,9 @@ test('SEO: sitemap, preview social y botones de compartir',()=>{
   assert.match(share,/wa\.me/);
   assert.match(share,/facebook\.com\/sharer/);
   assert.match(workflow,/scripts\/social_images\.py/);
+  assert.match(workflow,/CairoSVG/);
+  const previews=read('scripts/social_images.py');
+  assert.match(previews,/Brand\.astro/);
+  assert.match(previews,/cairosvg\.svg2png/);
+  assert.doesNotMatch(previews,/draw\.polygon/);
 });
