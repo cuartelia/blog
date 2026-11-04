@@ -96,3 +96,20 @@ test('los simuladores solo se publican cuando se habilitan expresamente',()=>{
   assert.match(lab,/Comprendé\./);
   assert.match(lab,/Simuladores didácticos para visualizar relaciones/);
 });
+
+test('SEO: sitemap, preview social y botones de compartir',()=>{
+  const layout=read('src/layouts/BaseLayout.astro');
+  const article=read('src/pages/articulos/[...slug].astro');
+  const sitemap=read('src/pages/sitemap.xml.ts');
+  const share=read('src/components/ShareArticle.astro');
+  const workflow=read('.github/workflows/deploy.yml');
+  assert.match(read('public/robots.txt'),/Sitemap: https:\/\/cuartelia\.ar\/sitemap\.xml/);
+  assert.match(sitemap,/!data\.draft/);
+  assert.match(layout,/og:image:width/);
+  assert.match(layout,/twitter:image/);
+  assert.match(article,/BlogPosting/);
+  assert.match(article,/ShareArticle/);
+  assert.match(share,/wa\.me/);
+  assert.match(share,/facebook\.com\/sharer/);
+  assert.match(workflow,/scripts\/social_images\.py/);
+});

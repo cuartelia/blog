@@ -1,0 +1,104 @@
+---
+interface Props { title: string; url: string }
+const { title, url } = Astro.props;
+const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(`${title} — ${url}`)}`;
+const telegramUrl = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
+const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+const xUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
+---
+<section class="article-share" aria-label="Compartir artículo" data-share-url={url} data-share-title={title}>
+  <span class="article-share-label">COMPARTÍ ESTE ARTÍCULO</span>
+  <div class="article-share-actions">
+    <details class="article-share-menu">
+      <summary>Compartir <span aria-hidden="true">⌄</span></summary>
+      <div class="article-share-options">
+        <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
+        <a href={telegramUrl} target="_blank" rel="noopener noreferrer">Telegram ↗</a>
+        <a href={facebookUrl} target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+        <a href={xUrl} target="_blank" rel="noopener noreferrer">X (Twitter) ↗</a>
+        <button type="button" data-share-instagram>Instagram (mensaje) ↗</button>
+      </div>
+    </details>
+    <button type="button" class="article-share-copy" data-share-copy>Copiar enlace</button>
+  </div>
+  <span class="article-share-feedback" data-share-feedback role="status" aria-live="polite"></span>
+</section>
+<script>
+  document.querySelectorAll<HTMLElement>('.article-share').forEach(section => {
+    const url = section.dataset.shareUrl || location.href;
+    const title = section.dataset.shareTitle || document.title;
+    const feedback = section.querySelector<HTMLElement>('[data-share-feedback]');
+    const copy = section.querySelector<HTMLButtonElement>('[data-share-copy]');
+    const instagram = section.querySelector<HTMLButtonElement>('[data-share-instagram]');
+    const menu = section.querySelector<HTMLDetailsElement>('.article-share-menu');
+    const inform = (message: string) => { if (feedback) feedback.textContent = message; };
+
+    const copyLink = async () => {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(url);
+        return;
+      }
+      const field = document.createElement('textarea');
+      field.value = url;
+      field.style.position = 'fixed';
+      field.style.opacity = '0';
+      document.body.appendChild(field);
+      field.select();
+      const copied = document.execCommand('copy');
+      field.remove();
+      if (!copied) throw new Error('No se pudo copiar');
+    };
+
+    copy?.addEventListener('click', async () => {
+      try { await copyLink(); inform('Enlace copiado.'); }
+      catch { inform('No se pudo copiar. Podés hacerlo desde la barra de direcciones.'); }
+    });
+
+    instagram?.addEventListener('click', async () => {
+      // Instagram no ofrece una URL pública para abrir directamente un DM con un enlace precargado.
+      // El sistema puede mostrar Instagram como destino si está instalada y admite Web Share.
+      if (typeof navigator.share === 'function') {
+        try {
+          await navigator.share({ title, url });
+          menu?.removeAttribute('open');
+          return;
+        } catch (error) {
+          if ((error as Error).name === 'AbortError') return;
+        }
+      }
+      try {
+        await copyLink();
+        inform('Enlace copiado. Podés pegarlo en un mensaje de Instagram.');
+      } catch {
+        inform('Copiá el enlace desde la barra de direcciones y pegalo en Instagram.');
+      }
+      menu?.removeAttribute('open');
+    });
+
+    // Cierra el menú al pulsar fuera o presionar Escape.
+    document.addEventListener('pointerdown', event => {
+      if (menu?.open && !menu.contains(event.target as Node)) menu.removeAttribute('open');
+    });
+    menu?.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        menu.removeAttribute('open');
+        menu.querySelector('summary')?.focus();
+      }
+    });
+  });
+</script>
+<style>
+  .article-share{margin:42px 0 30px;padding:24px 0;border-top:1px solid var(--sand-deep);border-bottom:1px solid var(--sand-deep)}
+  .article-share-label{display:block;font:500 .65rem var(--mono);letter-spacing:.1em;color:var(--rust-dark);margin-bottom:14px}
+  .article-share-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .article-share-menu{position:relative}
+  .article-share-menu summary,.article-share-copy{display:inline-flex;align-items:center;justify-content:center;gap:9px;font:700 .8rem var(--sans);color:var(--ink);background:transparent;border:1px solid var(--sand-deep);padding:10px 14px;cursor:pointer;list-style:none;min-height:42px}
+  .article-share-menu summary::-webkit-details-marker{display:none}
+  .article-share-menu[open] summary,.article-share-menu summary:hover,.article-share-copy:hover{border-color:var(--rust);color:var(--rust-dark)}
+  .article-share-options{position:absolute;bottom:calc(100% + 8px);left:0;z-index:15;min-width:210px;border:1px solid var(--sand-deep);background:var(--cream);box-shadow:0 10px 27px rgba(19,40,45,.14);padding:5px}
+  .article-share-options a,.article-share-options button{display:block;width:100%;text-align:left;padding:11px 12px;font:600 .8rem var(--sans);color:var(--ink);background:transparent;border:0;text-decoration:none;cursor:pointer}
+  .article-share-options a:hover,.article-share-options button:hover{background:var(--sand);color:var(--rust-dark)}
+  .article-share-actions :focus-visible{outline:2px solid var(--rust);outline-offset:3px}
+  .article-share-feedback{display:block;min-height:1.3em;margin-top:10px;font-size:.78rem;color:var(--rust-dark)}
+  @media(max-width:570px){.article-share-options{bottom:calc(100% + 8px);max-width:calc(100vw - 36px)}}
+</style>
