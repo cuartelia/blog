@@ -5,8 +5,10 @@ import { resolve } from 'node:path';
 const root = resolve(import.meta.dirname, '..');
 const read = path => readFileSync(resolve(root, path), 'utf8');
 const posts = readdirSync(resolve(root, 'src/content/articulos')).filter(x=>x.endsWith('.md'));
-test('hay exactamente tres artículos de demostración',()=>{
-  assert.deepEqual(posts.sort(), ['fuego.md','historia-bomberil-argentina.md','presion.md']);
+test('el catálogo incluye los artículos publicados y los borradores esperados',()=>{
+  for (const file of ['fuego.md','historia-bomberil-argentina.md','presion.md','voluntariado-bomberil-en-america.md']) {
+    assert.ok(posts.includes(file), `falta el artículo ${file}`);
+  }
 });
 test('todos los artículos tienen metadatos y fuentes',()=>{
   for(const file of posts){const text=read(`src/content/articulos/${file}`);
@@ -29,19 +31,22 @@ test('el sitio contempla navegación y disclaimer',()=>{
   assert.match(read('src/components/Header.astro'),/Biblioteca/);
   assert.match(read('src/components/Header.astro'),/Laboratorio/);
   assert.match(read('src/components/PressureSimulator.astro'),/No modela/);
-  assert.match(read('src/components/Footer.astro'),/No sustituye/);
+  assert.match(read('src/components/Footer.astro'),/No (?:sustituye|reemplaza)/);
+  assert.match(read('src/components/Footer.astro'),/href="mailto:contacto@cuartelia\.ar"/);
 });
 
 // La publicación se controla desde frontmatter, sin eliminar artículos en elaboración.
-test('solo Historia bomberil se publica; Fuego y Presión quedan en borrador',()=>{
+test('Historia y Voluntariado se publican; Fuego y Presión quedan en borrador',()=>{
   for(const slug of ['fuego','presion']){
     const md=read(`src/content/articulos/${slug}.md`);
     const frontmatter=md.split('---')[1];
     assert.match(frontmatter,/^draft: true$/m,`${slug} debe permanecer oculto`);
     assert.match(frontmatter,/^feature: false$/m,`${slug} no debe destacarse`);
   }
-  const history=read('src/content/articulos/historia-bomberil-argentina.md');
-  assert.doesNotMatch(history.split('---')[1],/^draft: true$/m);
+  for (const slug of ['historia-bomberil-argentina','voluntariado-bomberil-en-america']) {
+    const article=read(`src/content/articulos/${slug}.md`);
+    assert.doesNotMatch(article.split('---')[1],/^draft: true$/m);
+  }
   for(const file of ['src/pages/index.astro','src/pages/biblioteca.astro','src/pages/articulos/[...slug].astro']){
     assert.match(read(file),/!data\.draft/,`${file} debe filtrar los borradores`);
   }
@@ -57,38 +62,87 @@ test('Laboratorio declara el helper de rutas que usa en la navegación',()=>{
   assert.match(lab,/href=\{path\('biblioteca\/'\)\}/);
 });
 
-test('ley bomberil permanece en borrador e incorpora marco organizativo y escalafón',()=>{
-  const md=read('src/content/articulos/ley-del-sistema-bomberil.md');
-  const frontmatter=md.split('---')[1];
-  assert.match(frontmatter,/^draft: true$/m);
-  assert.match(frontmatter,/^rankGuide: snbv-oficial$/m);
-  for(const topic of ['asamblea','comisión directiva','cuerpo activo','servicio público','carga pública','jerárquico','atribuciones','obligaciones','25.054','12.969'])
-    assert.ok(md.toLocaleLowerCase('es-AR').includes(topic), `Falta abordar: ${topic}`);
-  const page=read('src/pages/articulos/[...slug].astro');
-  assert.match(page,/post\.data\.rankGuide === 'snbv-oficial'/);
-  assert.match(read('src/content.config.ts'),/rankGuide: z\.enum/);
-  const guide=read('src/components/RankGuide.astro');
-  assert.match(guide,/Comandante General/);
-  assert.match(guide,/Oficial Ayudante/);
-  assert.match(guide,/cabo-primero/);
-  assert.doesNotMatch(guide,/<svg/);
-  assert.doesNotMatch(guide,/Manual de Organización Bomberil/);
-  assert.doesNotMatch(md,/Manual de Organización Bomberil|FSABV/);
-  assert.doesNotMatch(md,/\\| Ámbito \\| Norma \\|/);
+// Umami se configura una sola vez en el layout y solo se habilita con un ID real.
+test('Umami se integra de forma opcional en el layout compartido',()=>{
+  const layout=read('src/layouts/BaseLayout.astro');
+  const workflow=read('.github/workflows/deploy.yml');
+  assert.match(layout,/PUBLIC_UMAMI_WEBSITE_ID/);
+  assert.match(layout,/AnalyticsNotice/);
+  assert.match(read('src/components/AnalyticsNotice.astro'),/cloud\.umami\.is\/script\.js/);
+  assert.match(layout,/umamiEnabled/);
+  assert.match(workflow,/vars\.UMAMI_WEBSITE_ID/);
+  const notice=read('src/components/AnalyticsNotice.astro');
+  assert.match(notice,/script\.onerror/);
+  assert.match(notice,/notice\.hidden = false/);
+  assert.match(notice,/localStorage\.setItem/);
+  assert.match(read('src/components/Footer.astro'),/privacidad\//);
+});
+
+test('los simuladores solo se publican cuando se habilitan expresamente',()=>{
+  const availability=read('src/lib/simulator-availability.ts');
+  assert.match(availability,/enabledSimulatorIds = new Set<string>/);
+  assert.doesNotMatch(availability,/^\s*['"](?:pressure|heat)['"],?\s*$/m);
+  const lab=read('src/pages/laboratorio.astro');
+  assert.match(lab,/simulators\.length > 0/);
+  assert.match(lab,/Estamos preparando nuevos simuladores/);
+  assert.match(lab,/enabledSimulatorIds\.has/);
+  const article=read('src/pages/articulos/[...slug].astro');
+  assert.match(article,/enabledSimulatorIds\.has/);
+  const home=read('src/pages/index.astro');
+  assert.match(home,/Explorá conceptos físicos/);
+  assert.match(home,/en movimiento\./);
+  assert.match(home,/Entrar al laboratorio/);
+  assert.match(home,/MODELOS EDUCATIVOS · NO APTOS PARA DECISIONES OPERATIVAS/);
+  assert.match(lab,/Probá, cambiá\./);
+  assert.match(lab,/Comprendé\./);
+  assert.match(lab,/Simuladores didácticos para visualizar relaciones/);
+});
+
+test('SEO: sitemap, preview social y botones de compartir',()=>{
+  const layout=read('src/layouts/BaseLayout.astro');
+  const article=read('src/pages/articulos/[...slug].astro');
+  const sitemap=read('src/pages/sitemap.xml.ts');
+  const share=read('src/components/ShareArticle.astro');
+  const workflow=read('.github/workflows/deploy.yml');
+  assert.match(read('public/robots.txt'),/Sitemap: https:\/\/cuartelia\.ar\/sitemap\.xml/);
+  assert.match(sitemap,/!data\.draft/);
+  assert.match(layout,/og:image:width/);
+  assert.match(layout,/twitter:image/);
+  assert.match(article,/BlogPosting/);
+  assert.match(article,/ShareArticle/);
+  assert.match(share,/wa\.me/);
+  assert.match(share,/facebook\.com\/sharer/);
+  assert.match(workflow,/scripts\/social_images\.py/);
+  assert.match(workflow,/CairoSVG/);
+  const previews=read('scripts/social_images.py');
+  assert.match(previews,/Brand\.astro/);
+  assert.match(previews,/cairosvg\.svg2png/);
+  assert.doesNotMatch(previews,/draw\.polygon/);
+});
+
+test('la portada invita a colaborar sin alterar los mensajes existentes',()=>{
+  const home=read('src/pages/index.astro');
+  assert.match(home,/¿Tenés algo para/);
+  assert.match(home,/compartir información, proponer un tema/);
+  assert.match(home,/href="mailto:contacto@cuartelia\.ar"/);
+  assert.match(home,/Explorá conceptos físicos/);
 });
 
 
-test('el artículo distingue sanciones y mantiene límites de verificación jurídica',()=>{
-  const md=read('src/content/articulos/ley-del-sistema-bomberil.md');
-  for(const topic of [
-    '### Faltas leves','### Faltas graves','### Faltas gravísimas',
-    '#### Exhortación:','#### Apercibimiento:','#### Suspensión:',
-    '#### Baja disciplinaria:','#### Exoneración:',
-    'cinco años','legajo personal','prohibición absoluta y permanente',
-    '60 días','360 días','Límite de verificación',
-    'Decreto 464/2010'
-  ]) assert.ok(md.includes(topic), `Falta la explicación: ${topic}`);
-  assert.match(md,/^draft: true$/m);
-  assert.doesNotMatch(md,/Slideshare|Scribd|webnode|Manual de Organización Bomberil/i);
-  assert.match(md,/no hemos verificado en una publicación oficial/);
+test('legislación nacional se publica sin incluir normativa provincial',()=>{
+  const md=read('src/content/articulos/leyes-y-regulaciones-nacionales-bomberos-voluntarios.md');
+  const frontmatter=md.split('---')[1];
+  assert.match(frontmatter,/^draft: false$/m);
+  assert.match(frontmatter,/^rankGuide: snbv-oficial$/m);
+  for(const term of ['25.054','26.987','27.629','27.287','224/2026','Agencia Federal de Emergencias'])
+    assert.ok(md.includes(term),`Falta el tema nacional: ${term}`);
+  assert.doesNotMatch(md,/12\\.969|13\\.860|14\\.296|Decreto 464\\/2010|exoneración|baja disciplinaria/i);
+  const page=read('src/pages/articulos/[...slug].astro');
+  assert.match(page,/RankGuide/);
+  assert.match(read('src/content.config.ts'),/rankGuide: z\\.enum/);
+  const guide=read('src/components/RankGuide.astro');
+  assert.match(guide,/Comandante General/);
+  assert.doesNotMatch(guide,/<svg/);
+  for(const file of ['cabo.png','comandante-general.png','oficial-ayudante.png'])
+    assert.ok(readdirSync(resolve(root,'public/insignias/snbv')).includes(file));
 });

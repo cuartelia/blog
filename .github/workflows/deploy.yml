@@ -23,29 +23,22 @@ jobs:
           node-version: '22'
           cache: npm
           cache-dependency-path: package-lock.json
-      - name: Configurar rutas para GitHub Pages
+      - name: Configurar rutas para cuartelia.ar
         shell: bash
-        env:
-          REPO: ${{ github.event.repository.name }}
-          OWNER: ${{ github.repository_owner }}
-          # Opcional: configurar variable de repositorio CUSTOM_DOMAIN_URL=https://ejemplo.ar
-          CUSTOM_DOMAIN_URL: ${{ vars.CUSTOM_DOMAIN_URL }}
         run: |
-          if [ -n "$CUSTOM_DOMAIN_URL" ]; then
-            echo "SITE_URL=${CUSTOM_DOMAIN_URL%/}" >> "$GITHUB_ENV"
-            echo 'BASE_PATH=/' >> "$GITHUB_ENV"
-          elif [ "$REPO" = "$OWNER.github.io" ]; then
-            echo "SITE_URL=https://$OWNER.github.io" >> "$GITHUB_ENV"
-            echo 'BASE_PATH=/' >> "$GITHUB_ENV"
-          else
-            echo "SITE_URL=https://$OWNER.github.io" >> "$GITHUB_ENV"
-            echo "BASE_PATH=/$REPO" >> "$GITHUB_ENV"
-          fi
+          echo 'SITE_URL=https://cuartelia.ar' >> "$GITHUB_ENV"
+          echo 'BASE_PATH=/' >> "$GITHUB_ENV"
       - name: Instalar dependencias
         run: npm ci --no-audit --no-fund
       - name: Ejecutar pruebas de regresión
         run: npm test
+      - name: Generar imágenes sociales para artículos publicados
+        run: |
+          python3 -m pip install --disable-pip-version-check Pillow==11.3.0 CairoSVG==2.7.1
+          python3 scripts/social_images.py
       - name: Compilar Astro y generar índice de búsqueda
+        env:
+          PUBLIC_UMAMI_WEBSITE_ID: ${{ vars.UMAMI_WEBSITE_ID }}
         run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:

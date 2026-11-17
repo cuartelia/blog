@@ -56,7 +56,7 @@ Por eso, cuando alguien consulta «¿cómo ingreso?» o «¿qué requisitos debo
 
 ## Una cronología para explorar
 
-La historia del movimiento bomberil reúne acontecimientos nacionales, historias locales y procesos de organización provincial. La línea de tiempo interactiva que sigue permite recorrer los principales hitos de **Argentina** y de **Santa Fe**, y consultar las fuentes documentales de cada episodio.
+La historia del movimiento bomberil argentino incluye distintos momentos clave: los primeros antecedentes del servicio organizado, el nacimiento del voluntariado, la articulación entre asociaciones y su reconocimiento normativo. La línea de tiempo interactiva que sigue reúne algunos de esos hitos nacionales, con fuentes para profundizar en cada uno.
 
 ## Lo que permanece
 
@@ -68,4 +68,4 @@ Conocer la historia no es mirar el pasado por nostalgia. Es recordar que, detrá
 
 ---
 
-**Para seguir explorando:** buscá los aniversarios, archivos históricos y documentos oficiales de los cuarteles de tu localidad. La historia nacional se entiende mejor cuando se conecta con las historias de cada comunidad.
+**Para seguir explorando:** las historias institucionales de Bomberos Voluntarios de La Boca y las publicaciones del Sistema Nacional de Bomberos Voluntarios permiten profundizar en los orígenes y la evolución del movimiento argentino.

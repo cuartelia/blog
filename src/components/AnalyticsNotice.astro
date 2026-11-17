@@ -1,0 +1,51 @@
+---
+interface Props { websiteId: string }
+const { websiteId } = Astro.props;
+---
+<div class="analytics-loader" data-umami-loader data-website-id={websiteId}>
+  <aside class="analytics-notice" data-analytics-notice hidden aria-labelledby="analytics-notice-title">
+    <div class="analytics-notice-copy">
+      <strong id="analytics-notice-title">¿Nos ayudás a mejorar Cuartelia?</strong>
+      <p>No pudimos cargar nuestras estadísticas de visitas. Las usamos para saber qué contenidos interesan y mejorar el sitio. Cuartelia no muestra publicidad ni utiliza estos datos para anuncios personalizados.</p>
+      <p>Si usás un bloqueador, podés permitir las estadísticas para este sitio. Es opcional: podés seguir leyendo sin cambiar nada. <a href="/privacidad/">Cómo usamos las estadísticas</a>.</p>
+    </div>
+    <button type="button" class="analytics-notice-close" data-analytics-dismiss aria-label="Cerrar aviso de estadísticas">×</button>
+  </aside>
+</div>
+<script>
+  // Se ejecuta aunque el script externo no cargue; no intenta sortear bloqueadores.
+  const loader = document.querySelector<HTMLElement>('[data-umami-loader]');
+  if (loader) {
+    const id = loader.dataset.websiteId;
+    const notice = loader.querySelector<HTMLElement>('[data-analytics-notice]');
+    const dismiss = loader.querySelector<HTMLButtonElement>('[data-analytics-dismiss]');
+    const storageKey = 'cuartelia:analytics-notice-dismissed';
+    let dismissed = false;
+    try { dismissed = localStorage.getItem(storageKey) === '1'; } catch { /* almacenamiento no disponible */ }
+    dismiss?.addEventListener('click', () => {
+      if (notice) notice.hidden = true;
+      try { localStorage.setItem(storageKey, '1'); } catch { /* almacenamiento no disponible */ }
+    });
+    if (id) {
+      const script = document.createElement('script');
+      script.defer = true;
+      script.src = 'https://cloud.umami.is/script.js';
+      script.dataset.websiteId = id;
+      script.onerror = () => {
+        // Un error de carga no demuestra que exista un bloqueador: el texto no lo presupone.
+        if (notice && !dismissed) notice.hidden = false;
+      };
+      document.head.appendChild(script);
+    }
+  }
+</script>
+<style>
+  .analytics-notice[hidden]{display:none}
+  .analytics-notice{position:fixed;z-index:200;bottom:20px;left:20px;max-width:min(450px,calc(100vw - 40px));display:flex;align-items:flex-start;gap:14px;background:#f7f5ef;color:#13282d;border:1px solid #d3d6ce;border-left:4px solid #d75138;box-shadow:0 12px 36px rgba(19,40,45,.16);padding:18px 16px 18px 20px}
+  .analytics-notice-copy strong{font-weight:800;font-size:1rem}
+  .analytics-notice-copy p{font-size:.82rem;line-height:1.65;margin:9px 0 0;color:#50625d}
+  .analytics-notice-copy a{color:#aa412b;text-decoration:underline;text-underline-offset:3px}
+  .analytics-notice-close{flex:none;font-family:inherit;font-size:1.5rem;line-height:1;background:transparent;border:0;color:#13282d;cursor:pointer;padding:0 3px}
+  .analytics-notice-close:focus-visible,.analytics-notice-copy a:focus-visible{outline:2px solid #d75138;outline-offset:3px}
+  @media(max-width:570px){.analytics-notice{bottom:12px;left:12px;max-width:calc(100vw - 24px);padding:15px}}
+</style>
