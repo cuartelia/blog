@@ -167,9 +167,9 @@ La prestación voluntaria del servicio puede coincidir con obligaciones laborale
 
 ### ¿Qué ocurre cuando el servicio coincide con el trabajo habitual?
 
-El **artículo 17** dispone que los empleadores públicos y privados consideren la actividad bomberil como **carga pública**, eximiendo al bombero voluntario de perjuicios económicos y laborales derivados de inasistencias o llegadas tarde causadas por el cumplimiento del servicio.
+El **artículo 17** dispone que los empleadores públicos y privados consideren la actividad bomberil como **carga pública**. En términos generales, una carga pública es un deber o prestación de interés comunitario reconocido por la ley. En el caso de los bomberos voluntarios, esta calificación se aplica al servicio que cumplen quienes ya se incorporaron voluntariamente a la institución.
 
-Las ausencias deben justificarse según las condiciones legales; la disposición también fija un límite anual específico para las vinculadas a funciones pedagógicas. El **artículo 22** contempla, además, la condición de movilizado del personal durante convocatorias oficiales ante emergencias provinciales o nacionales, desde la convocatoria hasta el retorno a sus bases.
+Su efecto en la relación laboral es concreto: el cumplimiento del servicio protege al bombero frente a perjuicios económicos, laborales o conceptuales derivados de inasistencias o llegadas tarde. La disposición también establece condiciones de justificación y un límite anual específico para las ausencias vinculadas a funciones pedagógicas. El **artículo 22** contempla, además, la condición de movilizado del personal durante convocatorias oficiales ante emergencias provinciales o nacionales, desde la convocatoria hasta el retorno a sus bases.
 
 ### ¿Y si ocurre un accidente o una enfermedad relacionada con el servicio?
 
