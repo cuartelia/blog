@@ -146,3 +146,14 @@ test('legislación nacional se publica sin incluir normativa provincial',()=>{
   for(const file of ['cabo.png','comandante-general.png','oficial-ayudante.png'])
     assert.ok(readdirSync(resolve(root,'public/insignias/snbv')).includes(file));
 });
+
+test('el articulo nacional explica el servicio publico y tiene icono juridico propio',()=>{
+  const md=read('src/content/articulos/leyes-y-regulaciones-nacionales-bomberos-voluntarios.md');
+  assert.match(md,/### ¿Qué significa que sea un servicio público\?/);
+  for(const term of ['continuidad','regularidad','generalidad','igualdad','transporte urbano'])
+    assert.ok(md.includes(term), `Falta explicar: ${term}`);
+  const card=read('src/components/ArticleCard.astro');
+  assert.match(card,/post\.id === 'leyes-y-regulaciones-nacionales-bomberos-voluntarios'/);
+  assert.match(card,/M39 87h52/); // platillo izquierdo de la balanza SVG
+  assert.match(card,/category === 'Fundamentos'/); // no cambia el icono de otros articulos
+});
