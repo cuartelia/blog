@@ -19,6 +19,8 @@ sources:
     url: 'https://www.argentina.gob.ar/normativa/nacional/ley-26994-235975/actualizacion'
   - label: 'Ley 27.629 — fortalecimiento del sistema nacional (2021)'
     url: 'https://www.argentina.gob.ar/normativa/nacional/ley-27629-350984/texto'
+  - label: 'Decreto 830/2024 — servicio público de transporte de pasajeros (ejemplo de régimen sectorial)'
+    url: 'https://www.argentina.gob.ar/normativa/nacional/decreto-830-2024-404098/texto'
   - label: 'Ley 27.287 — Sistema Nacional para la Gestión Integral del Riesgo y la Protección Civil'
     url: 'https://www.argentina.gob.ar/normativa/nacional/ley-27287-266631/actualizacion'
   - label: 'Decreto 225/2025 — Agencia Federal de Emergencias'
@@ -67,9 +69,11 @@ Como esas tareas responden a necesidades de toda la comunidad, la legislación l
 
 ### ¿Qué significa que sea un servicio público?
 
-Un servicio público atiende necesidades de interés general. El **artículo 3 de la Ley 25.054** reconoce expresamente ese carácter a las actividades específicas de los cuerpos de bomberos de asociaciones sin fines de lucro, que las prestan de manera voluntaria.
+En el derecho administrativo, un **servicio público** es una actividad destinada a satisfacer necesidades de interés general que el ordenamiento jurídico reconoce y somete a reglas específicas de prestación y control. Puede estar a cargo del Estado o de organizaciones privadas, según el régimen aplicable a cada actividad.
 
-En este modelo, el servicio es público por su finalidad y reconocimiento legal, mientras que las asociaciones son **entidades civiles sin fines de lucro**. El mismo artículo establece que la actividad del bombero voluntario es ajena a las normas del derecho laboral.
+Su regulación suele orientarse por principios como la **continuidad** (mantener el servicio disponible según su naturaleza), la **regularidad** (cumplir las condiciones establecidas), la **generalidad** (atender a sus destinatarios) y la **igualdad** (brindar un trato sin discriminaciones arbitrarias). Por ejemplo, el transporte urbano de pasajeros es un servicio público cuyo régimen establece condiciones de funcionamiento y acceso para la comunidad.
+
+En el ámbito bomberil, el **artículo 3 de la Ley 25.054** reconoce expresamente ese carácter a las actividades específicas de los cuerpos de bomberos voluntarios. La prestación está orientada a proteger a la comunidad y se realiza mediante **asociaciones de bien público sin fines de lucro**. La ley también establece que la actividad del bombero voluntario es ajena a las normas del derecho laboral.
 
 Cada integrante puede tener, a su vez, un empleo habitual. La ley contempla protecciones para compatibilizar esa actividad laboral con las obligaciones del servicio bomberil, que abordaremos más adelante.
 
