@@ -11,7 +11,16 @@ const tone = tones[category] || 'history';
 <article class:list={['article-card',`article-card--${tone}`, {'article-card--feature':variant==='feature'}]}>
   <div class="card-visual" aria-hidden="true">
     <span class="card-num">{String(index+1).padStart(2,'0')}</span>
-    {post.id === 'voluntariado-bomberil-en-america' ? <svg viewBox="0 0 230 140" fill="none">
+    {post.id === 'leyes-y-regulaciones-nacionales-bomberos-voluntarios' ? <svg viewBox="0 0 230 140" fill="none">
+      <g stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="115" cy="19" r="5" fill="currentColor" fill-opacity=".16"/>
+        <path d="M115 24v95M47 45h136M115 32v13"/>
+        <path d="M65 45 44 87M65 45 86 87M165 45 144 87M165 45 186 87" stroke-width="2.2"/>
+        <path d="M39 87h52c-3 13-13 20-26 20S42 100 39 87ZM139 87h52c-3 13-13 20-26 20s-23-7-26-20Z" fill="currentColor" fill-opacity=".12"/>
+        <path d="M94 118h42l10 9H84l10-9Z" fill="currentColor" fill-opacity=".12"/>
+        <path d="M102 110h26"/>
+      </g>
+    </svg> : post.id === 'voluntariado-bomberil-en-america' ? <svg viewBox="0 0 230 140" fill="none">
       <g stroke="currentColor" stroke-width="2.1" stroke-linejoin="round" stroke-linecap="round">
         <path d="M26 25 43 18 57 19 66 12 82 17 95 13 107 21 101 32 91 34 85 46 76 51 72 63 62 62 59 74 51 65 46 55 35 50 28 38 22 35Z" fill="currentColor" fill-opacity=".10"/>
         <path d="m59 75 9-5 11 3 7 8 11 2 4 11 11 6-4 14-8 11-5 13-9-11-4-13-7-10-2-12-9-7Z" fill="currentColor" fill-opacity=".12"/>
