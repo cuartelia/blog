@@ -5,7 +5,7 @@ date: 2026-11-17
 category: Formación
 audience: [Aspirantes, Cadetes, Bomberos, Público general]
 readingMinutes: 17
-updated: 2026-11-18
+updated: 2026-11-20
 feature: false
 draft: false
 order: 2
@@ -37,7 +37,7 @@ Cuando una dotación responde a una emergencia, vemos a los bomberos, sus vehíc
 
 ¿Por qué los bomberos voluntarios pueden prestar un servicio a toda la comunidad sin ser una dependencia estatal? ¿Qué relación existe entre un cuartel, una federación y el Consejo Nacional? ¿Qué respaldo reciben quienes integran el sistema?
 
-Para responderlo vamos a partir de **la tarea que prestan los bomberos voluntarios**, comprender cómo se organiza el sistema alrededor de ella y, recién entonces, ver qué reglas nacionales permiten sostenerla. Las referencias a artículos y decretos aparecerán cuando ayuden a explicar cada paso, no como una lista para memorizar.
+El recorrido comienza por **la tarea que prestan los bomberos voluntarios** y continúa con la organización que la hace posible, la formación de sus integrantes, sus protecciones y los recursos que sostienen el servicio.
 
 > **Alcance:** introducción divulgativa al marco **nacional argentino**. La legislación provincial, la designación de autoridades operativas y los regímenes disciplinarios de cada jurisdicción o federación merecen un desarrollo propio. Este texto no sustituye normas, estatutos ni reglamentos aplicables a una situación concreta.
 
@@ -45,15 +45,15 @@ Para responderlo vamos a partir de **la tarea que prestan los bomberos voluntari
 
 La **Ley 25.054**, sancionada en 1998, es el marco central del **Sistema Nacional de Bomberos Voluntarios (SNBV)**. Su **artículo 1** establece el alcance de la norma: regular la misión y organización del sistema en todo el país, su relación con el Estado nacional y la ayuda económica destinada a representación, equipamiento y formación.
 
-En **2014, la Ley 26.987** modificó numerosos artículos. Por eso, para estudiar lo que establece la Ley 25.054 hoy, corresponde consultar su **texto actualizado** y no solamente la versión original.
+En **2014, la Ley 26.987** modificó numerosos artículos de ese marco legal. El texto actualizado de la Ley 25.054 reúne las disposiciones originales y las reformas posteriores.
 
-Esa ley ofrece un punto de partida común, aunque no pretende resolver cada detalle de la vida de una asociación. Antes de conocer cómo se distribuyen las responsabilidades entre las instituciones, conviene entender **qué actividad es la que el sistema busca organizar y proteger**.
+Este marco nacional convive con las leyes provinciales y los estatutos de las entidades. Para comprender su alcance, empecemos por **la actividad que organiza y protege**.
 
 ## ¿Qué servicio prestan los bomberos voluntarios?
 
-Podríamos pensar que la tarea de los bomberos consiste únicamente en apagar incendios. Pero el alcance es mayor: el **artículo 2 de la Ley 25.054** encomienda a las asociaciones la prevención y extinción de incendios y la intervención operativa para proteger vidas y bienes ante siniestros de origen natural, accidental o intencional.
+La misión de los bomberos voluntarios abarca la prevención y extinción de incendios y la intervención operativa para proteger vidas y bienes ante siniestros de origen natural, accidental o intencional. Así la define el **artículo 2 de la Ley 25.054**, que también comprende otras tareas esenciales.
 
-Para cumplir esa misión, la ley también contempla tareas que ocurren antes, durante y después de una emergencia:
+Entre esas tareas se encuentran:
 
 - Integrar, equipar y capacitar un cuerpo de bomberos.
 - Prevenir y controlar siniestros dentro de la jurisdicción correspondiente.
@@ -61,23 +61,23 @@ Para cumplir esa misión, la ley también contempla tareas que ocurren antes, du
 - Formar parte de las fuerzas operativas de protección civil en los ámbitos municipal, provincial y nacional.
 - Documentar las intervenciones realizadas.
 
-Así, **la actividad bomberil no comienza cuando suena la alarma ni termina al regresar al cuartel**. Requiere preparación, prevención, intervención y registro de lo ocurrido.
+El servicio abarca todo el ciclo de una emergencia: preparación, prevención, respuesta y registro de lo actuado.
 
-Además, estas tareas no se prestan solamente en beneficio de quienes integran una asociación: están destinadas a la comunidad. Por ese motivo, la legislación nacional les reconoce un carácter particular: **son actividades de servicio público prestadas voluntariamente**. Esto nos lleva a una distinción importante.
+Como esas tareas responden a necesidades de toda la comunidad, la legislación les reconoce el carácter de **servicio público prestado voluntariamente**.
 
 ### ¿Qué significa que sea un servicio público?
 
-En términos sencillos, hablamos de un servicio orientado a satisfacer una necesidad de interés general. En el caso bomberil, **no es solo una descripción de su utilidad social**: el **artículo 3 de la Ley 25.054** reconoce expresamente el carácter de **servicio público prestado de manera voluntaria** a las actividades específicas de los cuerpos de bomberos de asociaciones sin fines de lucro.
+Un servicio público atiende necesidades de interés general. El **artículo 3 de la Ley 25.054** reconoce expresamente ese carácter a las actividades específicas de los cuerpos de bomberos de asociaciones sin fines de lucro, que las prestan de manera voluntaria.
 
-Esa declaración tiene un alcance preciso. **Que se preste un servicio público no significa que la asociación sea un organismo estatal**, ni que cada bombero voluntario se convierta en empleado público. El artículo 3 también establece que la actividad del bombero voluntario es ajena a las normas del derecho laboral.
+En este modelo, el servicio es público por su finalidad y reconocimiento legal, mientras que las asociaciones son **entidades civiles sin fines de lucro**. El mismo artículo establece que la actividad del bombero voluntario es ajena a las normas del derecho laboral.
 
-Por ejemplo, una dotación puede prestar ayuda gratuita a la población sin formar parte de una dependencia del Estado. Y un integrante puede tener, por separado, un empleo habitual: las protecciones que la legislación reconoce en esa relación laboral se explican más adelante.
+Cada integrante puede tener, a su vez, un empleo habitual. La ley contempla protecciones para compatibilizar esa actividad laboral con las obligaciones del servicio bomberil, que abordaremos más adelante.
 
-Si la actividad es de interés público, pero se lleva adelante mediante asociaciones, surge otra pregunta: **¿cómo se vinculan todas esas organizaciones en un sistema nacional?**
+Las asociaciones son, entonces, el punto de partida de una organización más amplia. **¿Cómo se vinculan entre sí a escala nacional?**
 
 ## ¿Cómo se organiza el Sistema Nacional de Bomberos Voluntarios?
 
-Los cuarteles no son dependencias de una única institución nacional que los administre a todos. La Ley 25.054 reconoce **distintos niveles de entidades** que permiten prestar el servicio localmente y representar a las organizaciones en ámbitos más amplios.
+La Ley 25.054 organiza el sistema en **distintos niveles de entidades**: desde las asociaciones que sostienen el servicio en cada localidad hasta las organizaciones que las representan en ámbitos provinciales y nacionales.
 
 ### Primer grado: las asociaciones de bomberos voluntarios
 
@@ -85,19 +85,19 @@ Son la **base del sistema**. Las asociaciones sostienen los recursos humanos, ma
 
 ### Segundo grado: las federaciones
 
-Una asociación puede integrar, junto con otras, una **federación**. El **artículo 4** reconoce a las federaciones como **entes de segundo grado**, representativos de las asociaciones que nuclean. Es decir, no son un cuartel de mayor tamaño, sino entidades que reúnen y representan a otras entidades.
+Las **federaciones** reúnen y representan asociaciones de bomberos voluntarios. El **artículo 4** las reconoce como **entes de segundo grado**, con funciones de representación y articulación de las entidades que las integran.
 
 ### Tercer grado: el Consejo de Federaciones
 
 Las federaciones se articulan a escala nacional mediante el **Consejo de Federaciones de Bomberos Voluntarios de la República Argentina**. El **artículo 5** lo reconoce como el **único ente de tercer grado**, representante de las federaciones y los sistemas provinciales que ellas agrupan ante los poderes públicos nacionales e internacionales.
 
-Ese mismo artículo reconoce los símbolos, uniformes, el sistema único de escalafón jerárquico y las nomenclaturas que el Consejo dicte para su aplicación. Más adelante veremos por qué el escalafón importa para identificar las jerarquías.
+Entre las atribuciones reconocidas en ese artículo se encuentran las vinculadas con símbolos, uniformes y el sistema único de escalafón jerárquico, que abordaremos en el apartado sobre formación e identificación de grados.
 
 ### ¿Dónde se ubica la Fundación Bomberos de Argentina?
 
-No constituye un cuarto grado. El **artículo 6** reconoce a la **Fundación Bomberos de Argentina** por sus programas y acciones orientados al bienestar de bomberos, bomberas y directivos. También puede participar en programas formativos a requerimiento de la Academia Nacional.
+La **Fundación Bomberos de Argentina** integra el sistema con una función diferente de la representación por grados. El **artículo 6** reconoce sus programas y acciones orientados al bienestar de bomberos, bomberas y directivos, así como su posible participación en programas formativos a requerimiento de la Academia Nacional.
 
-El **artículo 7** reúne a las asociaciones, las federaciones, el Consejo y la Fundación como componentes del **SNBV**. Son partes de un mismo sistema, pero **no cumplen las mismas funciones**.
+El **artículo 7** incluye a todas estas entidades entre los componentes del **SNBV**.
 
 Hasta aquí observamos cómo se conectan las instituciones entre sí. Ahora volvamos a su base, el lugar donde efectivamente se sostiene un cuartel: **la asociación de bomberos voluntarios**.
 
@@ -105,45 +105,43 @@ Hasta aquí observamos cómo se conectan las instituciones entre sí. Ahora volv
 
 Una **asociación de bomberos voluntarios** es una organización de bien público y sin fines de lucro que dispone los medios institucionales necesarios para prestar el servicio. Puede administrar bienes, gestionar recursos, sostener instalaciones y equipamiento y organizar la formación y las actividades del personal bomberil.
 
-La **Ley 25.054** define su misión dentro del sistema nacional. Para comprender **cómo se gobierna una asociación civil**, debemos acudir además al **Código Civil y Comercial de la Nación**, especialmente a sus artículos **168 a 173** y a los estatutos de cada entidad. No todos los detalles de su estructura interna están definidos en la ley bomberil.
+La Ley 25.054 establece su misión dentro del sistema nacional. Su gobierno institucional se encuadra, además, en el **Código Civil y Comercial de la Nación** (artículos **168 a 173**) y en el estatuto de cada entidad.
 
 ### ¿Quiénes integran y gobiernan la asociación?
 
-La asociación cuenta con **asociados** (o socios) y con órganos previstos en su estatuto. Conviene distinguirlos porque no todos participan del mismo modo en la prestación del servicio.
+La asociación está integrada por **asociados** (o socios), que participan en su vida institucional a través de los órganos previstos por la ley y el estatuto:
 
-- **Asamblea de asociados.** Es el ámbito en el que los socios habilitados participan en las decisiones institucionales que el estatuto y la ley reservan a la asamblea: por ejemplo, tratar estados contables o resolver asuntos de gobierno de la entidad. No es un órgano destinado a dirigir una intervención.
+- **Asamblea de asociados.** Reúne a los socios habilitados para adoptar decisiones de gobierno de la entidad, como tratar estados contables y otros asuntos reservados a este órgano por la ley y el estatuto.
 - **Comisión directiva.** Es el órgano de administración y representación institucional. El **artículo 171 del Código Civil y Comercial** exige que sus integrantes sean asociados y que el estatuto contemple, entre otros cargos, presidencia, secretaría y tesorería, además de vocalías. Gestiona los asuntos institucionales conforme a sus competencias.
 - **Órgano de fiscalización interna.** Permite controlar aspectos de la gestión de la asociación. Los **artículos 170 y 172** prevén este órgano y la actuación de revisores de cuentas, bajo las condiciones que determina la normativa.
 
-El **artículo 170** también exige que el acto constitutivo contemple las reglas de gobierno, representación, ingreso y participación de los asociados. Por eso no podemos asumir que dos asociaciones tengan exactamente las mismas categorías de socios o idénticos procedimientos internos.
+El **artículo 170** exige que el acto constitutivo establezca las reglas de gobierno, representación e ingreso y participación de asociados. El estatuto concreta esas reglas para cada institución.
 
 ### ¿Y quiénes prestan el servicio de emergencias?
 
 Para esa función, la asociación integra y sostiene un **cuerpo de bomberos**, tal como contempla el artículo 2 de la Ley 25.054. En el lenguaje bomberil suele hablarse del **cuerpo activo** para referirse al conjunto de integrantes habilitados y organizados para cumplir las tareas operativas del servicio.
 
-Esta última explicación es **descriptiva**: la Ley 25.054 menciona el cuerpo de bomberos y su misión, pero **no establece una definición orgánica completa de «cuerpo activo»**, ni regula de manera uniforme para todo el país su composición o la forma de designar a su jefatura. Esos detalles deben buscarse en las normas y reglamentos aplicables.
+Esta es una **descripción general** del cuerpo activo. La composición del personal, sus condiciones de incorporación y la designación de la jefatura se rigen por las disposiciones y reglamentos correspondientes a cada jurisdicción e institución.
 
-Esto permite diferenciar dos planos sin confundirlos: **la comisión directiva administra la institución** y **la estructura operativa organiza la prestación del servicio**. Ambas forman parte del funcionamiento del cuartel y deben coordinarse.
+En el funcionamiento cotidiano conviven dos responsabilidades complementarias: **la comisión directiva administra la institución** y **la estructura operativa organiza la prestación del servicio**.
 
-**Ejemplo:** la adquisición de un equipo puede requerir una decisión administrativa y recursos de la asociación; su utilización durante una emergencia, en cambio, corresponde a la organización operativa y al personal habilitado. Son responsabilidades distintas que se necesitan mutuamente.
+Por ejemplo, la compra de un equipo se gestiona en el ámbito institucional; su uso durante una emergencia corresponde a la organización operativa y al personal habilitado.
 
 Con esa estructura más clara, queda una cuestión: si las asociaciones conservan su organización interna, **¿cómo comprueba el Estado nacional cuáles integran el sistema reconocido por la ley?**
 
 ## ¿Quién coordina la relación con el Estado nacional?
 
-La Ley 25.054 contempla una **autoridad de aplicación** para cumplir funciones de reconocimiento, registro y control relacionadas con el sistema nacional. Esa intervención estatal **no reemplaza** el gobierno de las asociaciones ni implica ejercer el mando cotidiano sobre sus dotaciones.
+La Ley 25.054 contempla una **autoridad de aplicación** con funciones de reconocimiento, registro y control en el ámbito nacional. El gobierno de cada asociación y la conducción de sus dotaciones corresponden a sus respectivas estructuras institucionales y operativas.
 
 El texto actualizado de la ley conserva la denominación histórica **Dirección Nacional de Protección Civil**. Sin embargo, la organización administrativa cambió con los **decretos 225/2025 y 233/2025**, que establecieron la **Agencia Federal de Emergencias (AFE)** y la **Dirección Nacional de Bomberos Voluntarios** dentro de su estructura.
 
 ### ¿Para qué sirve el registro de entidades?
 
-Una entidad no accede automáticamente a los beneficios del sistema nacional solo por utilizar la denominación «bomberos voluntarios». La ley contempla condiciones de reconocimiento y un registro que permite comprobar su cumplimiento.
+Para obtener y mantener el reconocimiento nacional, las entidades deben cumplir requisitos de personería, inscripción y funcionamiento. La **Resolución 224/2026** reglamenta el **Registro Nacional de Entidades de Bomberos Voluntarios**, en el ámbito de la Dirección Nacional de Bomberos Voluntarios, y las reglas de gestión y rendición de subsidios.
 
-La **Resolución 224/2026** crea el **Registro Nacional de Entidades de Bomberos Voluntarios** en el ámbito de la Dirección Nacional de Bomberos Voluntarios. También aprueba reglas para el reconocimiento, la permanencia en el registro y la gestión y rendición de subsidios.
+También contiene disposiciones transitorias para reconocimientos y rendiciones correspondientes a períodos anteriores.
 
-La resolución contempla reglas transitorias respecto de reconocimientos y rendiciones anteriores. Ante un trámite concreto, por lo tanto, corresponde verificar **qué procedimiento es aplicable al período**, en lugar de utilizar instrucciones desactualizadas.
-
-Ya vimos quiénes integran el sistema y cómo se reconocen formalmente. Pero pertenecer a una red nacional también plantea desafíos comunes: **formación, información y criterios compartidos de identificación**.
+El reconocimiento institucional es una parte de la organización nacional. La **formación, el registro de recursos y la identificación de jerarquías** también cuentan con herramientas comunes.
 
 ## ¿Qué lugar ocupa la capacitación?
 
@@ -151,71 +149,65 @@ Un servicio que exige proteger vidas y bienes necesita preparación permanente. 
 
 El **artículo 10 de la Ley 25.054** reconoce a la **Academia Nacional de Capacitación de Bomberos Voluntarios**, dentro del ámbito del Consejo de Federaciones. Su función es coordinar la política formativa de bomberos y directivos de distintos niveles y administrar los recursos destinados a ese fin. Puede además desarrollar programas de formación y difusión dirigidos a personas y organizaciones ajenas al sistema.
 
-La coordinación no se limita a cursos. Para comprender los recursos disponibles y los servicios prestados en el país, el **artículo 9** crea en el ámbito del Consejo el **Registro Único de Bomberos Argentinos (RUBA)**, destinado a reunir y administrar información sobre recursos humanos, materiales e intervenciones.
+Para reunir información sobre los recursos disponibles y los servicios prestados, el **artículo 9** crea, en el ámbito del Consejo, el **Registro Único de Bomberos Argentinos (RUBA)**, que administra datos de recursos humanos, materiales e intervenciones.
 
 ### ¿Por qué existe un escalafón común?
 
 Si en el sistema conviven asociaciones y federaciones de distintos lugares, resulta útil contar con **jerarquías y símbolos identificables**. El artículo 5 reconoce el sistema único de escalafón jerárquico y las nomenclaturas dictadas por el Consejo.
 
-Hay conceptos que conviene no mezclar: el **grado** es una posición dentro del escalafón; el **cargo o función** describe una responsabilidad asignada; la **antigüedad** expresa tiempo de servicio; y el **mando** es la autoridad que se ejerce según las reglas aplicables. Tener un grado no permite deducir automáticamente todas las funciones de una persona.
+En este marco, el **grado** señala una posición dentro del escalafón; el **cargo o función** identifica una responsabilidad concreta; la **antigüedad** expresa tiempo de servicio; y el **mando** es la autoridad ejercida conforme a las reglas aplicables. Las funciones asignadas y la jerarquía de una persona se relacionan, aunque responden a criterios diferentes.
 
-Al final del artículo incluimos una guía visual con los distintivos publicados por el Consejo Nacional. La imagen permite reconocerlos, pero **no determina por sí sola cómo se asciende, quién debe ocupar una jefatura ni dónde se coloca cada insignia en el uniforme**.
+Al final incluimos una guía visual con los distintivos publicados por el Consejo Nacional. Los requisitos de ascenso, la designación de jefaturas y las reglas de uniformidad se desarrollan en los reglamentos correspondientes.
 
 Conocida la estructura que sostiene y prepara el servicio, falta mirar a quienes lo prestan: **¿qué protecciones contempla la ley para los bomberos voluntarios?**
 
 ## ¿Qué protecciones reconoce la legislación nacional?
 
-El servicio se presta voluntariamente, pero puede interferir en el empleo habitual de una persona y también implicar riesgos para su salud o integridad. Por eso la **Ley 25.054** incorpora protecciones que no deben confundirse con la existencia de una relación laboral entre el bombero y la asociación.
+La prestación voluntaria del servicio puede coincidir con obligaciones laborales y expone al personal a riesgos propios de las emergencias. La **Ley 25.054** contempla protecciones tanto para la relación con el empleador habitual como para determinadas contingencias vinculadas a la actividad.
 
 ### ¿Qué ocurre cuando el servicio coincide con el trabajo habitual?
 
 El **artículo 17** dispone que los empleadores públicos y privados consideren la actividad bomberil como **carga pública**, eximiendo al bombero voluntario de perjuicios económicos y laborales derivados de inasistencias o llegadas tarde causadas por el cumplimiento del servicio.
 
-La misma disposición establece condiciones de justificación y un límite anual específico para ausencias vinculadas a funciones pedagógicas. El **artículo 22** contempla, además, la condición de movilizado del personal durante convocatorias oficiales ante emergencias provinciales o nacionales, desde la convocatoria hasta el retorno a sus bases.
-
-**Esto no equivale a una autorización genérica para abandonar cualquier tarea sin comunicar ni justificar la ausencia.** La situación particular requiere observar las condiciones legales y las reglas aplicables.
+Las ausencias deben justificarse según las condiciones legales; la disposición también fija un límite anual específico para las vinculadas a funciones pedagógicas. El **artículo 22** contempla, además, la condición de movilizado del personal durante convocatorias oficiales ante emergencias provinciales o nacionales, desde la convocatoria hasta el retorno a sus bases.
 
 ### ¿Y si ocurre un accidente o una enfermedad relacionada con el servicio?
 
 Los **artículos 18 y 21** contemplan, con sus requisitos, indemnizaciones y atención sanitaria en situaciones relacionadas con la actividad. A su vez, la **Ley 27.629 (2021)** establece medidas de fortalecimiento del sistema e incorpora prestaciones dinerarias y en especie para determinadas contingencias del servicio, como asistencia médica, rehabilitación y traslados en los supuestos previstos.
 
-La existencia de esas protecciones no significa que toda prestación sea automática: su aplicación depende de los requisitos y procedimientos legales.
+Estas prestaciones se reconocen conforme a los requisitos y procedimientos establecidos para cada supuesto.
 
 Proteger a las personas es una parte del sostenimiento del sistema. La otra es asegurar que **haya vehículos, equipos, instalaciones y recursos disponibles** para que puedan realizar su trabajo.
 
 ## ¿Cómo se financia el sistema?
 
-Que el trabajo bomberil sea voluntario **no significa que prestar el servicio carezca de costos**. Los equipos de protección, los vehículos, las instalaciones y la formación requieren inversión y mantenimiento.
+El servicio bomberil requiere **equipamiento, vehículos, instalaciones, formación y mantenimiento**. Para sostener esas necesidades, la legislación nacional establece mecanismos de financiamiento y control.
 
 Los **artículos 11 a 15 de la Ley 25.054** establecen un esquema de subsidios nacionales, destinos de fondos, inventarios, rendición y determinadas exenciones. Entre sus mecanismos de financiamiento se encuentra una contribución obligatoria a cargo de aseguradoras, calculada sobre primas de seguros con las exclusiones previstas en la norma.
 
-Los recursos tienen **destinos determinados y obligaciones de control**. La **Resolución 224/2026** actualiza las reglas administrativas nacionales para la gestión y rendición de subsidios de las entidades alcanzadas.
+Los fondos deben aplicarse a los **destinos previstos por la ley** y rendirse según los procedimientos nacionales vigentes, actualizados por la **Resolución 224/2026**.
 
 ### ¿Cómo contribuye la Ley 27.629 al sostenimiento de las entidades?
 
-Además de las prestaciones personales ya mencionadas, la **Ley 27.629** prevé un **régimen tarifario especial** para determinados servicios públicos bajo jurisdicción nacional y un **régimen de reintegro del IVA** para operaciones comprendidas.
+La **Ley 27.629** complementa el financiamiento de las entidades mediante un **régimen tarifario especial** para determinados servicios públicos de jurisdicción nacional y un **régimen de reintegro del IVA** para operaciones comprendidas. Ambos mecanismos se aplican según las condiciones y el alcance establecidos en la norma.
 
-No significa que toda factura o adquisición quede automáticamente exenta: cada beneficio posee condiciones y un ámbito de aplicación que deben verificarse.
-
-Hasta aquí vimos cómo se reconoce, organiza, forma, protege y financia el servicio. Pero una emergencia puede requerir la actuación coordinada de **organismos distintos de los bomberos voluntarios**. ¿En qué marco nacional se articula esa cooperación?
+En una emergencia también participan otros organismos de respuesta. Esa coordinación se vincula con un sistema nacional más amplio: **la gestión integral del riesgo y la protección civil**.
 
 ## ¿Cómo se relaciona con la protección civil?
 
-Los bomberos voluntarios no actúan aislados del resto de los organismos que intervienen ante emergencias. Ya vimos que la propia Ley 25.054 contempla su participación en las fuerzas operativas de protección civil.
+La Ley 25.054 incluye entre las funciones bomberiles la participación en las fuerzas operativas de protección civil, donde los bomberos articulan su tarea con otros organismos de respuesta.
 
 En un marco más amplio, la **Ley 27.287** organiza el **Sistema Nacional para la Gestión Integral del Riesgo y la Protección Civil (SINAGIR)**, destinado a articular actores de distintos niveles del Estado, organizaciones no gubernamentales y sociedad civil para reducir riesgos, responder a emergencias y favorecer la recuperación.
 
-**El SINAGIR no reemplaza al SNBV.** Se trata de un sistema más amplio de coordinación, no de una norma que por sí sola determine el mando operativo de cada intervención local.
+El **SNBV** se ocupa específicamente de la organización nacional de los bomberos voluntarios, mientras que el **SINAGIR** establece un marco de coordinación más amplio. La conducción operativa de cada intervención se rige por las disposiciones aplicables.
 
-Con esto aparece la última distinción necesaria: si existe una organización nacional, **¿por qué seguimos necesitando leyes y reglamentos provinciales?**
+La articulación nacional convive con las competencias de cada jurisdicción. **¿Qué aspectos se desarrollan en las leyes provinciales?**
 
 ## ¿Y qué queda bajo regulación provincial?
 
-El marco nacional reconoce las instituciones, define misiones comunes y establece herramientas de representación, formación, protección y financiamiento. **No regula, sin embargo, de manera idéntica todos los aspectos internos de cada cuartel del país**.
+El marco nacional reconoce instituciones y misiones comunes y establece herramientas de representación, formación, protección y financiamiento. A partir de él, la **legislación provincial** y las normas institucionales desarrollan cuestiones como el ingreso al cuerpo activo, la organización cotidiana, las responsabilidades y los procedimientos disciplinarios.
 
-Las condiciones de incorporación al cuerpo activo, parte de la organización cotidiana, las responsabilidades y los procedimientos disciplinarios deben estudiarse junto con la **legislación provincial** y las normas institucionales que correspondan.
-
-Esa es la razón para separar las publicaciones: **conocer las reglas nacionales permite ubicar al sistema completo; estudiar las provinciales permite comprender cómo se aplican y complementan en cada jurisdicción**. El código disciplinario de una federación no debe presentarse como si fuera una ley nacional.
+Las reglas nacionales ofrecen una visión del sistema en su conjunto; las provinciales permiten comprender su funcionamiento en cada jurisdicción. Ese segundo nivel de regulación tendrá su propio artículo.
 
 ## Para repasar antes de seguir
 
@@ -229,10 +221,10 @@ Podés reconstruir el recorrido con estas preguntas, en el mismo orden en que ap
 - ¿Qué protecciones y mecanismos de financiamiento contemplan las leyes **25.054 y 27.629**?
 - ¿Qué diferencia hay entre el **SNBV** y el **SINAGIR**, y qué materias requieren estudiar normas provinciales?
 
-No hace falta memorizar cada artículo para comprender estos temas. Lo importante es poder explicar **qué problema regula cada norma, a quién se aplica y cómo se relaciona con las demás**.
+El objetivo es comprender **qué regula cada norma, a quién se aplica y cómo se relaciona con las demás**.
 
 ## Guía visual del escalafón nacional
 
-A continuación se muestran los **distintivos incluidos en el cuadro oficial del Consejo Nacional de Bomberos Voluntarios**, agrupados para facilitar la lectura. No se atribuye al grado inicial de Bombero una insignia inexistente en ese cuadro ni se infieren reglas de uniformidad a partir de una imagen.
+A continuación se muestran los **distintivos incluidos en el cuadro oficial del Consejo Nacional de Bomberos Voluntarios**, agrupados para facilitar su identificación. El grado inicial de **Bombero** forma parte del escalafón, aunque no tiene una insignia representada en ese cuadro.
 
-**Revisión normativa y editorial:** 18 de noviembre de 2026. Para trámites o situaciones concretas, consultá los textos actualizados y las disposiciones aplicables.
+**Revisión normativa:** noviembre de 2026. **Última edición editorial:** 20 de noviembre de 2026.
