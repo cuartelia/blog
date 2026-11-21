@@ -1,7 +1,7 @@
 ---
 title: 'Leyes y regulaciones nacionales de los bomberos voluntarios en Argentina'
 description: 'Qué establece la legislación nacional sobre la misión, organización, formación, derechos y recursos del Sistema Nacional de Bomberos Voluntarios.'
-date: 2026-11-17
+date: 2026-11-20
 category: Formación
 audience: [Aspirantes, Cadetes, Bomberos, Público general]
 readingMinutes: 19
