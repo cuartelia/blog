@@ -11,7 +11,23 @@ const tone = tones[category] || 'history';
 <article class:list={['article-card',`article-card--${tone}`, {'article-card--feature':variant==='feature'}]}>
   <div class="card-visual" aria-hidden="true">
     <span class="card-num">{String(index+1).padStart(2,'0')}</span>
-    {post.id === 'leyes-y-regulaciones-nacionales-bomberos-voluntarios' ? <svg viewBox="0 0 230 140" fill="none">
+    {post.id === 'mas-que-autobombas-unidades-de-bomberos' ? <svg viewBox="0 0 230 140" fill="none" aria-hidden="true">
+      <g stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M19 99h192M29 73h116v31H29z" fill="currentColor" fillOpacity=".10"/>
+        <path d="M145 78h37l20 17v9h-57z" fill="currentColor" fillOpacity=".14"/>
+        <path d="M151 83h28l13 12h-41z" />
+        <path d="M38 63h80v36H38zM48 69h23v20H48zM80 69h28v20H80z" />
+        <path d="M39 58h77M52 53h48M24 99h184" />
+        <path d="M120 80h17v19h-17zM123 84h11M123 89h11M123 94h11" strokeWidth="1.7"/>
+        <path d="M160 73h15M39 53V46h70v7M154 68h18" strokeWidth="2"/>
+        <circle cx="62" cy="105" r="12" fill="currentColor" fillOpacity=".18"/>
+        <circle cx="62" cy="105" r="5"/>
+        <circle cx="173" cy="105" r="12" fill="currentColor" fillOpacity=".18"/>
+        <circle cx="173" cy="105" r="5"/>
+        <path d="M38 99h12M74 99h87M185 99h15" strokeWidth="3"/>
+        <path d="M61 46V38h20v8M64 38v-5h14v5" />
+      </g>
+    </svg> : post.id === 'leyes-y-regulaciones-nacionales-bomberos-voluntarios' ? <svg viewBox="0 0 230 140" fill="none">
       <g stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="115" cy="19" r="5" fill="currentColor" fill-opacity=".16"/>
         <path d="M115 24v95M47 45h136M115 32v13"/>
