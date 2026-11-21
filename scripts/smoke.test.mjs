@@ -174,3 +174,13 @@ test('el escalafon nacional explica formación, antigüedad y ascensos junto a l
   assert.match(page,/#repaso-leyes-nacionales/);
   assert.match(md,/^draft: false$/m);
 });
+
+test('la guía de vehículos bomberiles se publica con SVG propio y categorías diferenciadas',()=>{
+  const md=read('src/content/articulos/mas-que-autobombas-unidades-de-bomberos.md');
+  const card=read('src/components/ArticleCard.astro');
+  assert.match(md,/^draft: false$/m);
+  for(const term of ['Autobomba','Cisterna','Escaleras','Rescate','Forestales','Materiales peligrosos','Ambulancias','Argentina'])
+    assert.ok(md.includes(term), `Falta tratar: ${term}`);
+  assert.match(card,/post\.id === 'mas-que-autobombas-unidades-de-bomberos'/);
+  assert.match(card,/viewBox="0 0 230 140"/);
+});
