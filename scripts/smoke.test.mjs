@@ -127,3 +127,50 @@ test('la portada invita a colaborar sin alterar los mensajes existentes',()=>{
   assert.match(home,/href="mailto:contacto@cuartelia\.ar"/);
   assert.match(home,/Explorá conceptos físicos/);
 });
+
+
+test('legislación nacional se publica sin incluir normativa provincial',()=>{
+  const md=read('src/content/articulos/leyes-y-regulaciones-nacionales-bomberos-voluntarios.md');
+  const frontmatter=md.split('---')[1];
+  assert.match(frontmatter,/^draft: false$/m);
+  assert.match(frontmatter,/^rankGuide: snbv-oficial$/m);
+  for(const term of ['25.054','26.987','27.629','27.287','224/2026','Agencia Federal de Emergencias'])
+    assert.ok(md.includes(term),`Falta el tema nacional: ${term}`);
+  assert.doesNotMatch(md,/12\\.969|13\\.860|14\\.296|Decreto 464\\/2010|exoneración|baja disciplinaria/i);
+  const page=read('src/pages/articulos/[...slug].astro');
+  assert.match(page,/RankGuide/);
+  assert.match(read('src/content.config.ts'),/rankGuide: z\\.enum/);
+  const guide=read('src/components/RankGuide.astro');
+  assert.match(guide,/Comandante General/);
+  assert.doesNotMatch(guide,/<svg/);
+  for(const file of ['cabo.png','comandante-general.png','oficial-ayudante.png'])
+    assert.ok(readdirSync(resolve(root,'public/insignias/snbv')).includes(file));
+});
+
+test('el articulo nacional explica el servicio publico y tiene icono juridico propio',()=>{
+  const md=read('src/content/articulos/leyes-y-regulaciones-nacionales-bomberos-voluntarios.md');
+  assert.match(md,/### ¿Qué significa que sea un servicio público\?/);
+  for(const term of ['continuidad','regularidad','generalidad','igualdad','transporte urbano'])
+    assert.ok(md.includes(term), `Falta explicar: ${term}`);
+  const card=read('src/components/ArticleCard.astro');
+  assert.match(card,/post\.id === 'leyes-y-regulaciones-nacionales-bomberos-voluntarios'/);
+  assert.match(card,/M39 87h52/); // platillo izquierdo de la balanza SVG
+  assert.match(card,/category === 'Fundamentos'/); // no cambia el icono de otros articulos
+});
+
+test('el escalafon nacional explica formación, antigüedad y ascensos junto a la guía',()=>{
+  const md=read('src/content/articulos/leyes-y-regulaciones-nacionales-bomberos-voluntarios.md');
+  const closing=read('src/components/NationalLawClosing.astro');
+  const page=read('src/pages/articulos/[...slug].astro');
+  for(const str of ['Bomberos I','Bomberos II','Bomberos III','tres o más años','estudios secundarios completos','Cabo Primero','Sargento Primero'])
+    assert.ok(md.includes(str), `Falta requisito del escalafón: ${str}`);
+  assert.ok(md.includes('10 días por año calendario'));
+  assert.ok(md.includes('puntaje especial'));
+  assert.ok(md.includes('régimen tarifario especial gratuito'));
+  assert.ok(md.includes('RUBA'));
+  assert.match(closing,/repaso-leyes-nacionales/);
+  assert.match(closing,/regulacion-provincial/);
+  assert.match(page,/<RankGuide\s*\/>[\s\S]*?<NationalLawClosing\s*\/>/);
+  assert.match(page,/#repaso-leyes-nacionales/);
+  assert.match(md,/^draft: false$/m);
+});

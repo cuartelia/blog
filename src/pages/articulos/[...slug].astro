@@ -3,6 +3,8 @@ import { getCollection, render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import ShareArticle from '../../components/ShareArticle.astro';
+import RankGuide from '../../components/RankGuide.astro';
+import NationalLawClosing from '../../components/NationalLawClosing.astro';
 import HistoryTimeline from '../../components/timelines/bomberos-argentina.astro';
 import { path, formattedDate } from '../../lib/site';
 import { enabledSimulatorIds } from '../../lib/simulator-availability';
@@ -43,8 +45,9 @@ const jsonLd = {
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')} />
   <div class="article-page">
     <div class="shell article-head"><nav class="breadcrumbs" aria-label="Ruta de navegación"><a href={path()}>Inicio</a><span>/</span><a href={path('biblioteca/')}>Biblioteca</a><span>/</span><span>{category}</span></nav><div class="eyebrow eyebrow--dark">CUARTELIA / ARCHIVO DE CONOCIMIENTO</div><h1>{title}</h1><p class="article-deck">{description}</p><div class="article-meta-row"><span class="pill pill-dark" data-pagefind-filter={`tema:${category}`}>{category}</span><time datetime={date.toISOString()}>{formattedDate(date)}</time><span class="meta-dot">·</span><span>{readingMinutes} min de lectura</span></div>{audience.map(a=><span class="sr-only" data-pagefind-filter={`publico:${a}`}>{a}</span>)}</div>
-    <div class="shell article-body-layout"><aside class="article-sidebar"><div class="toc-stick"><div class="eyebrow eyebrow--dark">EN ESTE ARTÍCULO</div><nav aria-label="Índice del artículo"><a href="#comienzo">Introducción</a>{headings.filter(h=>h.depth===2).map(h=><a href={`#${h.slug}`}>{h.text}</a>)}</nav><div class="toc-divider"></div><a href={path('biblioteca/')} class="back-inline">← Volver a la biblioteca</a></div></aside><div class="article-primary"><article class="prose" id="comienzo" data-pagefind-body><Content /></article>
+    <div class="shell article-body-layout"><aside class="article-sidebar"><div class="toc-stick"><div class="eyebrow eyebrow--dark">EN ESTE ARTÍCULO</div><nav aria-label="Índice del artículo"><a href="#comienzo">Introducción</a>{headings.filter(h=>h.depth===2).map(h=><a href={`#${h.slug}`}>{h.text}</a>)}{post.data.rankGuide === 'snbv-oficial' && <><a href="#regulacion-provincial">Regulación provincial</a><a href="#repaso-leyes-nacionales">Para repasar</a></>}</nav><div class="toc-divider"></div><a href={path('biblioteca/')} class="back-inline">← Volver a la biblioteca</a></div></aside><div class="article-primary"><article class="prose" id="comienzo" data-pagefind-body><Content /></article>
     {post.data.timeline === 'historia-bomberil' && <HistoryTimeline />}
+    {post.data.rankGuide === 'snbv-oficial' && <><RankGuide /><article class="prose" data-pagefind-body><NationalLawClosing /></article></>}
     {simulators.map(({ id, Component }) => <div class="article-lab" data-simulator={id}><Component /></div>)}
     <ShareArticle title={title} url={articleUrl} />
     <section class="sources"><div class="eyebrow eyebrow--dark">FUENTES PARA SEGUIR INVESTIGANDO</div><h2>Lecturas y referencias.</h2><ol>{sources.map(source=><li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label}<span aria-hidden="true">↗</span></a></li>)}</ol><p>Contenido introductorio de divulgación. No sustituye procedimientos ni formación operativa oficial.</p></section></div></div>
