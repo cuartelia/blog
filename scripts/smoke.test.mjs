@@ -136,10 +136,10 @@ test('legislación nacional se publica sin incluir normativa provincial',()=>{
   assert.match(frontmatter,/^rankGuide: snbv-oficial$/m);
   for(const term of ['25.054','26.987','27.629','27.287','224/2026','Agencia Federal de Emergencias'])
     assert.ok(md.includes(term),`Falta el tema nacional: ${term}`);
-  assert.doesNotMatch(md,/12\\.969|13\\.860|14\\.296|Decreto 464\\/2010|exoneración|baja disciplinaria/i);
+  assert.doesNotMatch(md,/12\.969|13\.860|14\.296|Decreto 464\/2010|exoneración|baja disciplinaria/i);
   const page=read('src/pages/articulos/[...slug].astro');
   assert.match(page,/RankGuide/);
-  assert.match(read('src/content.config.ts'),/rankGuide: z\\.enum/);
+  assert.match(read('src/content.config.ts'),/rankGuide: z\.enum/);
   const guide=read('src/components/RankGuide.astro');
   assert.match(guide,/Comandante General/);
   assert.doesNotMatch(guide,/<svg/);
