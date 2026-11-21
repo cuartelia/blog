@@ -157,3 +157,20 @@ test('el articulo nacional explica el servicio publico y tiene icono juridico pr
   assert.match(card,/M39 87h52/); // platillo izquierdo de la balanza SVG
   assert.match(card,/category === 'Fundamentos'/); // no cambia el icono de otros articulos
 });
+
+test('el escalafon nacional explica formación, antigüedad y ascensos junto a la guía',()=>{
+  const md=read('src/content/articulos/leyes-y-regulaciones-nacionales-bomberos-voluntarios.md');
+  const closing=read('src/components/NationalLawClosing.astro');
+  const page=read('src/pages/articulos/[...slug].astro');
+  for(const str of ['Bomberos I','Bomberos II','Bomberos III','tres o más años','estudios secundarios completos','Cabo Primero','Sargento Primero'])
+    assert.ok(md.includes(str), `Falta requisito del escalafón: ${str}`);
+  assert.ok(md.includes('10 días por año calendario'));
+  assert.ok(md.includes('puntaje especial'));
+  assert.ok(md.includes('régimen tarifario especial gratuito'));
+  assert.ok(md.includes('RUBA'));
+  assert.match(closing,/repaso-leyes-nacionales/);
+  assert.match(closing,/regulacion-provincial/);
+  assert.match(page,/<RankGuide\s*\/>[\s\S]*?<NationalLawClosing\s*\/>/);
+  assert.match(page,/#repaso-leyes-nacionales/);
+  assert.match(md,/^draft: false$/m);
+});

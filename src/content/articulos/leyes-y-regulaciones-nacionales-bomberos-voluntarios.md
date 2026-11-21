@@ -4,7 +4,7 @@ description: 'Qué establece la legislación nacional sobre la misión, organiza
 date: 2026-11-17
 category: Formación
 audience: [Aspirantes, Cadetes, Bomberos, Público general]
-readingMinutes: 17
+readingMinutes: 19
 updated: 2026-11-20
 feature: false
 draft: false
@@ -21,6 +21,8 @@ sources:
     url: 'https://www.argentina.gob.ar/normativa/nacional/ley-27629-350984/texto'
   - label: 'Decreto 830/2024 — servicio público de transporte de pasajeros (ejemplo de régimen sectorial)'
     url: 'https://www.argentina.gob.ar/normativa/nacional/decreto-830-2024-404098/texto'
+  - label: 'Decreto 23/2023 — reglamentación del régimen tarifario especial gratuito'
+    url: 'https://www.argentina.gob.ar/normativa/nacional/decreto-23-2023-378413/texto'
   - label: 'Ley 27.287 — Sistema Nacional para la Gestión Integral del Riesgo y la Protección Civil'
     url: 'https://www.argentina.gob.ar/normativa/nacional/ley-27287-266631/actualizacion'
   - label: 'Decreto 225/2025 — Agencia Federal de Emergencias'
@@ -143,7 +145,7 @@ El texto actualizado de la ley conserva la denominación histórica **Dirección
 
 Para obtener y mantener el reconocimiento nacional, las entidades deben cumplir requisitos de personería, inscripción y funcionamiento. La **Resolución 224/2026** reglamenta el **Registro Nacional de Entidades de Bomberos Voluntarios**, en el ámbito de la Dirección Nacional de Bomberos Voluntarios, y las reglas de gestión y rendición de subsidios.
 
-También contiene disposiciones transitorias para reconocimientos y rendiciones correspondientes a períodos anteriores.
+Por ejemplo, una asociación que solicita la asignación de subsidios nacionales necesita acreditar su reconocimiento e inscripción y luego rendir los fondos conforme al régimen correspondiente. La resolución también contempla disposiciones transitorias para reconocimientos y rendiciones de períodos anteriores.
 
 El reconocimiento institucional es una parte de la organización nacional. La **formación, el registro de recursos y la identificación de jerarquías** también cuentan con herramientas comunes.
 
@@ -155,15 +157,9 @@ El **artículo 10 de la Ley 25.054** reconoce a la **Academia Nacional de Capaci
 
 Para reunir información sobre los recursos disponibles y los servicios prestados, el **artículo 9** crea, en el ámbito del Consejo, el **Registro Único de Bomberos Argentinos (RUBA)**, que administra datos de recursos humanos, materiales e intervenciones.
 
-### ¿Por qué existe un escalafón común?
+Los dos registros cumplen funciones complementarias: el **Registro Nacional de Entidades** se ocupa del reconocimiento de las instituciones; el **RUBA** reúne información sobre las personas, los medios y los servicios del sistema.
 
-Si en el sistema conviven asociaciones y federaciones de distintos lugares, resulta útil contar con **jerarquías y símbolos identificables**. El artículo 5 reconoce el sistema único de escalafón jerárquico y las nomenclaturas dictadas por el Consejo.
-
-En este marco, el **grado** señala una posición dentro del escalafón; el **cargo o función** identifica una responsabilidad concreta; la **antigüedad** expresa tiempo de servicio; y el **mando** es la autoridad ejercida conforme a las reglas aplicables. Las funciones asignadas y la jerarquía de una persona se relacionan, aunque responden a criterios diferentes.
-
-Al final incluimos una guía visual con los distintivos publicados por el Consejo Nacional. Los requisitos de ascenso, la designación de jefaturas y las reglas de uniformidad se desarrollan en los reglamentos correspondientes.
-
-Conocida la estructura que sostiene y prepara el servicio, falta mirar a quienes lo prestan: **¿qué protecciones contempla la ley para los bomberos voluntarios?**
+Una parte de esa coordinación formativa se refleja también en el escalafón nacional, que ordena los grados y los requisitos de progresión. Más adelante veremos cómo se relacionan la formación y los ascensos.
 
 ## ¿Qué protecciones reconoce la legislación nacional?
 
@@ -173,13 +169,15 @@ La prestación voluntaria del servicio puede coincidir con obligaciones laborale
 
 El **artículo 17** dispone que los empleadores públicos y privados consideren la actividad bomberil como **carga pública**. En términos generales, una carga pública es un deber o prestación de interés comunitario reconocido por la ley. En el caso de los bomberos voluntarios, esta calificación se aplica al servicio que cumplen quienes ya se incorporaron voluntariamente a la institución.
 
-Su efecto en la relación laboral es concreto: el cumplimiento del servicio protege al bombero frente a perjuicios económicos, laborales o conceptuales derivados de inasistencias o llegadas tarde. La disposición también establece condiciones de justificación y un límite anual específico para las ausencias vinculadas a funciones pedagógicas. El **artículo 22** contempla, además, la condición de movilizado del personal durante convocatorias oficiales ante emergencias provinciales o nacionales, desde la convocatoria hasta el retorno a sus bases.
+Su efecto en la relación laboral es concreto: el cumplimiento del servicio protege al bombero frente a perjuicios económicos, laborales o conceptuales derivados de inasistencias o llegadas tarde. Las convocatorias a **funciones pedagógicas** pueden justificar inasistencias de hasta **10 días por año calendario**, de acuerdo con las condiciones del artículo 17.
+
+Por ejemplo, quien es convocado formalmente a una instancia de capacitación durante su jornada habitual puede acreditar esa convocatoria ante su empleador según las condiciones legales. El **artículo 22** contempla, además, la condición de movilizado del personal durante convocatorias oficiales ante emergencias provinciales o nacionales, desde la convocatoria hasta el retorno a sus bases.
 
 ### ¿Y si ocurre un accidente o una enfermedad relacionada con el servicio?
 
 Los **artículos 18 y 21** contemplan, con sus requisitos, indemnizaciones y atención sanitaria en situaciones relacionadas con la actividad. A su vez, la **Ley 27.629 (2021)** establece medidas de fortalecimiento del sistema e incorpora prestaciones dinerarias y en especie para determinadas contingencias del servicio, como asistencia médica, rehabilitación y traslados en los supuestos previstos.
 
-Estas prestaciones se reconocen conforme a los requisitos y procedimientos establecidos para cada supuesto.
+El **artículo 20** prevé además un **puntaje especial en planes de construcción de viviendas con intervención del Estado nacional** para bomberos pertenecientes a entidades con inscripción vigente. Las prestaciones y beneficios se aplican conforme a los requisitos de cada supuesto.
 
 Proteger a las personas es una parte del sostenimiento del sistema. La otra es asegurar que **haya vehículos, equipos, instalaciones y recursos disponibles** para que puedan realizar su trabajo.
 
@@ -193,7 +191,9 @@ Los fondos deben aplicarse a los **destinos previstos por la ley** y rendirse se
 
 ### ¿Cómo contribuye la Ley 27.629 al sostenimiento de las entidades?
 
-La **Ley 27.629** complementa el financiamiento de las entidades mediante un **régimen tarifario especial** para determinados servicios públicos de jurisdicción nacional y un **régimen de reintegro del IVA** para operaciones comprendidas. Ambos mecanismos se aplican según las condiciones y el alcance establecidos en la norma.
+La **Ley 27.629** establece un **régimen tarifario especial gratuito** para servicios públicos alcanzados que se encuentren bajo jurisdicción nacional, entre ellos electricidad, gas por red, agua, cloacas, telefonía y servicios de conectividad. Está destinado a las entidades comprendidas y a sus inmuebles utilizados como cuarteles, destacamentos u oficinas permanentes, según los requisitos de la ley y su reglamentación, incluido el **Decreto 23/2023**.
+
+La ley contempla también un **régimen de reintegro del IVA** para operaciones incluidas en sus disposiciones. Ambos mecanismos contribuyen a sostener los recursos institucionales.
 
 En una emergencia también participan otros organismos de respuesta. Esa coordinación se vincula con un sistema nacional más amplio: **la gestión integral del riesgo y la protección civil**.
 
@@ -205,30 +205,36 @@ En un marco más amplio, la **Ley 27.287** organiza el **Sistema Nacional para l
 
 El **SNBV** se ocupa específicamente de la organización nacional de los bomberos voluntarios, mientras que el **SINAGIR** establece un marco de coordinación más amplio. La conducción operativa de cada intervención se rige por las disposiciones aplicables.
 
-La articulación nacional convive con las competencias de cada jurisdicción. **¿Qué aspectos se desarrollan en las leyes provinciales?**
+Junto con estas reglas de coordinación, el sistema cuenta con una estructura jerárquica común. **¿Qué formación y antigüedad se necesitan para avanzar en ella?**
 
-## ¿Y qué queda bajo regulación provincial?
+## ¿Cómo se avanza en el escalafón nacional?
 
-El marco nacional reconoce instituciones y misiones comunes y establece herramientas de representación, formación, protección y financiamiento. A partir de él, la **legislación provincial** y las normas institucionales desarrollan cuestiones como el ingreso al cuerpo activo, la organización cotidiana, las responsabilidades y los procedimientos disciplinarios.
+La capacitación y la experiencia permiten asumir responsabilidades progresivamente. Para ordenar ese recorrido, el **artículo 5 de la Ley 25.054** reconoce el Sistema Único de Escalafón Jerárquico, desarrollado en el **Reglamento del Consejo Nacional de Bomberos Voluntarios de 2018**.
 
-Las reglas nacionales ofrecen una visión del sistema en su conjunto; las provinciales permiten comprender su funcionamiento en cada jurisdicción. Ese segundo nivel de regulación tendrá su propio artículo.
+Este reglamento distingue los **grados** —como Bombero, Cabo o Sargento— de la **formación necesaria para acceder a ellos**. Las currículas *Bomberos I, II y III* representan etapas de formación, mientras que el escalafón identifica la posición jerárquica dentro del cuerpo.
 
-## Para repasar antes de seguir
+### El ingreso al grado de Bombero
 
-Podés reconstruir el recorrido con estas preguntas, en el mismo orden en que aparecieron los conceptos:
+Para alcanzar el grado de **Bombero**, el artículo 6 del reglamento exige ser **mayor de 18 años**, aprobar el examen de competencia de la currícula **Bomberos I** de la Academia Nacional y contar con la propuesta de la jefatura del cuerpo activo y la incorporación formal por acta de la comisión directiva.
 
-- ¿Qué misión y funciones reconoce la **Ley 25.054**, reformada por la **Ley 26.987**?
-- ¿Por qué esa actividad se considera **servicio público** aunque sea prestada voluntariamente por asociaciones sin fines de lucro?
-- ¿Qué representan el **primer, segundo y tercer grado** del sistema? ¿Qué función diferente cumple la Fundación?
-- ¿Cómo se distinguen **asamblea, comisión directiva, órgano de fiscalización y cuerpo activo** dentro de una asociación?
-- ¿Qué hacen la **autoridad de aplicación**, el registro de entidades, la Academia Nacional y el RUBA?
-- ¿Qué protecciones y mecanismos de financiamiento contemplan las leyes **25.054 y 27.629**?
-- ¿Qué diferencia hay entre el **SNBV** y el **SINAGIR**, y qué materias requieren estudiar normas provinciales?
+Es el punto de partida de la carrera jerárquica. La condición de aspirante y las etapas de formación previas se rigen por las disposiciones de ingreso aplicables.
 
-El objetivo es comprender **qué regula cada norma, a quién se aplica y cómo se relaciona con las demás**.
+### De Bombero a Cabo: el inicio de los suboficiales
 
-## Guía visual del escalafón nacional
+El primer ascenso del escalafón es de **Bombero a Cabo**, dentro del grupo de **suboficiales subalternos**. Según el artículo 6, requiere **tres o más años de antigüedad en el grado de Bombero**, aprobar **Bomberos II** y, si corresponde, el examen de competencia para suboficiales subalternos de la federación. Se completa con la propuesta de jefatura y el acta de la comisión directiva.
 
-A continuación se muestran los **distintivos incluidos en el cuadro oficial del Consejo Nacional de Bomberos Voluntarios**, agrupados para facilitar su identificación. El grado inicial de **Bombero** forma parte del escalafón, aunque no tiene una insignia representada en ese cuadro.
+El **artículo 8** exige, además, tener **estudios secundarios completos** para acceder a grados de suboficiales u oficiales.
 
-**Revisión normativa:** noviembre de 2026. **Última edición editorial:** 20 de noviembre de 2026.
+Por ejemplo, un bombero que ya aprobó Bomberos II y cumple tres años de antigüedad reúne parte de los requisitos para aspirar a Cabo. Su promoción requiere completar las demás condiciones del reglamento.
+
+### ¿Cómo continúa la progresión?
+
+Los ascensos avanzan **de un grado al inmediato superior**, combinando antigüedad mínima, exámenes de competencia y formalización institucional:
+
+- **Suboficiales subalternos:** Cabo, Cabo Primero y Sargento. El reglamento exige al menos **un año en el grado anterior** para pasar de Cabo a Cabo Primero y de Cabo Primero a Sargento, además de las condiciones de formación.
+- **Suboficiales superiores:** Sargento Primero, Suboficial Principal y Suboficial Mayor. Para llegar a Sargento Primero se requieren **dos años como Sargento** y, cuando corresponda, el examen federativo de suboficiales superiores. Para los grados siguientes se establece al menos un año en el grado inmediato anterior.
+- **Oficiales:** el acceso a **Oficial Ayudante** incorpora la formación **Bomberos III** y condiciones adicionales de antigüedad, exámenes y disponibilidad de vacantes. El reglamento desarrolla después los ascensos por los grados de oficiales subalternos, oficiales jefes y oficial superior.
+
+En todos los casos, **el tiempo de servicio es un requisito mínimo y forma parte de un conjunto de condiciones para ascender**. El reglamento de 2018 establece su aplicación para quienes ingresaron al sistema después de su entrada en vigencia; las situaciones anteriores y su implementación se consideran conforme a las normas correspondientes.
+
+La siguiente guía permite visualizar el orden de los grados, desde los suboficiales subalternos hasta el oficial superior. El grado inicial de **Bombero** forma parte del escalafón, aunque el cuadro oficial no le asigna una insignia gráfica.
