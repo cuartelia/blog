@@ -14,8 +14,6 @@ sources:
     url: 'https://www.nist.gov/glossary-term/23781'
   - label: 'NIST — Combustion (NFPA 921)'
     url: 'https://www.nist.gov/glossary-term/20551'
-  - label: 'NIST — Fire Tetrahedron'
-    url: 'https://www.nist.gov/glossary-term/38471'
   - label: 'NIST — Heat Transfer (NFPA 921)'
     url: 'https://www.nist.gov/glossary-term/24986'
   - label: 'NIST — Fire Tetrahedron (NFPA 921)'
