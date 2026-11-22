@@ -1,0 +1,58 @@
+<style is:global>
+.fire-cover{margin:0 0 2.2rem}.fire-cover img{display:block;width:100%;height:auto;border-radius:12px}.fire-cover figcaption,.fire-figure figcaption{font-size:.84rem;color:#586965;margin-top:.5rem}.fire-figure{margin:1.7rem 0 2rem}.fire-figure img{display:block;width:100%;height:auto;border-radius:12px}
+.fire-demo{background:#f0f2ec;border:1px solid #cbd7cf;border-radius:14px;padding:clamp(1rem,3vw,1.55rem);margin:1.9rem 0 2rem;max-width:100%;font-family:var(--sans)}.fire-demo h3{font-size:1.25rem;margin:0 0 .55rem;font-family:var(--serif)}.fire-demo p{margin:.45rem 0}.fire-demo .fire-intro{font-size:.94rem;color:#4c605b}.fire-demo .fire-controls{display:flex;flex-wrap:wrap;gap:.65rem;margin:1rem 0}.fire-demo label{display:flex;align-items:center;gap:.5rem;font-weight:650;font-size:.9rem}.fire-demo button,.fire-demo select{background:#fffdf8;border:1px solid #7c9990;border-radius:7px;color:#19373b;padding:.55rem .7rem}.fire-demo button[aria-pressed=true]{background:#203b3d;color:#fff;border-color:#203b3d}.fire-demo button:focus-visible,.fire-demo input:focus-visible{outline:3px solid #eb6848;outline-offset:3px}.fire-demo input[type=range]{accent-color:#bd482d;max-width:100%;width:100%}.fire-demo .fire-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem}.fire-demo .fire-field{display:flex;flex-direction:column;gap:.4rem}.fire-demo .fire-value{font:700 1.6rem/1.2 var(--sans);color:#19373b}.fire-demo .fire-output{border-left:4px solid #df7855;background:#fffdf8;padding:.8rem 1rem;margin:1rem 0;font-size:1rem}.fire-demo .fire-note{font-size:.79rem;line-height:1.55;color:#586965}.fire-demo svg{width:100%;height:auto;display:block;max-height:250px}.fire-demo .fire-tetra{display:grid;grid-template-columns:minmax(180px,1fr) minmax(180px,1fr);gap:1rem;align-items:center}.fire-demo .fire-tetra button{width:100%;margin:.24rem 0;text-align:left}.fire-demo .fire-tetra polygon{transition:opacity .2s}.fire-demo .fire-tetra .disabled{opacity:.18}.fire-demo .fire-stage{font-size:.85rem;font-weight:700;letter-spacing:.02em}.fire-demo .fire-pyro-viz{border-radius:10px;background:#1a3538;margin:1rem 0;overflow:hidden}.fire-demo .fire-pyro-viz svg{max-height:220px}.fire-demo .fire-vapors{opacity:0;transition:opacity .25s}.fire-demo .fire-flame{opacity:0;transition:opacity .25s}.fire-demo [data-fire-step="1"] .fire-vapors,.fire-demo [data-fire-step="2"] .fire-vapors,.fire-demo [data-fire-step="3"] .fire-vapors{opacity:1}.fire-demo [data-fire-step="3"] .fire-flame{opacity:1}.fire-demo .fire-small-label{font-size:.82rem;font-weight:700;display:flex;justify-content:space-between;gap:1rem}.fire-demo output{font-weight:800;color:#bd482d}@media(max-width:620px){.fire-demo .fire-grid,.fire-demo .fire-tetra{grid-template-columns:1fr}.fire-demo{padding:1rem}.fire-demo .fire-value{font-size:1.35rem}}
+</style>
+<script>
+  const $=(root:Element,selector:string)=>root.querySelector<HTMLElement>(selector);
+  document.querySelectorAll<HTMLElement>('[data-fire-tetra]').forEach(root=>{
+    const buttons=Array.from(root.querySelectorAll<HTMLButtonElement>('[data-factor]'));
+    const output=$(root,'[data-tetra-output]');
+    const pieces=Array.from(root.querySelectorAll<SVGElement>('[data-piece]'));
+    function update(){
+      const off=buttons.filter(b=>b.getAttribute('aria-pressed')==='false').map(b=>b.dataset.factor);
+      pieces.forEach(p=>p.classList.toggle('disabled',off.includes(p.dataset.piece)));
+      if(output) output.textContent=off.length===0?'Los cuatro elementos están presentes: el modelo representa una combustión sostenida.': 'Se retiró '+off.join(', ')+'. El modelo indica que la combustión con llama no puede mantenerse sin todos sus elementos.';
+    }
+    buttons.forEach(b=>b.addEventListener('click',()=>{b.setAttribute('aria-pressed',String(b.getAttribute('aria-pressed')!=='true'));update()}));update();
+  });
+  const caps:Record<string,number>={acero:.49,aluminio:.90,agua:4.18};
+  document.querySelectorAll<HTMLElement>('[data-fire-heat]').forEach(root=>{
+    const material=root.querySelector<HTMLSelectElement>('[data-heat-material]');
+    const mass=root.querySelector<HTMLInputElement>('[data-heat-mass]');
+    const energy=root.querySelector<HTMLInputElement>('[data-heat-energy]');
+    const result=$(root,'[data-heat-result]');
+    const massLabel=$(root,'[data-heat-mass-label]');
+    const energyLabel=$(root,'[data-heat-energy-label]');
+    function update(){
+      const m=Number(mass?.value),q=Number(energy?.value),c=caps[material?.value||'acero'];
+      if(!Number.isFinite(m)||!Number.isFinite(q)||!c||m<=0)return;
+      if(massLabel)massLabel.textContent=m.toFixed(1)+' kg';
+      if(energyLabel)energyLabel.textContent=q+' kJ';
+      if(result)result.textContent='+'+(q/(m*c)).toFixed(1)+' °C';
+    }
+    [material,mass,energy].forEach(el=>el?.addEventListener('input',update));update();
+  });
+  document.querySelectorAll<HTMLElement>('[data-fire-pyro]').forEach(root=>{
+    const input=root.querySelector<HTMLInputElement>('[data-pyro-stage]');
+    const output=$(root,'[data-pyro-description]');
+    const stage=$(root,'[data-pyro-name]');
+    const viz=$(root,'[data-pyro-visual]');
+    const names=['Material sin calentar','Calentamiento','Pirólisis','Ignición de vapores','Combustión con llama'];
+    const notes=[
+      'El material se encuentra a temperatura ambiente. No hay una fuente térmica aplicada en este esquema.',
+      'Al recibir energía aumenta su temperatura. Aún no implica que haya combustión.',
+      'El calentamiento puede descomponer químicamente ciertos sólidos y liberar productos gaseosos. Pirólisis no significa que ya haya llama.',
+      'Si existen vapores combustibles, mezcla adecuada con oxidante y una fuente de ignición, puede producirse una llama.',
+      'Una llama sostenida requiere combustible, oxidante, energía térmica suficiente y reacciones en cadena. La madera puede conservar combustión incandescente en zonas carbonizadas.'
+    ];
+    function update(){
+      const n=Math.max(0,Math.min(4,Number(input?.value)||0));
+      if(stage)stage.textContent=names[n];
+      if(output)output.textContent=notes[n];
+      if(viz)viz.dataset.fireStep=String(n===4?3:n===3?3:n===2?2:n===1?1:0);
+      const flame=root.querySelector<SVGElement>('.fire-flame');
+      if(flame) flame.style.opacity=n>=3?'1':'0';
+    }
+    input?.addEventListener('input',update);update();
+  });
+</script>
