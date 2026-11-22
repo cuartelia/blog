@@ -18,8 +18,8 @@ sources:
     url: 'https://www.nist.gov/glossary-term/38471'
   - label: 'NIST — Fire Dynamics'
     url: 'https://www.nist.gov/el/fire-research-division-73300/firegov-fire-service/fire-dynamics'
-  - label: 'UL FSRI — Understanding Backdraft and Smoke Explosion'
-    url: 'https://training.fsri.org/resources/30/036-15-backdraft-and-smoke-explosion-instructor-handout-rgb'
+  - label: 'UL FSRI — Structural Fire Dynamics'
+    url: 'https://training.fsri.org/course/125/fire-dynamics-in-structures'
 ---
 
 Una llama parece sencilla: algo se enciende, desprende calor y continúa ardiendo. Sin embargo, detrás de ella ocurren reacciones químicas, intercambios de energía y movimientos de gases. Comprender esos procesos permite entender por qué un incendio crece, se propaga o cambia de comportamiento.
