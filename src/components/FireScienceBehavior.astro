@@ -11,6 +11,7 @@
     function update(){
       const off=buttons.filter(b=>b.getAttribute('aria-pressed')==='false').map(b=>b.dataset.factor);
       pieces.forEach(p=>p.classList.toggle('disabled',off.includes(p.dataset.piece)));
+      buttons.forEach(b=>{const name=b.dataset.factor==='oxidante'?'Comburente':(b.dataset.factor||'');b.textContent=name+' '+(b.getAttribute('aria-pressed')==='true'?'✓':'×')});
       if(output) output.textContent=off.length===0?'Los cuatro elementos están presentes: el modelo representa una combustión sostenida.': 'Se retiró '+off.join(', ')+'. El modelo indica que la combustión con llama no puede mantenerse sin todos sus elementos.';
     }
     buttons.forEach(b=>b.addEventListener('click',()=>{b.setAttribute('aria-pressed',String(b.getAttribute('aria-pressed')!=='true'));update()}));update();
@@ -26,9 +27,9 @@
     function update(){
       const m=Number(mass?.value),q=Number(energy?.value),c=caps[material?.value||'acero'];
       if(!Number.isFinite(m)||!Number.isFinite(q)||!c||m<=0)return;
-      if(massLabel)massLabel.textContent=m.toFixed(1)+' kg';
+      if(massLabel)massLabel.textContent=m.toFixed(1).replace('.',',')+' kg';
       if(energyLabel)energyLabel.textContent=q+' kJ';
-      if(result)result.textContent='+'+(q/(m*c)).toFixed(1)+' °C';
+      if(result)result.textContent='+'+(q/(m*c)).toFixed(1).replace('.',',')+' °C';
     }
     [material,mass,energy].forEach(el=>el?.addEventListener('input',update));update();
   });
