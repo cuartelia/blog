@@ -11,7 +11,7 @@ const tone = tones[category] || 'history';
 <article class:list={['article-card',`article-card--${tone}`, {'article-card--feature':variant==='feature'}]}>
   <div class="card-visual" aria-hidden="true">
     <span class="card-num">{String(index+1).padStart(2,'0')}</span>
-    {post.id === 'leyes-y-regulaciones-nacionales-bomberos-voluntarios' ? <svg viewBox="0 0 230 140" fill="none">
+    {post.id === 'fuego' ? <img class="fire-card-cover" src={path('images/articulos/fuego-portada.svg')} alt="" loading="lazy" /> : post.id === 'leyes-y-regulaciones-nacionales-bomberos-voluntarios' ? <svg viewBox="0 0 230 140" fill="none">
       <g stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="115" cy="19" r="5" fill="currentColor" fill-opacity=".16"/>
         <path d="M115 24v95M47 45h136M115 32v13"/>
@@ -48,3 +48,8 @@ const tone = tones[category] || 'history';
     <div class="card-bottom"><time datetime={date.toISOString()}>{formattedDate(date)}</time><a aria-label={`Leer: ${title}`} href={href} class="card-arrow">↗</a></div>
   </div>
 </article>
+
+<style>
+  .fire-card-cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+  .article-card--fire:has(.fire-card-cover) .card-num,.article-card--fire:has(.fire-card-cover) .card-visual-caption{color:#fff;z-index:2;text-shadow:0 1px 5px #112b2c}
+</style>
