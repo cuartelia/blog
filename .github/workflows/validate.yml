@@ -1,0 +1,25 @@
+name: Validar cambios de Cuartelia
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - name: Instalar dependencias
+        run: npm ci --no-audit --no-fund
+      - name: Pruebas de regresión y ciencia del fuego
+        run: npm test
+      - name: Compilación estática
+        run: npm run build
