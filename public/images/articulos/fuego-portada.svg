@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="t d">
+<title id="t">Fuego: ciencia de la combustión</title><desc id="d">Llama estilizada rodeada de moléculas, energía y los elementos del tetraedro, sin mostrar una escena de incendio.</desc>
+<rect width="1200" height="620" rx="26" fill="#162e32"/>
+<g stroke="#52726e" stroke-width="1" opacity=".26"><path d="M0 100h1200M0 200h1200M0 300h1200M0 400h1200M0 500h1200M100 0v620M200 0v620M300 0v620M400 0v620M500 0v620M600 0v620M700 0v620M800 0v620M900 0v620M1000 0v620M1100 0v620"/></g>
+<g fill="none" stroke="#94a9a0" stroke-width="2" opacity=".64"><circle cx="600" cy="310" r="244" stroke-dasharray="8 12"/><circle cx="600" cy="310" r="181"/><path d="M600 40v55M600 524v55M330 310h55M815 310h55"/></g>
+<path d="M595 119c-66 85-21 125-32 166-33-29-51-59-53-93-95 83-99 180-61 248 30 55 87 84 152 84 107 0 181-73 181-174 0-84-51-154-117-196 16 64-14 91-35 105 0-65 8-88-35-140Z" fill="#eb6848"/>
+<path d="M590 295c-38 45-28 70-40 93-14-18-15-31-17-48-48 52-24 132 42 151 74 23 129-23 129-90 0-40-20-65-53-98 5 42-21 52-34 59 2-28-10-51-27-67Z" fill="#f6bb81"/>
+<path d="M598 403c-28 28-31 60-7 89 32-11 48-37 36-66l-14 17c-2-16-6-25-15-40Z" fill="#fff1d6"/>
+<g fill="#e7ebe2" font-family="Arial, sans-serif" font-size="23" font-weight="700" text-anchor="middle"><text x="599" y="53">ENERGÍA</text><text x="240" y="250">COMBUSTIBLE</text><text x="961" y="250">OXIDANTE</text><text x="600" y="591">REACCIÓN EN CADENA</text></g>
+<g stroke="#ecb28c" stroke-width="3" fill="none"><path d="M355 248h-70M846 248h70M600 94v36M600 522v30"/></g>
+<g opacity=".85" fill="none" stroke="#acd0bf" stroke-width="3"><circle cx="167" cy="400" r="17"/><circle cx="217" cy="379" r="12"/><path d="M181 393 205 383"/><circle cx="1000" cy="411" r="15"/><circle cx="1047" cy="390" r="15"/><path d="M1013 405 1033 396"/></g>
+<g fill="#a9c3b8" font-family="monospace" font-size="18"><text x="90" y="461">CH₄</text><text x="1006" y="465">O₂</text></g>
+</svg>

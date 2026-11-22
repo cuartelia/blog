@@ -36,14 +36,14 @@ test('el sitio contempla navegación y disclaimer',()=>{
 });
 
 // La publicación se controla desde frontmatter, sin eliminar artículos en elaboración.
-test('Historia y Voluntariado se publican; Fuego y Presión quedan en borrador',()=>{
-  for(const slug of ['fuego','presion']){
+test('Fuego se publica; Presión continúa en borrador',()=>{
+  for(const slug of ['presion']){
     const md=read(`src/content/articulos/${slug}.md`);
     const frontmatter=md.split('---')[1];
     assert.match(frontmatter,/^draft: true$/m,`${slug} debe permanecer oculto`);
     assert.match(frontmatter,/^feature: false$/m,`${slug} no debe destacarse`);
   }
-  for (const slug of ['historia-bomberil-argentina','voluntariado-bomberil-en-america']) {
+  for (const slug of ['fuego','historia-bomberil-argentina','voluntariado-bomberil-en-america']) {
     const article=read(`src/content/articulos/${slug}.md`);
     assert.doesNotMatch(article.split('---')[1],/^draft: true$/m);
   }

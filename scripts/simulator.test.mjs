@@ -28,7 +28,10 @@ test('registro dinámico de simuladores sin dependencia del slug de la nota', ()
   const route = read('src/pages/articulos/[...slug].astro');
   assert.match(route, /import\.meta\.glob/);
   assert.match(route, /post\.data\.simulators/);
-  assert.doesNotMatch(route, /post\.id\s*===/);
+  // Las experiencias editoriales especiales pueden depender del slug;
+  // el registro de simuladores debe seguir derivándose solo del frontmatter.
+  assert.match(route, /post\.data\.simulators\.filter/);
+  assert.doesNotMatch(route, /post\.id\s*===\s*['"](?:heat|pressure)['"]/);
   const components = readdirSync(resolve(import.meta.dirname, '..', 'src/components/simulators'));
   const files = readdirSync(resolve(import.meta.dirname, '..', 'src/content/articulos')).filter(f => f.endsWith('.md'));
   for (const file of files) {
